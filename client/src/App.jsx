@@ -21,12 +21,12 @@ const App = () => {
         />
         <div style={{ margin: "100px" }}></div>
         <InputField
+          // reference={nameRef}
           type="text"
           // value={name}
-          placeholder="Product Name"
+          placeholder="Name"
           label="Name"
           name="name"
-          // onChange={handleChange}
         />
       </div>
     </>
