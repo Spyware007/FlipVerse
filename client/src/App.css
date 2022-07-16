@@ -1,8 +1,31 @@
+@font-face {
+  font-family: Starcraft-Italic;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  src: local("Combatron"),
+    url("./Fonts/Starcraft-Italic.otf") format("opentype");
+}
+@font-face {
+  font-family: Starcraft-Normal;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  src: local("Combatron"),
+    url("./Fonts/Starcraft-Normal.ttf") format("truetype");
+}
+@font-face {
+  font-family: Starcraft;
+  font-display: swap;
+  unicode-range: U+000-5FF;
+  src: local("Combatron"), url("./Fonts/Starcraft.otf") format("opentype");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* border: 2px solid red; */
+  font-family: "Orbitron", sans-serif;
+  font-family: Starcraft;
 }
 body,
 html {
