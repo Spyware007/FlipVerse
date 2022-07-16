@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+}
+body,
+html {
+  background: linear-gradient(
+    240.32deg,
+    #5b1188 10.2%,
+    #2c185b 36.02%,
+    #081e3a 50.45%,
+    #051225 81.89%,
+    #040d1f 100.83%
+  );
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
