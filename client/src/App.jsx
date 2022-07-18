@@ -16,7 +16,7 @@ const App = () => {
       >
         <Button
           // onClick={handleClick}
-          label="Submit"
+          label="Submited"
           // filled
         />
         <div style={{ margin: "100px" }}></div>
