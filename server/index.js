@@ -1,28 +1,29 @@
-
-require("dotenv").config();
 import express from "express";
 import cors from "cors";
-import mongoose from "mongoose";
+import "dotenv/config.js";
+import connectDB from "./config/db.js";
+import { errorMiddleware, notFound } from "./middleware/errorMiddleware.js";
+import userRouter from "./routes/user.js";
 
-import authRoutes from "./routes/auth";
-
-const morgan = require("morgan");
+const PORT = 6000 || process.env.PORT;
 
 const app = express();
 
 // db connection
-mongoose
-  .connect(process.env.DATABASE)
-  .then(() => console.log("DB connected"))
-  .catch((err) => console.log("DB CONNECTION ERROR: ", err));
+connectDB();
 
 // middlewares
+app.use(cors());
 app.use(express.json({ limit: "4mb" }));
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
-app.use(morgan("dev"));
 
-// route middlewares
-app.use("/api", authRoutes);
+app.use(errorMiddleware);
+// app.use(notFound);
 
-app.listen(8000, () => console.log("Server running on port 8000"));
+// Routers
+
+app.use(userRouter);
+
+app.listen(PORT, () => {
+	console.log(`Server running in ${process.env.NODE_ENV} mode on ${PORT}`);
+});
