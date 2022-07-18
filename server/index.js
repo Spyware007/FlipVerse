@@ -9,6 +9,7 @@ const PORT = 6000 || process.env.PORT;
 
 const app = express();
 
+console.log("FD");
 // db connection
 connectDB();
 
