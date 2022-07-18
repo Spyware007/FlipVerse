@@ -1,0 +1,74 @@
+.login_section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: hidden;
+}
+.left_section {
+  width: 50vw;
+  height: 100vh;
+}
+.image {
+  width: 300%;
+  padding-right: 300px;
+}
+.right_section {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  margin-top: 280px;
+}
+.login_text {
+  font-size: 4rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+.form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 60px;
+}
+.inputs {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login_para {
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 25px;
+}
+#upper_part {
+  /* display: none; */
+  /* transform: translate(0, 0); */
+  animation: floating 5s ease-in-out infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 40px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
+  }
+}

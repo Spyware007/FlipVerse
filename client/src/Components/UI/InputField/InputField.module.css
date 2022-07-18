@@ -8,9 +8,19 @@
 
 .form__field {
   font-family: inherit;
-  width: 100%;
+  width: 400px;
   border: none;
-  border-bottom: 2px solid #9b9b9b;
+  border-bottom: 4px solid;
+  border-image: linear-gradient(
+    90deg,
+    #cc00ff 50%,
+    rgba(255, 255, 255, 0) 104.81%
+  );
+  border-width: 4px;
+
+  border-image-slice: 1;
+  /* border-bottom-color: ; */
+
   outline: 0;
   font-size: 17px;
   color: #fff;
@@ -35,14 +45,15 @@
   display: block;
   transition: 0.2s;
   font-size: 17px;
-  color: #9b9b9b;
+  color: #e4abff;
   pointer-events: none;
+  font-weight: 600;
 }
 
 .form__field:focus {
   padding-bottom: 6px;
-  font-weight: 700;
-  border-width: 3px;
+  font-weight: 300;
+  border-width: 4px;
   border-image: linear-gradient(to right, #116399, #38caef);
   border-image-slice: 1;
 }
@@ -54,7 +65,7 @@
   transition: 0.2s;
   font-size: 17px;
   color: #38caef;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 /* reset input */

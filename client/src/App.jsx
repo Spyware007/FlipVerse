@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, InputField } from "./Components/UI";
 import "./App.css";
+import Login from "./Components/Login/Login";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           name="name"
         />
       </div>
+      <Login />
     </>
   );
 };

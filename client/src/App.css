@@ -25,7 +25,8 @@
   box-sizing: border-box;
   /* border: 2px solid red; */
   font-family: "Orbitron", sans-serif;
-  font-family: Starcraft;
+  /* font-family: Starcraft; */
+  /* overflow-x: hidden; */
 }
 body,
 html {
