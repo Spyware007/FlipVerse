@@ -3,21 +3,19 @@ import cors from "cors";
 import "dotenv/config.js";
 import connectDB from "./config/db.js";
 import { errorMiddleware, notFound } from "./middleware/errorMiddleware.js";
-import userRouter from "./routes/user.js";
+import userRouter from "./routes/userAuth.js";
 
 const PORT = 6000 || process.env.PORT;
 
 const app = express();
 
-console.log("FD");
-// db connection
+// DB connection
 connectDB();
 
 // middlewares
 app.use(cors());
 app.use(express.json({ limit: "4mb" }));
 app.use(express.urlencoded({ extended: true }));
-
 app.use(errorMiddleware);
 // app.use(notFound);
 

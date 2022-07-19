@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 const { Schema } = mongoose;
 import asyncHandler from "express-async-handler";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 const userSchema = new Schema(
 	{
@@ -53,31 +55,29 @@ const userSchema = new Schema(
 	{ timestamps: true },
 );
 
-userSchema.statics.findUserByCredentials = asyncHandler(
-	async (email, password) => {
-		try {
-			const user = await User.findOne({ email });
+userSchema.statics.findUserByCredentials = async (email, password) => {
+	try {
+		const user = await User.findOne({ email });
 
-			if (!user) {
-				throw new Error("User does not exist.");
-			}
-
-			const isPasswordCorrect = await bcrypt.compare(password, user.password);
-
-			if (!isPasswordCorrect) {
-				throw new Error("Please enter correct password.");
-			}
-
-			return user;
-		} catch (error) {
-			console.log(error);
+		if (!user) {
+			throw new Error("User does not exist.");
 		}
-	},
-);
 
-userSchema.methods.generateAuthToken = asyncHandler(async function () {
+		const isPasswordCorrect = await bcrypt.compare(password, user.password);
+
+		if (!isPasswordCorrect) {
+			throw new Error("Please enter correct password.");
+		}
+
+		return user;
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+userSchema.methods.generateAuthToken = async function () {
 	const user = this;
-
+	console.log(user);
 	const payload = { _id: user._id };
 
 	const token = await jwt.sign(payload, process.env.SECRET_KEY);
@@ -87,7 +87,7 @@ userSchema.methods.generateAuthToken = asyncHandler(async function () {
 	await user.save();
 
 	return token;
-});
+};
 
 userSchema.pre("save", async function (next) {
 	const user = this;
