@@ -26,10 +26,43 @@ const createUser = asyncHandler(async (req, res) => {
 		role,
 	});
 
-	console.log(user);
 	const token = await user.generateAuthToken();
 
 	res.status(201).json({ name, email, role, token });
 });
 
-export { createUser };
+// @desc Login User
+// @route /login
+// @access Public
+const loginUser = asyncHandler(async (req, res) => {
+	const { email, password } = req.body;
+
+	const user = await User.findUserByCredentials(email, password);
+
+	if (!user) {
+		res.status(404).send();
+		throw new Error("Please enter correct email and password.");
+	}
+
+	const token = await user.generateAuthToken();
+
+	res.status(200).json({
+		name: user.name,
+		email: user.email,
+		token,
+	});
+});
+
+// @desc Logout User
+// @route /logout
+// @access Private
+const logoutUser = asyncHandler(async (req, res) => {
+	req.user.tokens = req.user.tokens.filter((token) => {
+		return token.token != req.token;
+	});
+
+	await req.user.save();
+	res.status(200).send();
+});
+
+export { createUser, loginUser, logoutUser };
