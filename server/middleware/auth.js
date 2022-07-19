@@ -3,7 +3,7 @@ import User from "../models/User.js";
 
 const authMiddleware = async (req, res, next) => {
 	const token = req.header("x-auth-token");
-
+	console.log(token);
 	try {
 		const decodedUser = await jwt.verify(token, process.env.SECRET_KEY);
 
@@ -11,6 +11,8 @@ const authMiddleware = async (req, res, next) => {
 			_id: decodedUser._id,
 			"tokens.token": token,
 		});
+
+		console.log(user);
 
 		if (!user) {
 			throw new Error("Could not find user");
