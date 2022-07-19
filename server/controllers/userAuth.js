@@ -1,5 +1,14 @@
 import asyncHandler from "express-async-handler";
 import User from "../models/User.js";
+import { validateEmail } from "../helpers/auth.js";
+
+// @desc Get Users
+// @route /signup
+// @access Public
+const getAllUsers = async (req, res) => {
+	const users = await User.find({});
+	res.status(200).json({ users });
+};
 
 // @desc Register User
 // @route /signup
@@ -7,7 +16,7 @@ import User from "../models/User.js";
 const createUser = asyncHandler(async (req, res) => {
 	let { name, email, password, role } = req.body;
 	password = password.toString();
-	if (!name || !email || !password) {
+	if (!name || !email || !password || !validateEmail(email)) {
 		res.status(404);
 		throw new Error("Please provide valid credentials");
 	}
@@ -36,6 +45,10 @@ const createUser = asyncHandler(async (req, res) => {
 // @access Public
 const loginUser = asyncHandler(async (req, res) => {
 	const { email, password } = req.body;
+	if (!validateEmail(email)) {
+		res.status(404);
+		throw new Error("Please enter valid email");
+	}
 
 	const user = await User.findUserByCredentials(email, password);
 
@@ -65,4 +78,19 @@ const logoutUser = asyncHandler(async (req, res) => {
 	res.status(200).send();
 });
 
-export { createUser, loginUser, logoutUser };
+// @desc Logout User From all devices
+// @route /logout/all
+// @access Private
+const logoutUserFromAllDevices = async (req, res) => {
+	req.user.tokens = [];
+	await req.user.save();
+	res.status(200).send();
+};
+
+export {
+	getAllUsers,
+	createUser,
+	loginUser,
+	logoutUser,
+	logoutUserFromAllDevices,
+};
