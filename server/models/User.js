@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 const { Schema } = mongoose;
+import asyncHandler from "express-async-handler";
 
 const userSchema = new Schema(
 	{
@@ -28,6 +29,18 @@ const userSchema = new Schema(
 			public_id: "",
 			url: "",
 		},
+		wishList: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: "Product",
+			},
+		],
+		purchasedProducts: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: "Product",
+			},
+		],
 		tokens: [
 			{
 				token: {
@@ -40,4 +53,53 @@ const userSchema = new Schema(
 	{ timestamps: true },
 );
 
-export default mongoose.model("User", userSchema);
+userSchema.statics.findUserByCredentials = asyncHandler(
+	async (email, password) => {
+		try {
+			const user = await User.findOne({ email });
+
+			if (!user) {
+				throw new Error("User does not exist.");
+			}
+
+			const isPasswordCorrect = await bcrypt.compare(password, user.password);
+
+			if (!isPasswordCorrect) {
+				throw new Error("Please enter correct password.");
+			}
+
+			return user;
+		} catch (error) {
+			console.log(error);
+		}
+	},
+);
+
+userSchema.methods.generateAuthToken = asyncHandler(async function () {
+	const user = this;
+
+	const payload = { _id: user._id };
+
+	const token = await jwt.sign(payload, process.env.SECRET_KEY);
+
+	user.tokens = user.tokens.concat({ token });
+
+	await user.save();
+
+	return token;
+});
+
+userSchema.pre("save", async function (next) {
+	const user = this;
+
+	if (!user.isModified("password")) {
+		next();
+	}
+
+	const hashedPassword = await bcrypt.hash(user.password, 9);
+
+	user.password = hashedPassword;
+});
+
+const User = mongoose.model("User", userSchema);
+export default User;
