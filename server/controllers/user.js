@@ -1,17 +1,52 @@
 import asyncHandler from "express-async-handler";
 import User from "../models/User.js";
 
-// const createUser = asyncHandler(async (req, res) => {
-// 	console.log("hel");
-// 	const user = new User({
-// 		name: "nishant",
-// 		email: "sfjal",
-// 		password: "abl",
-// 	});
+//@desc Get user Profile
+//@route /user/profile
+//@access private
+const getUserProfile = asyncHandler(async (req, res) => {
+	const user = await User.findById(req.user._id);
 
-// 	await user.save();
-// 	res.status(201).json({ user });
-// 	console.log(user);
-// });
+	if (!user) {
+		res.status(404);
+		throw new Error("User doesn't exist");
+	}
 
-export { createUser };
+	const { name, email, role, _id, image } = user;
+	res.json({
+		name,
+		email,
+		role,
+		_id,
+		image,
+	});
+});
+
+//@desc Update user Profile
+//@route /profile/me
+//@access private
+const updateUserProfile = asyncHandler(async (req, res) => {
+	const user = await User.findById(req.user._id);
+
+	const { name, email, role, image } = req.body;
+
+	if (user) {
+		user.name = name || user.name;
+		user.email = email || user.email;
+		user.role = role || user.role;
+		user.image = image || user.image;
+
+		await user.save();
+		res.status(200).json({
+			_id: user._id,
+			name: user.name,
+			email: user.email,
+			role: user.role,
+		});
+	} else {
+		res.status(404);
+		throw new Error("User not found");
+	}
+});
+
+export { getUserProfile, updateUserProfile };

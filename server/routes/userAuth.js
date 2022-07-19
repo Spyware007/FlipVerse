@@ -8,14 +8,15 @@ import {
 	logoutUser,
 } from "../controllers/userAuth.js";
 
-const userRouter = express.Router();
+const userAuthRouter = express.Router();
 
-userRouter.route("/api/user").post(getAllUsers);
-userRouter.route("/api/user/signup").post(createUser);
-userRouter.route("/api/user/login").post(loginUser);
-userRouter.route("/api/user/logout").post(authMiddleware, logoutUser);
-userRouter
+// Authentication Routes
+userAuthRouter.route("/api/user").post(getAllUsers);
+userAuthRouter.route("/api/user/signup").post(createUser);
+userAuthRouter.route("/api/user/login").post(loginUser);
+userAuthRouter.route("/api/user/logout").post(authMiddleware, logoutUser);
+userAuthRouter
 	.route("/api/user/logout/all")
 	.post(authMiddleware, logoutUserFromAllDevices);
 
-export default userRouter;
+export default userAuthRouter;

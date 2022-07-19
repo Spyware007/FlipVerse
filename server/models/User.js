@@ -28,8 +28,7 @@ const userSchema = new Schema(
 			default: "Subscriber",
 		},
 		image: {
-			public_id: "",
-			url: "",
+			type: String,
 		},
 		wishList: [
 			{
