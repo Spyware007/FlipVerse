@@ -1,5 +1,5 @@
 import express from "express";
-import authMiddleware from "../middleware/auth.js";
+import userAuthMiddleware from "../middleware/userAuth.js";
 import {
 	getAllUsers,
 	createUser,
@@ -14,9 +14,9 @@ const userAuthRouter = express.Router();
 userAuthRouter.route("/api/user").post(getAllUsers);
 userAuthRouter.route("/api/user/signup").post(createUser);
 userAuthRouter.route("/api/user/login").post(loginUser);
-userAuthRouter.route("/api/user/logout").post(authMiddleware, logoutUser);
+userAuthRouter.route("/api/user/logout").post(userAuthMiddleware, logoutUser);
 userAuthRouter
 	.route("/api/user/logout/all")
-	.post(authMiddleware, logoutUserFromAllDevices);
+	.post(userAuthMiddleware, logoutUserFromAllDevices);
 
 export default userAuthRouter;

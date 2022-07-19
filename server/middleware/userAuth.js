@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 
-const authMiddleware = async (req, res, next) => {
+const userAuthMiddleware = async (req, res, next) => {
 	const token = req.header("x-auth-token");
 	console.log(token);
 	try {
@@ -27,4 +27,4 @@ const authMiddleware = async (req, res, next) => {
 	}
 };
 
-export default authMiddleware;
+export default userAuthMiddleware;

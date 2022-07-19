@@ -1,11 +1,11 @@
 import express from "express";
-import authMiddleware from "../middleware/auth.js";
+import userAuthMiddleware from "../middleware/userAuth.js";
 import { getUserProfile, updateUserProfile } from "../controllers/user.js";
 const userRouter = express.Router();
 
 userRouter
 	.route("/api/user/profile")
-	.get(authMiddleware, getUserProfile)
-	.put(authMiddleware, updateUserProfile);
+	.get(userAuthMiddleware, getUserProfile)
+	.put(userAuthMiddleware, updateUserProfile);
 
 export default userRouter;
