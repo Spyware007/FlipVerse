@@ -21,8 +21,8 @@ const productSchema = new Schema(
 		description: {
 			type: String,
 		},
-		imageUrl: {
-			type: String,
+		image: {
+			type: Buffer,
 		},
 		createdBy: {
 			type: mongoose.Schema.Types.ObjectId,

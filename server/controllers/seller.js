@@ -52,4 +52,7 @@ const updateSellerProfile = asyncHandler(async (req, res) => {
 	}
 });
 
+const createProduct = asyncHandler(async (req, res) => {
+	const { title, category, price, brand, description } = req.body;
+});
 export { getSellerProfile, updateSellerProfile };
