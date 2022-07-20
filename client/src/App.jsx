@@ -12,7 +12,6 @@ import {
 } from "./Components";
 
 import "./App.css";
-import ProductCard from "./Components/UI/ProductCard/ProductCard";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -41,6 +40,7 @@ const App = () => {
           </>
         )}
       </div>
+      <Product />
     </>
   );
 };
