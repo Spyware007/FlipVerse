@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Loading } from "./Components/UI";
 import {
-  Footer,
   Home,
   Login,
   Product,
@@ -13,7 +12,7 @@ import {
 } from "./Components";
 
 import "./App.css";
-import SingleProductCard from "./Components/UI/SingleProductCard/SingleProductCard";
+import ProductCard from "./Components/UI/ProductCard/ProductCard";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -41,8 +40,6 @@ const App = () => {
             </Routes>
           </>
         )}
-        {/* <Footer /> */}
-        <SingleProductCard />
       </div>
     </>
   );
