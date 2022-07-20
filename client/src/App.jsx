@@ -40,7 +40,6 @@ const App = () => {
           </>
         )}
       </div>
-      <Product />
     </>
   );
 };
