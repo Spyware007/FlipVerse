@@ -4,7 +4,8 @@ import "dotenv/config.js";
 import connectDB from "./config/db.js";
 import { errorMiddleware, notFound } from "./middleware/errorMiddleware.js";
 import userRouter from "./routes/user.js";
-import userAuthRouter from "./routes/userAuth.js";
+import userAuthRouter from "./routes/authRoutes/userAuth.js";
+import sellerAuthRouter from "./routes/authRoutes/sellerAuth.js";
 
 const PORT = 6000 || process.env.PORT;
 
@@ -23,6 +24,7 @@ app.use(errorMiddleware);
 // Routers
 app.use(userRouter);
 app.use(userAuthRouter);
+app.use(sellerAuthRouter);
 
 app.listen(PORT, () => {
 	console.log(`Server running in ${process.env.NODE_ENV} mode on ${PORT}`);

@@ -1,6 +1,6 @@
 import asyncHandler from "express-async-handler";
-import User from "../models/User.js";
-import { validateEmail } from "../helpers/auth.js";
+import User from "../../models/User.js";
+import { validateEmail } from "../../helpers/auth.js";
 
 // @desc Get Users
 // @route /signup
