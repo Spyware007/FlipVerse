@@ -33,9 +33,6 @@ const userSchema = new Schema(
 		image: {
 			type: Buffer,
 		},
-		imageType: {
-			type: String,
-		},
 		wishList: [
 			{
 				type: mongoose.Schema.Types.ObjectId,

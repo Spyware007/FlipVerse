@@ -24,9 +24,6 @@ const productSchema = new Schema(
 		image: {
 			type: Buffer,
 		},
-		imageType: {
-			type: String,
-		},
 		createdBy: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "Seller",

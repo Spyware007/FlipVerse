@@ -12,9 +12,11 @@ const getUserProfile = asyncHandler(async (req, res) => {
 		throw new Error("User doesn't exist");
 	}
 
-	const buffer = Buffer.from(user.image);
-
-	const base64Image = buffer.toString("base64");
+	let buffer, base64Image;
+	if (user.image) {
+		buffer = Buffer.from(user.image);
+		base64Image = buffer.toString("base64");
+	}
 
 	const { name, email, role, _id, address } = user;
 	res.json({
@@ -22,7 +24,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
 		email,
 		role,
 		_id,
-		image: base64Image,
+		image: user.image ? base64Image : "",
 		address,
 	});
 });
@@ -31,19 +33,6 @@ const getUserProfile = asyncHandler(async (req, res) => {
 //@route /profile/image
 //@access private
 const uploadUserImage = asyncHandler(async (req, res) => {
-	let imageType = "";
-	const fileName = req.file.originalname;
-
-	for (let i = fileName.length - 1; i >= 0; i--) {
-		imageType += fileName[i];
-		if (fileName[i] == ".") break;
-	}
-
-	const arrStrs = imageType.split("");
-	const reverseStrsArray = arrStrs.reverse();
-	const joinedString = reverseStrsArray.join("");
-
-	req.user.imageType = joinedString;
 	req.user.image = req.file.buffer;
 	await req.user.save();
 
