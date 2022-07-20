@@ -11,7 +11,8 @@ import {
 const userAuthRouter = express.Router();
 
 // Authentication Routes
-userAuthRouter.route("/api/user").get(getAllUsers);
+userAuthRouter.route("/api/user").post(getAllUsers);
+
 userAuthRouter.route("/api/user/signup").post(createUser);
 userAuthRouter.route("/api/user/login").post(loginUser);
 userAuthRouter.route("/api/user/logout").post(userAuthMiddleware, logoutUser);

@@ -21,7 +21,10 @@ const productSchema = new Schema(
 		description: {
 			type: String,
 		},
-		imageUrl: {
+		image: {
+			type: Buffer,
+		},
+		imageType: {
 			type: String,
 		},
 		createdBy: {
