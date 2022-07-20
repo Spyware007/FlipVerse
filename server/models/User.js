@@ -22,6 +22,10 @@ const userSchema = new Schema(
 			min: 6,
 			max: 64,
 		},
+		address: {
+			type: String,
+			required: true,
+		},
 		role: {
 			type: String,
 			default: "Subscriber",

@@ -12,13 +12,14 @@ const getUserProfile = asyncHandler(async (req, res) => {
 		throw new Error("User doesn't exist");
 	}
 
-	const { name, email, role, _id, image } = user;
+	const { name, email, role, _id, image, address } = user;
 	res.json({
 		name,
 		email,
 		role,
 		_id,
 		image,
+		address,
 	});
 });
 
@@ -28,13 +29,14 @@ const getUserProfile = asyncHandler(async (req, res) => {
 const updateUserProfile = asyncHandler(async (req, res) => {
 	const user = await User.findById(req.user._id);
 
-	const { name, email, role, image } = req.body;
+	const { name, email, role, image, address } = req.body;
 
 	if (user) {
 		user.name = name || user.name;
 		user.email = email || user.email;
 		user.role = role || user.role;
 		user.image = image || user.image;
+		user.address = address || user.address;
 
 		await user.save();
 		res.status(200).json({
@@ -42,6 +44,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
 			name: user.name,
 			email: user.email,
 			role: user.role,
+			address: user.address,
 		});
 	} else {
 		res.status(404);
