@@ -27,7 +27,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
 	});
 });
 
-//@desc Update user image
+//@desc Update/Upload user image
 //@route /profile/image
 //@access private
 const uploadUserImage = asyncHandler(async (req, res) => {
