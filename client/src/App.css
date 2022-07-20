@@ -48,4 +48,9 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+.image {
+  object-fit: cover;
+  width: 100%;
 }

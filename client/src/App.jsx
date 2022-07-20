@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
-import { Loading } from "./Components/UI";
+import { Loading, Card } from "./Components/UI";
 import "./App.css";
+import Signup from "./Components/Signup/Signup";
 
 const App = () => {
   const [loading, setLoading] = useState(true);

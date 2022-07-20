@@ -1,28 +1,30 @@
-.btn {
+/* .btn {
   --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
   --border-width: 0.125em;
-  --curve-size: 0.5em;
+  --curve-size: 2em;
   --blur: 30px;
-  --bg: #080312;
+  --bg: rgb(255, 255, 255, 0.1);
   --color: #afffff;
   color: var(--color);
-  /* use position: relative; so that BG is only for .btn */
+  use position: relative; so that BG is only for .btn
   position: relative;
   isolation: isolate;
   display: inline-grid;
   place-content: center;
   padding: 0.5em 1.5em;
+  width: 515px;
+  height: 595px;
   font-size: 17px;
   border: 0;
   text-transform: uppercase;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
   clip-path: polygon(
-    /* Top-left */ 0% var(--curve-size),
+    Top-left 0% var(--curve-size),
     var(--curve-size) 0,
-    /* top-right */ 100% 0,
+    top-right 100% 0,
     100% calc(100% - var(--curve-size)),
-    /* bottom-right 1 */ calc(100% - var(--curve-size)) 100%,
-    /* bottom-right 2 */ 0 100%
+    bottom-right 1 calc(100% - var(--curve-size)) 100%,
+    bottom-right 2 0 100%
   );
   transition: color 250ms;
 }
@@ -37,11 +39,11 @@
 .btn::before {
   background: var(--border-color);
   background-size: 300% 300%;
-  animation: btn_animation 5s ease infinite;
+  animation: card_animation 5s ease infinite;
   z-index: -2;
 }
 
-@keyframes btn_animation {
+@keyframes card_animation {
   0% {
     background-position: 31% 0%;
   }
@@ -59,32 +61,32 @@
   background: var(--bg);
   z-index: -1;
   clip-path: polygon(
-    /* Top-left */ var(--border-width)
+    Top-left var(--border-width)
       calc(var(--curve-size) + var(--border-width) * 0.5),
     calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
-    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    top-right calc(100% - var(--border-width)) var(--border-width),
     calc(100% - var(--border-width))
       calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-    /* bottom-right 1 */
+    bottom-right 1
       calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
       calc(100% - var(--border-width)),
-    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+    bottom-right 2 var(--border-width) calc(100% - var(--border-width))
   );
   transition: clip-path 500ms;
 }
 
 .btn:where(:hover, :focus)::after {
   clip-path: polygon(
-    /* Top-left */ calc(100% - var(--border-width))
+    Top-left calc(100% - var(--border-width))
       calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
     calc(100% - var(--border-width)) var(--border-width),
-    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    top-right calc(100% - var(--border-width)) var(--border-width),
     calc(100% - var(--border-width))
       calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
-    /* bottom-right 1 */
+    bottom-right 1
       calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
       calc(100% - var(--border-width)),
-    /* bottom-right 2 */
+    bottom-right 2
       calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
       calc(100% - var(--border-width))
   );
@@ -93,5 +95,23 @@
 
 .btn:where(:hover, :focus) {
   color: #fff;
+} */
+.card {
+  --curve-size: 1.5em;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+  background-color: rgb(255, 255, 255, 0.1);
+  position: relative;
+  isolation: isolate;
+
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  clip-path: polygon(
+    0% var(--curve-size),
+    var(--curve-size) 0,
+    100% 0,
+    100% calc(100% - var(--curve-size)),
+    calc(100% - var(--curve-size)) 100%,
+    0 100%
+  );
 }
-/* Filled */
