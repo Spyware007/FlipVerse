@@ -83,14 +83,31 @@ const getProduct = asyncHandler(async (req, res) => {
 
 	const pId = id.toString();
 
-	const product = await Product.findById(pId);
+	const product = await Product.findById(pId)
+		.populate("createdBy", ["name", "email"])
+		.exec();
+
+	const buffer = Buffer.from(product.image);
+	const base64Image = buffer.toString("base64");
 
 	if (!product) {
 		res.status(404);
 		throw new Error("Product not found");
 	}
 
-	res.status(200).json({ product });
+	const { title, createdBy, brand, description, category, price } = product;
+
+	res
+		.status(200)
+		.json({
+			title,
+			createdBy,
+			brand,
+			description,
+			image: base64Image,
+			price,
+			category,
+		});
 });
 
 const deleteProduct = asyncHandler(async (req, res) => {
@@ -113,9 +130,40 @@ const deleteProduct = asyncHandler(async (req, res) => {
 	await seller.save();
 	res.status(201).json({ message: "Product removed successfully" });
 });
+
+const uploadProductImage = asyncHandler(async (req, res) => {
+	const {
+		file,
+		params: { id },
+	} = req;
+
+	const pId = id.toString();
+	const product = await Product.findById(pId);
+
+	let imageType = "";
+	const fileName = file.originalname;
+
+	for (let i = fileName.length - 1; i >= 0; i--) {
+		imageType += fileName[i];
+		if (fileName[i] == ".") break;
+	}
+
+	const arrStrs = imageType.split("");
+	const reverseStrsArray = arrStrs.reverse();
+	const joinedString = reverseStrsArray.join("");
+
+	product.imageType = joinedString;
+	product.image = file.buffer;
+
+	await product.save();
+
+	res.status(201).json({ message: "Image added successfully", product });
+});
+
 export {
 	getSellerProfile,
 	updateSellerProfile,
+	uploadProductImage,
 	createProduct,
 	deleteProduct,
 	getProduct,

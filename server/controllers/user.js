@@ -35,7 +35,6 @@ const uploadUserImage = asyncHandler(async (req, res) => {
 	const fileName = req.file.originalname;
 
 	for (let i = fileName.length - 1; i >= 0; i--) {
-		console.log(fileName[i]);
 		imageType += fileName[i];
 		if (fileName[i] == ".") break;
 	}
