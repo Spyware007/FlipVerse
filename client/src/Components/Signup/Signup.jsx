@@ -18,7 +18,7 @@ const Signup = () => {
                     type="name"
                     // value={name}
                     label="Name"
-                    name="email"
+                    name="name"
                     placeholder="Name"
                     required
                   />
@@ -45,7 +45,7 @@ const Signup = () => {
                     type="password"
                     // value={name}
                     label="Confirm Password"
-                    name="password"
+                    name="confirm_password"
                     placeholder="Confirm Password"
                     required
                   />

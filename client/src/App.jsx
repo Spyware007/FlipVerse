@@ -13,6 +13,7 @@ import {
 } from "./Components";
 
 import "./App.css";
+import SingleProductCard from "./Components/UI/SingleProductCard/SingleProductCard";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -41,6 +42,7 @@ const App = () => {
           </>
         )}
         {/* <Footer /> */}
+        <SingleProductCard />
       </div>
     </>
   );
