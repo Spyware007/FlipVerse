@@ -36,7 +36,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
 		user.email = email || user.email;
 		user.role = role || user.role;
 		user.image = image || user.image;
-		user.address = address || address.image;
+		user.address = address || user.address;
 
 		await user.save();
 		res.status(200).json({
