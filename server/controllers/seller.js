@@ -1,6 +1,7 @@
 import asyncHandler from "express-async-handler";
 import Seller from "../models/Seller.js";
 import Product from "../models/Product.js";
+import { verifyId, findProductInProductsArray } from "../utils/helpers.js";
 
 //@desc Get seller Profile
 //@route /seller/profile
@@ -82,25 +83,51 @@ const getProduct = asyncHandler(async (req, res) => {
 	} = req;
 
 	const pId = id.toString();
+	if (!verifyId(pId)) {
+		res.status(400);
+		throw new Error("Product ID invalid");
+	}
 
-	const product = await Product.findById(pId);
+	const product = await Product.findById(pId)
+		.populate("createdBy", ["name", "email"])
+		.exec();
 
 	if (!product) {
 		res.status(404);
 		throw new Error("Product not found");
 	}
 
-	res.status(200).json({ product });
+	let buffer, base64Image;
+	if (product.image) {
+		buffer = Buffer.from(product.image);
+		base64Image = buffer.toString("base64");
+	}
+
+	const { title, createdBy, brand, description, category, price } = product;
+
+	res.status(200).json({
+		title,
+		createdBy,
+		brand,
+		description,
+		image: product.image ? base64Image : "",
+		price,
+		category,
+	});
 });
 
 const deleteProduct = asyncHandler(async (req, res) => {
 	const { params, seller } = req;
 	const pId = params.id.toString();
+
+	if (!verifyId(pId)) {
+		res.status(400);
+		throw new Error("Product ID invalid");
+	}
+
 	const product = await Product.findById(pId);
 
-	const pIdIndex = seller.products.find((id) => {
-		return id.toString() === pId;
-	});
+	const pIdIndex = findProductInProductsArray(seller.products, pId);
 
 	if (!product || pIdIndex < -1) {
 		res.status(404);
@@ -113,9 +140,34 @@ const deleteProduct = asyncHandler(async (req, res) => {
 	await seller.save();
 	res.status(201).json({ message: "Product removed successfully" });
 });
+
+const uploadProductImage = asyncHandler(async (req, res) => {
+	const {
+		file,
+		params: { id },
+		seller,
+	} = req;
+
+	const pId = id.toString();
+	const product = await Product.findById(pId);
+	const pIdIndex = findProductInProductsArray(seller.products, pId);
+
+	if (!product || pIdIndex < -1) {
+		res.status(404);
+		throw new Error("Product not found");
+	}
+
+	product.image = file.buffer;
+
+	await product.save();
+
+	res.status(201).json({ message: "Image added successfully", product });
+});
+
 export {
 	getSellerProfile,
 	updateSellerProfile,
+	uploadProductImage,
 	createProduct,
 	deleteProduct,
 	getProduct,
