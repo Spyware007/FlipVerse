@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .left_section {
   width: 50vw;
@@ -53,22 +53,4 @@
   font-size: 1rem;
   font-weight: 400;
   margin-left: 25px;
-}
-#upper_part {
-  /* display: none; */
-  /* transform: translate(0, 0); */
-  animation: floating 5s ease-in-out infinite;
-}
-@keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
-
-  50% {
-    transform: translate(0, 40px);
-  }
-
-  100% {
-    transform: translate(0, -0px);
-  }
 }
