@@ -31,7 +31,7 @@ const userSchema = new Schema(
 			default: "Subscriber",
 		},
 		image: {
-			type: String,
+			type: Buffer,
 		},
 		wishList: [
 			{

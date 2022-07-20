@@ -16,6 +16,7 @@ const getAllUsers = async (req, res) => {
 const createUser = asyncHandler(async (req, res) => {
 	let { name, email, password, role, address } = req.body;
 	password = password.toString();
+
 	if (!name || !email || !password || !validateEmail(email) || !address) {
 		res.status(404);
 		throw new Error("Please provide valid credentials");
