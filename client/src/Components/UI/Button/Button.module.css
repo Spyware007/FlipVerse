@@ -25,6 +25,7 @@
     /* bottom-right 2 */ 0 100%
   );
   transition: color 250ms;
+  cursor: pointer;
 }
 
 .btn::after,
@@ -95,3 +96,93 @@
   color: #fff;
 }
 /* Filled */
+.fill {
+  --curve-size: 0.5em;
+  --color: #afffff;
+  color: var(--color);
+  background-color: rgb(255, 255, 255);
+  background: linear-gradient(128.92deg, #00d1ff 2.28%, #cd63ff 72.34%);
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 0.5em 2em;
+  font-size: 17px;
+  border: 0;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  clip-path: polygon(
+    0% var(--curve-size),
+    var(--curve-size) 0,
+    100% 0,
+    100% calc(100% - var(--curve-size)),
+    calc(100% - var(--curve-size)) 100%,
+    0 100%
+  );
+  cursor: pointer;
+}
+.fill::after,
+.fill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.fill::before {
+  background: linear-gradient(128.92deg, #00d1ff 2.28%, #cd63ff 72.34%);
+  background-size: 300% 300%;
+  animation: btn_animation 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes btn_animation {
+  0% {
+    background-position: 31% 0%;
+  }
+
+  50% {
+    background-position: 70% 100%;
+  }
+
+  100% {
+    background-position: 31% 0%;
+  }
+}
+.fill::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+    /* Top-left */ var(--border-width)
+      calc(var(--curve-size) + var(--border-width) * 0.5),
+    calc(var(--curve-size) + var(--border-width) * 0.5) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */ var(--border-width) calc(100% - var(--border-width))
+  );
+  transition: clip-path 500ms;
+}
+
+.fill:where(:hover, :focus)::after {
+  clip-path: polygon(
+    /* Top-left */ calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    calc(100% - var(--border-width)) var(--border-width),
+    /* top-right */ calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width))
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    /* bottom-right 1 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width)),
+    /* bottom-right 2 */
+      calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+      calc(100% - var(--border-width))
+  );
+  transition: 200ms;
+}
+
+.fill:where(:hover, :focus) {
+  color: #ffffff;
+}
