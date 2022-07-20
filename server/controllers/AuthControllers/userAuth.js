@@ -14,9 +14,9 @@ const getAllUsers = async (req, res) => {
 // @route /signup
 // @access Public
 const createUser = asyncHandler(async (req, res) => {
-	let { name, email, password, role } = req.body;
+	let { name, email, password, role, address } = req.body;
 	password = password.toString();
-	if (!name || !email || !password || !validateEmail(email)) {
+	if (!name || !email || !password || !validateEmail(email) || !address) {
 		res.status(404);
 		throw new Error("Please provide valid credentials");
 	}
@@ -33,11 +33,12 @@ const createUser = asyncHandler(async (req, res) => {
 		email,
 		password,
 		role,
+		address,
 	});
 
 	const token = await user.generateAuthToken();
 
-	res.status(201).json({ name, email, role, token });
+	res.status(201).json({ name, email, role, token, address });
 });
 
 // @desc Login User
