@@ -24,6 +24,10 @@ const productSchema = new Schema(
 		image: {
 			type: Buffer,
 		},
+		sold: {
+			type: Boolean,
+			default: false,
+		},
 		createdBy: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "Seller",

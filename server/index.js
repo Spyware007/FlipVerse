@@ -4,6 +4,7 @@ import "dotenv/config.js";
 import connectDB from "./config/db.js";
 import { errorMiddleware, notFound } from "./middleware/errorMiddleware.js";
 import userRouter from "./routes/user.js";
+import productRouter from "./routes/product.js";
 import sellerRouter from "./routes/seller.js";
 import userAuthRouter from "./routes/authRoutes/userAuth.js";
 import sellerAuthRouter from "./routes/authRoutes/sellerAuth.js";
@@ -25,6 +26,7 @@ app.use(errorMiddleware);
 // Routers
 app.use(userRouter);
 app.use(sellerRouter);
+app.use(productRouter);
 app.use(userAuthRouter);
 app.use(sellerAuthRouter);
 

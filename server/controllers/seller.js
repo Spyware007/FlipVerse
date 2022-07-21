@@ -1,7 +1,7 @@
 import asyncHandler from "express-async-handler";
 import Seller from "../models/Seller.js";
 import Product from "../models/Product.js";
-import { verifyId, findProductInProductsArray } from "../utils/helpers.js";
+import { verifyId, getIndexOfProduct } from "../utils/helpers.js";
 
 //@desc Get seller Profile
 //@route /seller/profile
@@ -112,6 +112,7 @@ const getProduct = asyncHandler(async (req, res) => {
 		description,
 		image: product.image ? base64Image : "",
 		price,
+
 		category,
 	});
 });
@@ -127,7 +128,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
 
 	const product = await Product.findById(pId);
 
-	const pIdIndex = findProductInProductsArray(seller.products, pId);
+	const pIdIndex = getIndexOfProduct(seller.products, pId);
 
 	if (!product || pIdIndex < -1) {
 		res.status(404);
@@ -150,7 +151,7 @@ const uploadProductImage = asyncHandler(async (req, res) => {
 
 	const pId = id.toString();
 	const product = await Product.findById(pId);
-	const pIdIndex = findProductInProductsArray(seller.products, pId);
+	const pIdIndex = getIndexOfProduct(seller.products, pId);
 
 	if (!product || pIdIndex < -1) {
 		res.status(404);
