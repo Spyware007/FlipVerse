@@ -5,10 +5,15 @@ import {
 	removeProductFromWishList,
 	getWishListedProducts,
 	getPurchasedProducts,
+	getProducts,
+	getProductsByCategory,
 } from "../controllers/product.js";
 import userAuthMiddleware from "../middleware/userAuth.js";
 
 const productRouter = express.Router();
+
+productRouter.route("/api/products").get(getProducts);
+productRouter.route("/api/products/category").get(getProductsByCategory);
 
 productRouter
 	.route("/api/user/wishlist")
