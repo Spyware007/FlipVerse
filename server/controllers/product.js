@@ -1,8 +1,7 @@
-import User from "../models/User.js";
 import Product from "../models/Product.js";
-import mongoose from "mongoose";
 import asyncHandler from "express-async-handler";
 import { getIndexOfProduct, verifyId } from "../utils/helpers.js";
+import User from "../models/User.js";
 
 const addProductToWishList = asyncHandler(async (req, res) => {
 	const {
@@ -11,27 +10,27 @@ const addProductToWishList = asyncHandler(async (req, res) => {
 	} = req;
 
 	if (!id) {
-		res.status(400);
+		res.status(400).json({ message: "Product ID invalid!" });
 		throw new Error("Product ID invalid");
 	}
 
 	const pId = id.toString();
 	if (!verifyId(pId)) {
-		res.status(400);
+		res.status(400).json({ message: "Product ID invalid!" });
 		throw new Error("Product ID invalid");
 	}
 
 	const productIndex = getIndexOfProduct(wishList, id);
 
 	if (productIndex > -1) {
-		res.status(400);
+		res.status(400).json({ message: "Product is already wishlisted!" });
 		throw new Error("Product is already wishlisted!");
 	}
 
 	const product = await Product.findById(pId);
 
-	if (!product) {
-		res.status(400);
+	if (!product || product.sold) {
+		res.status(400).json({ message: "Product not found!" });
 		throw new Error("Product not found!");
 	}
 
@@ -47,20 +46,20 @@ const removeProductFromWishList = asyncHandler(async (req, res) => {
 	} = req;
 
 	if (!id) {
-		res.status(400);
+		res.status(400).json({ message: "Product ID invalid!" });
 		throw new Error("Product ID invalid");
 	}
 
 	const pId = id.toString();
 	if (!verifyId(pId)) {
-		res.status(400);
+		res.status(400).json({ message: "Product ID invalid!" });
 		throw new Error("Product ID invalid");
 	}
 
 	const productIndex = getIndexOfProduct(wishList, id);
 
 	if (productIndex === -1) {
-		res.status(400);
+		res.status(400).json({ message: "Product is not wishlisted!" });
 		throw new Error("Product is not wishlisted!");
 	}
 
@@ -69,4 +68,61 @@ const removeProductFromWishList = asyncHandler(async (req, res) => {
 	res.status(200).json({ message: "Removed product from wishlist!" });
 });
 
-export { addProductToWishList, removeProductFromWishList };
+const purchaseProduct = asyncHandler(async (req, res) => {
+	const {
+		params: { id },
+		user: { purchasedProducts },
+	} = req;
+
+	if (!id) {
+		res.status(400).json({ message: "Product ID invalid" });
+		throw new Error("Product ID invalid");
+	}
+
+	const pId = id.toString();
+
+	if (!verifyId(pId)) {
+		res.status(400).json({ message: "Product ID invalid" });
+		throw new Error("Product ID invalid");
+	}
+
+	const product = await Product.findById(pId, { _id: 1, sold: 1 });
+
+	if (!product || product.sold) {
+		res.status(400).json({ message: "Product not found" });
+		throw new Error("Product not found!");
+	}
+
+	const productIndex = getIndexOfProduct(purchasedProducts, id);
+
+	if (productIndex > -1) {
+		res.status(400).json({ message: "Product already purchased" });
+		throw new Error("Product already purchased");
+	}
+
+	product.sold = true;
+	purchasedProducts.push(id);
+	await product.save();
+	await req.user.save();
+	res.status(200).json({ message: "Purchased product successfully" });
+});
+
+const getWishListedProducts = asyncHandler(async (req, res) => {
+	const user = await User.findById(req.user._id).populate("wishList").exec();
+	res.status(200).json({ wishList: user.wishList });
+});
+
+const getPurchasedProducts = asyncHandler(async (req, res) => {
+	const user = await User.findById(req.user._id)
+		.populate("purchasedProducts")
+		.exec();
+	res.status(200).json({ purchasedProducts: user.purchasedProducts });
+});
+
+export {
+	getWishListedProducts,
+	addProductToWishList,
+	removeProductFromWishList,
+	purchaseProduct,
+	getPurchasedProducts,
+};

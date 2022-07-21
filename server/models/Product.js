@@ -24,11 +24,9 @@ const productSchema = new Schema(
 		image: {
 			type: Buffer,
 		},
-		stock: {
-			type: Number,
-			required: [true, "Please enter product stock"],
-			maxlength: [4, "Stock cannot exceed limit"],
-			default: 1,
+		sold: {
+			type: Boolean,
+			default: false,
 		},
 		createdBy: {
 			type: mongoose.Schema.Types.ObjectId,

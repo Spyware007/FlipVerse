@@ -55,9 +55,9 @@ const updateSellerProfile = asyncHandler(async (req, res) => {
 });
 
 const createProduct = asyncHandler(async (req, res) => {
-	const { title, category, price, brand, description, stock } = req.body;
+	const { title, category, price, brand, description } = req.body;
 
-	if (!title || !category || price < 1 || !stock) {
+	if (!title || !category || price < 1) {
 		res.status(400);
 		throw new Error("Please provide valid details");
 	}
@@ -68,7 +68,6 @@ const createProduct = asyncHandler(async (req, res) => {
 		brand,
 		category,
 		description,
-		stock,
 		createdBy: req.seller._id,
 	});
 
@@ -104,8 +103,7 @@ const getProduct = asyncHandler(async (req, res) => {
 		base64Image = buffer.toString("base64");
 	}
 
-	const { title, createdBy, brand, description, category, price, stock } =
-		product;
+	const { title, createdBy, brand, description, category, price } = product;
 
 	res.status(200).json({
 		title,
@@ -114,7 +112,7 @@ const getProduct = asyncHandler(async (req, res) => {
 		description,
 		image: product.image ? base64Image : "",
 		price,
-		stock,
+
 		category,
 	});
 });
