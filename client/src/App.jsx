@@ -12,6 +12,7 @@ import {
   Navbar,
   Footer,
   NotFound,
+  Cart,
 } from "./Components";
 
 import "./App.css";
@@ -40,6 +41,7 @@ const App = () => {
               <Route path="/verifynft" element={<VerifyNft />}></Route>
               <Route path="/product/:productId" element={<Product />}></Route>
               <Route path="/user/:userId" element={<User />}></Route>
+              <Route path="/cart/:userId" element={<Cart />}></Route>
               <Route
                 path="/retailer/:retailerId"
                 element={<Retailer />}
