@@ -3,6 +3,24 @@ import asyncHandler from "express-async-handler";
 import { getIndexOfProduct, verifyId } from "../utils/helpers.js";
 import User from "../models/User.js";
 
+const getProducts = asyncHandler(async (req, res) => {
+	const products = await Product.find({ sold: false });
+	res.status(201).json({ products });
+});
+
+const getProductsByCategory = asyncHandler(async (req, res) => {
+	const {
+		query: { category },
+	} = req;
+
+	if (!category) {
+		res.status(400).json({ message: "Please enter category" });
+	}
+
+	const products = await Product.find({ category });
+	res.status(200).json({ products });
+});
+
 const addProductToWishList = asyncHandler(async (req, res) => {
 	const {
 		params: { id },
@@ -120,9 +138,11 @@ const getPurchasedProducts = asyncHandler(async (req, res) => {
 });
 
 export {
+	getProducts,
 	getWishListedProducts,
 	addProductToWishList,
 	removeProductFromWishList,
 	purchaseProduct,
 	getPurchasedProducts,
+	getProductsByCategory,
 };
