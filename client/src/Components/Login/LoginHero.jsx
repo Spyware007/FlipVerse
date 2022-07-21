@@ -572,13 +572,13 @@ const LoginHero = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(1030.28 594.824) scale(826.911 826.911)"
         >
-          <stop offset="0.14" stop-color="white" />
-          <stop offset="0.15" stop-color="#FCFCFC" stop-opacity="0.99" />
-          <stop offset="0.35" stop-color="#A4A4A4" stop-opacity="0.64" />
-          <stop offset="0.53" stop-color="#5E5E5E" stop-opacity="0.37" />
-          <stop offset="0.68" stop-color="#2B2B2B" stop-opacity="0.17" />
-          <stop offset="0.79" stop-color="#0C0C0C" stop-opacity="0.05" />
-          <stop offset="0.86" stop-opacity="0" />
+          <stop offset="0.14" stopColor="white" />
+          <stop offset="0.15" stopColor="#FCFCFC" stopOpacity="0.99" />
+          <stop offset="0.35" stopColor="#A4A4A4" stopOpacity="0.64" />
+          <stop offset="0.53" stopColor="#5E5E5E" stopOpacity="0.37" />
+          <stop offset="0.68" stopColor="#2B2B2B" stopOpacity="0.17" />
+          <stop offset="0.79" stopColor="#0C0C0C" stopOpacity="0.05" />
+          <stop offset="0.86" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint1_radial_354_8916"
@@ -588,12 +588,12 @@ const LoginHero = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(825.649 460.704) scale(249.676)"
         >
-          <stop stop-color="white" />
-          <stop offset="0.29" stop-color="#A6A6A6" stop-opacity="0.65" />
-          <stop offset="0.54" stop-color="#5F5F5F" stop-opacity="0.37" />
-          <stop offset="0.75" stop-color="#2B2B2B" stop-opacity="0.17" />
-          <stop offset="0.91" stop-color="#0C0C0C" stop-opacity="0.05" />
-          <stop offset="1" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="0.29" stopColor="#A6A6A6" stopOpacity="0.65" />
+          <stop offset="0.54" stopColor="#5F5F5F" stopOpacity="0.37" />
+          <stop offset="0.75" stopColor="#2B2B2B" stopOpacity="0.17" />
+          <stop offset="0.91" stopColor="#0C0C0C" stopOpacity="0.05" />
+          <stop offset="1" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint2_radial_354_8916"
@@ -603,12 +603,12 @@ const LoginHero = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(1198.76 701.629) scale(249.676)"
         >
-          <stop stop-color="white" />
-          <stop offset="0.29" stop-color="#A6A6A6" stop-opacity="0.65" />
-          <stop offset="0.54" stop-color="#5F5F5F" stop-opacity="0.37" />
-          <stop offset="0.75" stop-color="#2B2B2B" stop-opacity="0.17" />
-          <stop offset="0.91" stop-color="#0C0C0C" stop-opacity="0.05" />
-          <stop offset="1" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="0.29" stopColor="#A6A6A6" stopOpacity="0.65" />
+          <stop offset="0.54" stopColor="#5F5F5F" stopOpacity="0.37" />
+          <stop offset="0.75" stopColor="#2B2B2B" stopOpacity="0.17" />
+          <stop offset="0.91" stopColor="#0C0C0C" stopOpacity="0.05" />
+          <stop offset="1" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint3_radial_354_8916"
@@ -618,12 +618,12 @@ const LoginHero = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(1285.47 830.028) rotate(29.8865) scale(102.013 24.4978)"
         >
-          <stop stop-color="white" />
-          <stop offset="0.29" stop-color="#A6A6A6" stop-opacity="0.65" />
-          <stop offset="0.54" stop-color="#5F5F5F" stop-opacity="0.37" />
-          <stop offset="0.75" stop-color="#2B2B2B" stop-opacity="0.17" />
-          <stop offset="0.91" stop-color="#0C0C0C" stop-opacity="0.05" />
-          <stop offset="1" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="0.29" stopColor="#A6A6A6" stopOpacity="0.65" />
+          <stop offset="0.54" stopColor="#5F5F5F" stopOpacity="0.37" />
+          <stop offset="0.75" stopColor="#2B2B2B" stopOpacity="0.17" />
+          <stop offset="0.91" stopColor="#0C0C0C" stopOpacity="0.05" />
+          <stop offset="1" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint4_radial_354_8916"
@@ -633,12 +633,12 @@ const LoginHero = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(1355.1 773.99) rotate(29.8284) scale(101.709 23.7988)"
         >
-          <stop stop-color="white" />
-          <stop offset="0.29" stop-color="#A6A6A6" stop-opacity="0.65" />
-          <stop offset="0.54" stop-color="#5F5F5F" stop-opacity="0.37" />
-          <stop offset="0.75" stop-color="#2B2B2B" stop-opacity="0.17" />
-          <stop offset="0.91" stop-color="#0C0C0C" stop-opacity="0.05" />
-          <stop offset="1" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="0.29" stopColor="#A6A6A6" stopOpacity="0.65" />
+          <stop offset="0.54" stopColor="#5F5F5F" stopOpacity="0.37" />
+          <stop offset="0.75" stopColor="#2B2B2B" stopOpacity="0.17" />
+          <stop offset="0.91" stopColor="#0C0C0C" stopOpacity="0.05" />
+          <stop offset="1" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint5_radial_354_8916"
@@ -648,12 +648,12 @@ const LoginHero = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(1431.36 738.529) rotate(29.8284) scale(101.709 23.7988)"
         >
-          <stop stop-color="white" />
-          <stop offset="0.29" stop-color="#A6A6A6" stop-opacity="0.65" />
-          <stop offset="0.54" stop-color="#5F5F5F" stop-opacity="0.37" />
-          <stop offset="0.75" stop-color="#2B2B2B" stop-opacity="0.17" />
-          <stop offset="0.91" stop-color="#0C0C0C" stop-opacity="0.05" />
-          <stop offset="1" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="0.29" stopColor="#A6A6A6" stopOpacity="0.65" />
+          <stop offset="0.54" stopColor="#5F5F5F" stopOpacity="0.37" />
+          <stop offset="0.75" stopColor="#2B2B2B" stopOpacity="0.17" />
+          <stop offset="0.91" stopColor="#0C0C0C" stopOpacity="0.05" />
+          <stop offset="1" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint6_radial_354_8916"
@@ -663,12 +663,12 @@ const LoginHero = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(620.441 748.377) rotate(152.438) scale(101.709 23.7988)"
         >
-          <stop stop-color="white" />
-          <stop offset="0.29" stop-color="#A6A6A6" stop-opacity="0.65" />
-          <stop offset="0.54" stop-color="#5F5F5F" stop-opacity="0.37" />
-          <stop offset="0.75" stop-color="#2B2B2B" stop-opacity="0.17" />
-          <stop offset="0.91" stop-color="#0C0C0C" stop-opacity="0.05" />
-          <stop offset="1" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="0.29" stopColor="#A6A6A6" stopOpacity="0.65" />
+          <stop offset="0.54" stopColor="#5F5F5F" stopOpacity="0.37" />
+          <stop offset="0.75" stopColor="#2B2B2B" stopOpacity="0.17" />
+          <stop offset="0.91" stopColor="#0C0C0C" stopOpacity="0.05" />
+          <stop offset="1" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint7_radial_354_8916"
@@ -678,12 +678,12 @@ const LoginHero = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(702.83 785.05) rotate(152.438) scale(101.709 23.7988)"
         >
-          <stop stop-color="white" />
-          <stop offset="0.29" stop-color="#A6A6A6" stop-opacity="0.65" />
-          <stop offset="0.54" stop-color="#5F5F5F" stop-opacity="0.37" />
-          <stop offset="0.75" stop-color="#2B2B2B" stop-opacity="0.17" />
-          <stop offset="0.91" stop-color="#0C0C0C" stop-opacity="0.05" />
-          <stop offset="1" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="0.29" stopColor="#A6A6A6" stopOpacity="0.65" />
+          <stop offset="0.54" stopColor="#5F5F5F" stopOpacity="0.37" />
+          <stop offset="0.75" stopColor="#2B2B2B" stopOpacity="0.17" />
+          <stop offset="0.91" stopColor="#0C0C0C" stopOpacity="0.05" />
+          <stop offset="1" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint8_radial_354_8916"
@@ -693,12 +693,12 @@ const LoginHero = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(763.979 829.074) rotate(152.438) scale(101.709 23.7988)"
         >
-          <stop stop-color="white" />
-          <stop offset="0.29" stop-color="#A6A6A6" stop-opacity="0.65" />
-          <stop offset="0.54" stop-color="#5F5F5F" stop-opacity="0.37" />
-          <stop offset="0.75" stop-color="#2B2B2B" stop-opacity="0.17" />
-          <stop offset="0.91" stop-color="#0C0C0C" stop-opacity="0.05" />
-          <stop offset="1" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="0.29" stopColor="#A6A6A6" stopOpacity="0.65" />
+          <stop offset="0.54" stopColor="#5F5F5F" stopOpacity="0.37" />
+          <stop offset="0.75" stopColor="#2B2B2B" stopOpacity="0.17" />
+          <stop offset="0.91" stopColor="#0C0C0C" stopOpacity="0.05" />
+          <stop offset="1" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint9_linear_354_8916"
@@ -708,8 +708,8 @@ const LoginHero = () => {
           y2="672.332"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4F33A3" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#4F33A3" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint10_linear_354_8916"
@@ -719,8 +719,8 @@ const LoginHero = () => {
           y2="702.602"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4F33A3" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#4F33A3" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint11_linear_354_8916"
@@ -730,8 +730,8 @@ const LoginHero = () => {
           y2="695.583"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4F33A3" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#4F33A3" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint12_linear_354_8916"
@@ -741,8 +741,8 @@ const LoginHero = () => {
           y2="628.946"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#7760BD" />
-          <stop offset="1" stop-color="#C17FFF" />
+          <stop stopColor="#7760BD" />
+          <stop offset="1" stopColor="#C17FFF" />
         </linearGradient>
         <linearGradient
           id="paint13_linear_354_8916"
@@ -752,8 +752,8 @@ const LoginHero = () => {
           y2="625.039"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#6244BD" />
-          <stop offset="1" stop-color="#2F118A" />
+          <stop stopColor="#6244BD" />
+          <stop offset="1" stopColor="#2F118A" />
         </linearGradient>
         <linearGradient
           id="paint14_linear_354_8916"
@@ -763,8 +763,8 @@ const LoginHero = () => {
           y2="616.019"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4F33A3" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#4F33A3" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <radialGradient
           id="paint15_radial_354_8916"
@@ -774,12 +774,12 @@ const LoginHero = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(1203.79 402.386) rotate(28.56) scale(270.294 38.6135)"
         >
-          <stop stop-color="white" />
-          <stop offset="0.29" stop-color="#A6A6A6" stop-opacity="0.65" />
-          <stop offset="0.54" stop-color="#5F5F5F" stop-opacity="0.37" />
-          <stop offset="0.75" stop-color="#2B2B2B" stop-opacity="0.17" />
-          <stop offset="0.91" stop-color="#0C0C0C" stop-opacity="0.05" />
-          <stop offset="1" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="0.29" stopColor="#A6A6A6" stopOpacity="0.65" />
+          <stop offset="0.54" stopColor="#5F5F5F" stopOpacity="0.37" />
+          <stop offset="0.75" stopColor="#2B2B2B" stopOpacity="0.17" />
+          <stop offset="0.91" stopColor="#0C0C0C" stopOpacity="0.05" />
+          <stop offset="1" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint16_radial_354_8916"
@@ -789,12 +789,12 @@ const LoginHero = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(847.486 617.614) rotate(28.56) scale(270.294 38.6135)"
         >
-          <stop stop-color="white" />
-          <stop offset="0.29" stop-color="#A6A6A6" stop-opacity="0.65" />
-          <stop offset="0.54" stop-color="#5F5F5F" stop-opacity="0.37" />
-          <stop offset="0.75" stop-color="#2B2B2B" stop-opacity="0.17" />
-          <stop offset="0.91" stop-color="#0C0C0C" stop-opacity="0.05" />
-          <stop offset="1" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="0.29" stopColor="#A6A6A6" stopOpacity="0.65" />
+          <stop offset="0.54" stopColor="#5F5F5F" stopOpacity="0.37" />
+          <stop offset="0.75" stopColor="#2B2B2B" stopOpacity="0.17" />
+          <stop offset="0.91" stopColor="#0C0C0C" stopOpacity="0.05" />
+          <stop offset="1" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint17_linear_354_8916"
@@ -804,8 +804,8 @@ const LoginHero = () => {
           y2="610.697"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#7F70D1" />
-          <stop offset="1" stop-color="#402F9E" />
+          <stop stopColor="#7F70D1" />
+          <stop offset="1" stopColor="#402F9E" />
         </linearGradient>
         <linearGradient
           id="paint18_linear_354_8916"
@@ -815,8 +815,8 @@ const LoginHero = () => {
           y2="578.067"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#D065D6" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="#D065D6" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint19_linear_354_8916"
@@ -826,15 +826,15 @@ const LoginHero = () => {
           y2="481.065"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint20_linear_354_8916"
@@ -844,15 +844,15 @@ const LoginHero = () => {
           y2="480.877"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint21_linear_354_8916"
@@ -862,15 +862,15 @@ const LoginHero = () => {
           y2="480.687"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint22_linear_354_8916"
@@ -880,15 +880,15 @@ const LoginHero = () => {
           y2="480.499"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint23_linear_354_8916"
@@ -898,15 +898,15 @@ const LoginHero = () => {
           y2="480.311"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint24_linear_354_8916"
@@ -916,15 +916,15 @@ const LoginHero = () => {
           y2="480.122"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint25_linear_354_8916"
@@ -934,15 +934,15 @@ const LoginHero = () => {
           y2="479.933"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint26_linear_354_8916"
@@ -952,15 +952,15 @@ const LoginHero = () => {
           y2="479.745"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint27_linear_354_8916"
@@ -970,15 +970,15 @@ const LoginHero = () => {
           y2="479.555"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint28_linear_354_8916"
@@ -988,15 +988,15 @@ const LoginHero = () => {
           y2="479.367"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint29_linear_354_8916"
@@ -1006,15 +1006,15 @@ const LoginHero = () => {
           y2="479.178"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint30_linear_354_8916"
@@ -1024,15 +1024,15 @@ const LoginHero = () => {
           y2="478.99"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint31_linear_354_8916"
@@ -1042,15 +1042,15 @@ const LoginHero = () => {
           y2="478.8"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint32_linear_354_8916"
@@ -1060,15 +1060,15 @@ const LoginHero = () => {
           y2="478.612"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint33_linear_354_8916"
@@ -1078,15 +1078,15 @@ const LoginHero = () => {
           y2="478.424"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint34_linear_354_8916"
@@ -1096,15 +1096,15 @@ const LoginHero = () => {
           y2="478.235"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint35_linear_354_8916"
@@ -1114,15 +1114,15 @@ const LoginHero = () => {
           y2="478.046"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint36_linear_354_8916"
@@ -1132,15 +1132,15 @@ const LoginHero = () => {
           y2="477.858"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint37_linear_354_8916"
@@ -1150,15 +1150,15 @@ const LoginHero = () => {
           y2="477.668"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint38_linear_354_8916"
@@ -1168,15 +1168,15 @@ const LoginHero = () => {
           y2="477.48"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint39_linear_354_8916"
@@ -1186,15 +1186,15 @@ const LoginHero = () => {
           y2="477.291"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint40_linear_354_8916"
@@ -1204,15 +1204,15 @@ const LoginHero = () => {
           y2="477.103"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint41_linear_354_8916"
@@ -1222,15 +1222,15 @@ const LoginHero = () => {
           y2="476.913"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint42_linear_354_8916"
@@ -1240,15 +1240,15 @@ const LoginHero = () => {
           y2="476.725"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint43_linear_354_8916"
@@ -1258,15 +1258,15 @@ const LoginHero = () => {
           y2="476.537"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint44_linear_354_8916"
@@ -1276,15 +1276,15 @@ const LoginHero = () => {
           y2="476.347"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint45_linear_354_8916"
@@ -1294,15 +1294,15 @@ const LoginHero = () => {
           y2="476.159"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint46_linear_354_8916"
@@ -1312,15 +1312,15 @@ const LoginHero = () => {
           y2="475.97"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint47_linear_354_8916"
@@ -1330,15 +1330,15 @@ const LoginHero = () => {
           y2="474.781"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint48_linear_354_8916"
@@ -1348,15 +1348,15 @@ const LoginHero = () => {
           y2="475.593"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint49_linear_354_8916"
@@ -1366,15 +1366,15 @@ const LoginHero = () => {
           y2="475.403"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint50_linear_354_8916"
@@ -1384,15 +1384,15 @@ const LoginHero = () => {
           y2="475.216"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint51_linear_354_8916"
@@ -1402,15 +1402,15 @@ const LoginHero = () => {
           y2="475.026"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint52_linear_354_8916"
@@ -1420,15 +1420,15 @@ const LoginHero = () => {
           y2="474.837"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint53_linear_354_8916"
@@ -1438,15 +1438,15 @@ const LoginHero = () => {
           y2="474.649"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint54_linear_354_8916"
@@ -1456,15 +1456,15 @@ const LoginHero = () => {
           y2="474.46"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint55_linear_354_8916"
@@ -1474,15 +1474,15 @@ const LoginHero = () => {
           y2="474.272"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint56_linear_354_8916"
@@ -1492,15 +1492,15 @@ const LoginHero = () => {
           y2="474.083"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint57_linear_354_8916"
@@ -1510,15 +1510,15 @@ const LoginHero = () => {
           y2="473.894"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint58_linear_354_8916"
@@ -1528,15 +1528,15 @@ const LoginHero = () => {
           y2="473.706"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint59_linear_354_8916"
@@ -1546,15 +1546,15 @@ const LoginHero = () => {
           y2="473.516"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint60_linear_354_8916"
@@ -1564,15 +1564,15 @@ const LoginHero = () => {
           y2="473.328"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint61_linear_354_8916"
@@ -1582,15 +1582,15 @@ const LoginHero = () => {
           y2="473.139"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint62_linear_354_8916"
@@ -1600,15 +1600,15 @@ const LoginHero = () => {
           y2="472.95"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint63_linear_354_8916"
@@ -1618,15 +1618,15 @@ const LoginHero = () => {
           y2="472.762"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint64_linear_354_8916"
@@ -1636,15 +1636,15 @@ const LoginHero = () => {
           y2="472.573"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint65_linear_354_8916"
@@ -1654,15 +1654,15 @@ const LoginHero = () => {
           y2="472.384"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint66_linear_354_8916"
@@ -1672,15 +1672,15 @@ const LoginHero = () => {
           y2="472.196"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint67_linear_354_8916"
@@ -1690,15 +1690,15 @@ const LoginHero = () => {
           y2="472.007"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint68_linear_354_8916"
@@ -1708,15 +1708,15 @@ const LoginHero = () => {
           y2="471.819"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint69_linear_354_8916"
@@ -1726,15 +1726,15 @@ const LoginHero = () => {
           y2="471.629"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint70_linear_354_8916"
@@ -1744,15 +1744,15 @@ const LoginHero = () => {
           y2="471.441"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint71_linear_354_8916"
@@ -1762,15 +1762,15 @@ const LoginHero = () => {
           y2="471.252"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint72_linear_354_8916"
@@ -1780,15 +1780,15 @@ const LoginHero = () => {
           y2="471.063"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint73_linear_354_8916"
@@ -1798,15 +1798,15 @@ const LoginHero = () => {
           y2="470.875"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint74_linear_354_8916"
@@ -1816,15 +1816,15 @@ const LoginHero = () => {
           y2="470.686"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint75_linear_354_8916"
@@ -1834,15 +1834,15 @@ const LoginHero = () => {
           y2="470.497"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint76_linear_354_8916"
@@ -1852,15 +1852,15 @@ const LoginHero = () => {
           y2="470.309"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint77_linear_354_8916"
@@ -1870,15 +1870,15 @@ const LoginHero = () => {
           y2="470.119"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint78_linear_354_8916"
@@ -1888,15 +1888,15 @@ const LoginHero = () => {
           y2="469.931"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint79_linear_354_8916"
@@ -1906,15 +1906,15 @@ const LoginHero = () => {
           y2="469.742"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint80_linear_354_8916"
@@ -1924,15 +1924,15 @@ const LoginHero = () => {
           y2="469.554"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint81_linear_354_8916"
@@ -1942,15 +1942,15 @@ const LoginHero = () => {
           y2="469.364"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint82_linear_354_8916"
@@ -1960,15 +1960,15 @@ const LoginHero = () => {
           y2="469.176"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint83_linear_354_8916"
@@ -1978,15 +1978,15 @@ const LoginHero = () => {
           y2="468.988"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint84_linear_354_8916"
@@ -1996,15 +1996,15 @@ const LoginHero = () => {
           y2="468.799"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint85_linear_354_8916"
@@ -2014,15 +2014,15 @@ const LoginHero = () => {
           y2="468.61"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint86_linear_354_8916"
@@ -2032,15 +2032,15 @@ const LoginHero = () => {
           y2="468.422"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint87_linear_354_8916"
@@ -2050,15 +2050,15 @@ const LoginHero = () => {
           y2="468.232"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint88_linear_354_8916"
@@ -2068,15 +2068,15 @@ const LoginHero = () => {
           y2="468.044"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint89_linear_354_8916"
@@ -2086,15 +2086,15 @@ const LoginHero = () => {
           y2="467.855"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint90_linear_354_8916"
@@ -2104,15 +2104,15 @@ const LoginHero = () => {
           y2="467.667"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint91_linear_354_8916"
@@ -2122,15 +2122,15 @@ const LoginHero = () => {
           y2="467.477"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint92_linear_354_8916"
@@ -2140,15 +2140,15 @@ const LoginHero = () => {
           y2="467.289"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint93_linear_354_8916"
@@ -2158,15 +2158,15 @@ const LoginHero = () => {
           y2="467.1"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint94_linear_354_8916"
@@ -2176,15 +2176,15 @@ const LoginHero = () => {
           y2="466.911"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint95_linear_354_8916"
@@ -2194,15 +2194,15 @@ const LoginHero = () => {
           y2="466.723"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint96_linear_354_8916"
@@ -2212,15 +2212,15 @@ const LoginHero = () => {
           y2="466.534"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint97_linear_354_8916"
@@ -2230,15 +2230,15 @@ const LoginHero = () => {
           y2="466.345"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint98_linear_354_8916"
@@ -2248,15 +2248,15 @@ const LoginHero = () => {
           y2="466.157"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint99_linear_354_8916"
@@ -2266,15 +2266,15 @@ const LoginHero = () => {
           y2="465.967"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C3AAFF" />
-          <stop offset="0.08" stop-color="#A78EE9" />
-          <stop offset="0.21" stop-color="#8167CB" />
-          <stop offset="0.33" stop-color="#664AB5" />
-          <stop offset="0.43" stop-color="#5539A8" />
-          <stop offset="0.51" stop-color="#4F33A3" />
-          <stop offset="0.7" stop-color="#371C87" />
-          <stop offset="0.87" stop-color="#270E76" />
-          <stop offset="1" stop-color="#220970" />
+          <stop stopColor="#C3AAFF" />
+          <stop offset="0.08" stopColor="#A78EE9" />
+          <stop offset="0.21" stopColor="#8167CB" />
+          <stop offset="0.33" stopColor="#664AB5" />
+          <stop offset="0.43" stopColor="#5539A8" />
+          <stop offset="0.51" stopColor="#4F33A3" />
+          <stop offset="0.7" stopColor="#371C87" />
+          <stop offset="0.87" stopColor="#270E76" />
+          <stop offset="1" stopColor="#220970" />
         </linearGradient>
         <linearGradient
           id="paint100_linear_354_8916"
@@ -2284,9 +2284,9 @@ const LoginHero = () => {
           y2="542.304"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="0.51" stop-color="#F0EBFF" />
-          <stop offset="1" stop-color="#DFD4FF" />
+          <stop stopColor="white" />
+          <stop offset="0.51" stopColor="#F0EBFF" />
+          <stop offset="1" stopColor="#DFD4FF" />
         </linearGradient>
         <linearGradient
           id="paint101_linear_354_8916"
@@ -2296,16 +2296,16 @@ const LoginHero = () => {
           y2="47.3115"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="0.08" stop-color="white" stop-opacity="0.82" />
-          <stop offset="0.17" stop-color="white" stop-opacity="0.63" />
-          <stop offset="0.26" stop-color="white" stop-opacity="0.46" />
-          <stop offset="0.36" stop-color="white" stop-opacity="0.32" />
-          <stop offset="0.47" stop-color="white" stop-opacity="0.2" />
-          <stop offset="0.57" stop-color="white" stop-opacity="0.11" />
-          <stop offset="0.69" stop-color="white" stop-opacity="0.05" />
-          <stop offset="0.82" stop-color="white" stop-opacity="0.01" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop stopColor="white" />
+          <stop offset="0.08" stopColor="white" stopOpacity="0.82" />
+          <stop offset="0.17" stopColor="white" stopOpacity="0.63" />
+          <stop offset="0.26" stopColor="white" stopOpacity="0.46" />
+          <stop offset="0.36" stopColor="white" stopOpacity="0.32" />
+          <stop offset="0.47" stopColor="white" stopOpacity="0.2" />
+          <stop offset="0.57" stopColor="white" stopOpacity="0.11" />
+          <stop offset="0.69" stopColor="white" stopOpacity="0.05" />
+          <stop offset="0.82" stopColor="white" stopOpacity="0.01" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <image
           id="image0_354_8916"

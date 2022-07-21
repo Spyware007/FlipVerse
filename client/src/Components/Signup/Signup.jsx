@@ -54,7 +54,7 @@ const Signup = () => {
                   <Button
                     // onClick={handleClick}
                     label="Create"
-                    // filled
+                    filled
                   />
                 </div>
                 <p className={classes.signup_para}>Already login ? Sign Up</p>

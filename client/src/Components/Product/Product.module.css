@@ -31,6 +31,7 @@
   align-items: center;
   flex-direction: column;
   row-gap: 40px;
+  margin-top: 30px;
 }
 .price_container {
   display: flex;

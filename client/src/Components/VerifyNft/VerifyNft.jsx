@@ -16,7 +16,7 @@ const VerifyNft = () => {
             <span className={classes.verify_text_span}>Warranty</span>
           </h2>
 
-          <Card width="430px" height="200px" padding="40px">
+          <Card width="450px" height="200px" padding="40px">
             <form className={classes.form}>
               <div className={classes.inputs}>
                 <InputField
@@ -33,7 +33,7 @@ const VerifyNft = () => {
                 <Button
                   // onClick={handleClick}
                   label="Verify"
-                  // filled
+                  filled
                 />
               </div>
             </form>

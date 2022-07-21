@@ -17,8 +17,8 @@ const SignupHero = () => {
             <path
               d="M86.7622 285.022L70.0318 289.505L82.2793 301.753L455.921 675.394L468.168 687.642L472.651 670.911L609.413 160.508L613.896 143.777L597.166 148.26L86.7622 285.022Z"
               stroke="url(#paint0_linear_486_8799)"
-              stroke-width="20"
-              shape-rendering="crispEdges"
+              strokeWidth="20"
+              shapeendering="crispEdges"
             />
           </g>
           <g id={classes.float}>
@@ -32,7 +32,7 @@ const SignupHero = () => {
               transform="rotate(23 369.945 92.1702)"
               fill="url(#pattern0)"
               stroke="white"
-              stroke-width="3.51"
+              strokeWidth="3.51"
             />
             <rect
               id="image 14"
@@ -44,7 +44,7 @@ const SignupHero = () => {
               transform="rotate(13 301.205 110.502)"
               fill="url(#pattern1)"
               stroke="white"
-              stroke-width="3.50656"
+              strokeWidth="3.50656"
             />
             <rect
               id="unsplash:3MAmj1ZKSZA_2"
@@ -56,7 +56,7 @@ const SignupHero = () => {
               transform="rotate(3 221.446 153.1)"
               fill="url(#pattern2)"
               stroke="white"
-              stroke-width="3.51"
+              strokeWidth="3.51"
             />
             <g id="Rectangle 22">
               <rect
@@ -85,7 +85,7 @@ const SignupHero = () => {
                 rx="19"
                 transform="rotate(-7 159.13 188.006)"
                 stroke="white"
-                stroke-width="2"
+                strokeWidth="2"
               />
             </g>
           </g>
@@ -93,7 +93,7 @@ const SignupHero = () => {
             id="Polygon 2"
             d="M74.4072 293.635L471.396 689.636"
             stroke="url(#paint1_linear_486_8799)"
-            stroke-width="20"
+            strokeWidth="20"
           />
         </g>
       </g>
@@ -105,9 +105,9 @@ const SignupHero = () => {
           width="677.326"
           height="677.325"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -185,8 +185,8 @@ const SignupHero = () => {
           y2="452.601"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0073FF" />
-          <stop offset="1" stop-color="#DB00FF" />
+          <stop stopColor="#0073FF" />
+          <stop offset="1" stopColor="#DB00FF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_486_8799"
@@ -196,8 +196,8 @@ const SignupHero = () => {
           y2="452.542"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0073FF" />
-          <stop offset="1" stop-color="#DB00FF" />
+          <stop stopColor="#0073FF" />
+          <stop offset="1" stopColor="#DB00FF" />
         </linearGradient>
         <image
           id="image0_486_8799"

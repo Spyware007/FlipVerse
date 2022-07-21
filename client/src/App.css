@@ -44,7 +44,7 @@ html {
 }
 .App {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background: linear-gradient(
     240.32deg,
     #5b1188 10.2%,

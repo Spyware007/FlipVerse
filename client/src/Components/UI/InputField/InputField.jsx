@@ -23,7 +23,7 @@ const InputField = ({
           required={required}
         />
         {label && (
-          <label className={classes.form__label} for={`${name}`}>
+          <label className={classes.form__label} htmlFor={`${name}`}>
             {label}
           </label>
         )}

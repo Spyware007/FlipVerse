@@ -32,12 +32,14 @@ const Product = () => {
             <div className={classes.btn}>
               <Button
                 // onClick={handleClick}
-                label="Buy"
-                // filled
+                label="BUY"
+                padding="0.5em 11em"
+                filled
               />
               <Button
                 // onClick={handleClick}
                 label="Add to wishlist"
+                padding="0.5em 8em"
                 // filled
               />
             </div>
