@@ -11,6 +11,7 @@ import {
   Retailer,
   Navbar,
   Footer,
+  NotFound,
 } from "./Components";
 
 import "./App.css";
@@ -43,7 +44,8 @@ const App = () => {
                 path="/retailer/:retailerId"
                 element={<Retailer />}
               ></Route>
-              <Route path="*" element={<Navigate to="/" />} />
+              <Route path="*" element={<NotFound />}></Route>
+              {/* <Route path="*" element={<Navigate to="/" />} /> */}
             </Routes>
             <Footer />
           </>

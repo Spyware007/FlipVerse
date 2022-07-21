@@ -1,0 +1,13 @@
+.not_found {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 200px;
+  color: #fff;
+}
+.image_404 {
+  width: 700px;
+}
