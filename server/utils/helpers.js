@@ -7,12 +7,15 @@ const verifyId = (id) => {
 
 const findProductInProductsArray = (products, pId) => {
 	products.find((id) => {
-		if (id !== null) {
-			return id.toString() === pId;
-		}
+		return id.toString() === pId;
 	});
 
 	return -1;
 };
 
-export { verifyId, findProductInProductsArray };
+const getIndexOfProduct = (products, pId) => {
+	let index = products.indexOf(pId);
+	return index;
+};
+
+export { verifyId, findProductInProductsArray, getIndexOfProduct };

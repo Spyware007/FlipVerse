@@ -1,7 +1,7 @@
 import asyncHandler from "express-async-handler";
 import Seller from "../models/Seller.js";
 import Product from "../models/Product.js";
-import { verifyId, findProductInProductsArray } from "../utils/helpers.js";
+import { verifyId, getIndexOfProduct } from "../utils/helpers.js";
 
 //@desc Get seller Profile
 //@route /seller/profile
@@ -55,9 +55,9 @@ const updateSellerProfile = asyncHandler(async (req, res) => {
 });
 
 const createProduct = asyncHandler(async (req, res) => {
-	const { title, category, price, brand, description } = req.body;
+	const { title, category, price, brand, description, stock } = req.body;
 
-	if (!title || !category || price < 1) {
+	if (!title || !category || price < 1 || !stock) {
 		res.status(400);
 		throw new Error("Please provide valid details");
 	}
@@ -68,6 +68,7 @@ const createProduct = asyncHandler(async (req, res) => {
 		brand,
 		category,
 		description,
+		stock,
 		createdBy: req.seller._id,
 	});
 
@@ -103,7 +104,8 @@ const getProduct = asyncHandler(async (req, res) => {
 		base64Image = buffer.toString("base64");
 	}
 
-	const { title, createdBy, brand, description, category, price } = product;
+	const { title, createdBy, brand, description, category, price, stock } =
+		product;
 
 	res.status(200).json({
 		title,
@@ -112,6 +114,7 @@ const getProduct = asyncHandler(async (req, res) => {
 		description,
 		image: product.image ? base64Image : "",
 		price,
+		stock,
 		category,
 	});
 });
@@ -127,7 +130,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
 
 	const product = await Product.findById(pId);
 
-	const pIdIndex = findProductInProductsArray(seller.products, pId);
+	const pIdIndex = getIndexOfProduct(seller.products, pId);
 
 	if (!product || pIdIndex < -1) {
 		res.status(404);
@@ -150,7 +153,7 @@ const uploadProductImage = asyncHandler(async (req, res) => {
 
 	const pId = id.toString();
 	const product = await Product.findById(pId);
-	const pIdIndex = findProductInProductsArray(seller.products, pId);
+	const pIdIndex = getIndexOfProduct(seller.products, pId);
 
 	if (!product || pIdIndex < -1) {
 		res.status(404);
