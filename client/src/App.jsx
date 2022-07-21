@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Button, Loading } from "./Components/UI";
+import { Loading } from "./Components/UI";
 import {
   Home,
   Login,
