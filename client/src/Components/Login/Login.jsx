@@ -3,6 +3,7 @@ import classes from "./Login.module.css";
 import LoginHero from "./LoginHero";
 
 import { InputField, Button } from "../UI";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -42,7 +43,8 @@ const Login = () => {
               />
             </div>
             <p className={classes.login_para}>
-              Don&apos;t have an account ? Create an Account
+              Don&apos;t have an account ?
+              <NavLink to="/signup"> Create an Account</NavLink>
             </p>
             {/* <div className={classes.btn}>
               <Button

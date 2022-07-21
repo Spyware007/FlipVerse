@@ -64,3 +64,9 @@
   margin-bottom: 150px;
   flex-wrap: wrap;
 }
+.cart_logo {
+  display: flex;
+}
+.cart_logo2 {
+  margin-left: 10px;
+}

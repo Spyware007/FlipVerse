@@ -65,3 +65,12 @@ html {
   object-fit: cover;
   width: 100%;
 }
+a {
+  all: unset;
+  cursor: pointer;
+  color: #e4abff;
+  transition: all 0.3s ease-in-out;
+}
+a:hover {
+  color: #c039ff;
+}

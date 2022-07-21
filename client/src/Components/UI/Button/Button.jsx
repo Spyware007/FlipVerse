@@ -1,7 +1,13 @@
 import React from "react";
 import classes from "./Button.module.css";
 
-const Button = ({ onClick, label, filled, padding = "0.5em 1.5em" }) => {
+const Button = ({
+  children,
+  onClick,
+  label,
+  filled,
+  padding = "0.5em 1.5em",
+}) => {
   return (
     <>
       <button
@@ -9,7 +15,7 @@ const Button = ({ onClick, label, filled, padding = "0.5em 1.5em" }) => {
         className={filled ? classes.fill : classes.btn}
         onClick={onClick}
       >
-        {label}
+        {label || children}
       </button>
     </>
   );

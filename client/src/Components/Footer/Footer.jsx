@@ -36,16 +36,25 @@ const Footer = () => {
               Verify NFT
             </NavLink>
             {isAuthenticated && (
-              <NavLink to="/" className={classes.links}>
-                Profile
-              </NavLink>
+              <>
+                <NavLink to="/" className={classes.links}>
+                  Cart
+                </NavLink>
+                <NavLink to="/" className={classes.links}>
+                  Profile
+                </NavLink>
+              </>
             )}
-            <NavLink to="/login" className={classes.links}>
-              Login
-            </NavLink>
-            <NavLink to="/signup" className={classes.links}>
-              Sign Up
-            </NavLink>
+            {!isAuthenticated && (
+              <>
+                <NavLink to="/login" className={classes.links}>
+                  Login
+                </NavLink>
+                <NavLink to="/signup" className={classes.links}>
+                  Sign Up
+                </NavLink>
+              </>
+            )}
           </div>
           <div className={classes.footer_column}>
             <h2 className={classes.content_top}>Categories</h2>
@@ -77,7 +86,7 @@ const Footer = () => {
                 href={omLink}
                 target="__blank"
                 rel="noopener noreferrer"
-                className={classes.links}
+                className={classes.links_special}
               >
                 Om Gawande
               </a>
@@ -92,7 +101,7 @@ const Footer = () => {
                 href={nishantLink}
                 target="__blank"
                 rel="noopener noreferrer"
-                className={classes.links}
+                className={classes.links_special}
               >
                 Nishant Bhosale
               </a>
@@ -107,7 +116,7 @@ const Footer = () => {
                 href={saurabhLink}
                 target="__blank"
                 rel="noopener noreferrer"
-                className={classes.links}
+                className={classes.links_special}
               >
                 Saurabh Barde
               </a>

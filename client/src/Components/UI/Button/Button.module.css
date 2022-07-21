@@ -10,6 +10,7 @@
   position: relative;
   isolation: isolate;
   display: inline-grid;
+  display: flex;
   place-content: center;
   padding: 0.5em 1.5em;
   font-size: 17px;

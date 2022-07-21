@@ -44,13 +44,17 @@
 .creators_image {
   width: 45px;
 }
-.links {
+.links,
+.links_special {
   all: unset;
   color: #9f9f9f;
   font-size: 1.2rem;
   margin: 8px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+.links_special:hover {
+  animation: colorChanger 0.3s ease-in infinite;
 }
 .links:hover {
   color: #e4abff;
@@ -80,4 +84,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@keyframes colorChanger {
+  0% {
+    color: #e4abff;
+  }
+  50% {
+    color: #ecff6d;
+  }
+  100% {
+    color: #ff6e6e;
+  }
 }

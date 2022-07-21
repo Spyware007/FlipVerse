@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import classes from "./Signup.module.css";
 import { Card, InputField, Button } from "../UI";
 import SignupHero from "./SignupHero";
@@ -57,7 +58,9 @@ const Signup = () => {
                     filled
                   />
                 </div>
-                <p className={classes.signup_para}>Already login ? Sign Up</p>
+                <p className={classes.signup_para}>
+                  Already login ?<NavLink to="/signup"> Sign Up</NavLink>
+                </p>
                 {/* <div className={classes.btn}>
               <Button
                 // onClick={handleClick}
