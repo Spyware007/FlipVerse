@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Footer.module.css";
 import { NavLink } from "react-router-dom";
 import spider from "../../Assets/spider.png";
 import nishant from "../../Assets/nishant.png";
 import saurabh from "../../Assets/saurabh.png";
+import { Logo } from "../UI";
+import {
+  omLink,
+  nishantLink,
+  saurabhLink,
+} from "../../Constants/social.contact";
 
 const Footer = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   return (
     <>
       <div className={classes.footer_section}>
         <div className={classes.footer_top}>
-          <div className={classes.footer_column}>
-            <img src={""} alt="logo" className={classes.footer_logo} />
-            <h4>
-              <span className={classes.grey}>©</span> 2022
-            </h4>
+          <div className={classes.footer_column_logo}>
+            {/* <img src={""} alt="logo" className={classes.footer_logo} /> */}
+            <Logo />
+            <h4 className={classes.text}>Shopping is fun!</h4>
           </div>
           <div className={classes.footer_column}>
             <h2 className={classes.content_top}>Links</h2>
@@ -25,11 +32,19 @@ const Footer = () => {
             <NavLink to="/" className={classes.links}>
               Explore
             </NavLink>
-            <NavLink to="/" className={classes.links}>
+            <NavLink to="/verifynft" className={classes.links}>
               Verify NFT
             </NavLink>
-            <NavLink to="/" className={classes.links}>
-              Profile
+            {isAuthenticated && (
+              <NavLink to="/" className={classes.links}>
+                Profile
+              </NavLink>
+            )}
+            <NavLink to="/login" className={classes.links}>
+              Login
+            </NavLink>
+            <NavLink to="/signup" className={classes.links}>
+              Sign Up
             </NavLink>
           </div>
           <div className={classes.footer_column}>
@@ -58,9 +73,14 @@ const Footer = () => {
                 alt="Om Gawande"
                 className={classes.creators_image}
               />
-              <NavLink to="/" className={classes.links}>
+              <a
+                href={omLink}
+                target="__blank"
+                rel="noopener noreferrer"
+                className={classes.links}
+              >
                 Om Gawande
-              </NavLink>
+              </a>
             </div>
             <div className={classes.link_container}>
               <img
@@ -68,9 +88,14 @@ const Footer = () => {
                 alt="Nishant Bhosale"
                 className={classes.creators_image}
               />
-              <NavLink to="/" className={classes.links}>
+              <a
+                href={nishantLink}
+                target="__blank"
+                rel="noopener noreferrer"
+                className={classes.links}
+              >
                 Nishant Bhosale
-              </NavLink>
+              </a>
             </div>
             <div className={classes.link_container}>
               <img
@@ -78,9 +103,14 @@ const Footer = () => {
                 alt="Saurabh Barde"
                 className={classes.creators_image}
               />
-              <NavLink to="/" className={classes.links}>
+              <a
+                href={saurabhLink}
+                target="__blank"
+                rel="noopener noreferrer"
+                className={classes.links}
+              >
                 Saurabh Barde
-              </NavLink>
+              </a>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Loading } from "./Components/UI";
 import {
   Home,
@@ -9,11 +9,18 @@ import {
   VerifyNft,
   User,
   Retailer,
+  Navbar,
+  Footer,
 } from "./Components";
 
 import "./App.css";
 
 const App = () => {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // console.log(location);
+  }, [location]);
   const [loading, setLoading] = useState(true);
 
   setTimeout(() => setLoading(false), 1800);
@@ -24,6 +31,7 @@ const App = () => {
           <Loading />
         ) : (
           <>
+            <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/signup" element={<Signup />} />
@@ -37,6 +45,7 @@ const App = () => {
               ></Route>
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
+            <Footer />
           </>
         )}
       </div>
