@@ -48,6 +48,7 @@
   color: #e4abff;
   pointer-events: none;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .form__field:focus {

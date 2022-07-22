@@ -1,0 +1,17 @@
+.outer_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  row-gap: 40px;
+  flex-direction: column;
+  padding: 20px;
+}
+.inputs {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  row-gap: 40px;
+  margin-left: 40px;
+}

@@ -3,8 +3,9 @@
   height: 100vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-right: 200px;
+  align-items: flex-start;
+  margin-top: 50px;
+  padding-right: 70px;
 }
 .nav_links_container {
   width: 100%;
@@ -12,7 +13,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 60px;
+  padding-left: 30px;
 }
 .nav_links {
   display: flex;
@@ -21,7 +22,7 @@
   flex-direction: column;
 }
 .link_container {
-  margin: 40px 30px;
+  margin: 20px 30px;
   list-style-type: none;
 }
 .link {
@@ -30,13 +31,20 @@
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .link:hover {
   color: #e4abff;
 }
-.icons_container {
+.user_sections {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 40px;
+  align-self: center;
+  margin-bottom: 170px;
+}
+.icon {
+  width: 30px;
+  margin-left: 8px;
 }
