@@ -21,6 +21,7 @@ const Footer = () => {
           <div className={classes.footer_column_logo}>
             {/* <img src={""} alt="logo" className={classes.footer_logo} /> */}
             <Logo />
+            <h4 className={classes.text}>FlipVerse</h4>
             <h4 className={classes.text}>Shopping is fun!</h4>
           </div>
           <div className={classes.footer_column}>

@@ -1,4 +1,5 @@
-.card {
+.card,
+.smooth_card {
   --curve-size: 1.5em;
 
   --color: #afffff;
@@ -16,4 +17,16 @@
     calc(100% - var(--curve-size)) 100%,
     0 100%
   );
+}
+.smooth_card {
+  --curve-size: 0;
+  clip-path: polygon(
+    0% var(--curve-size),
+    var(--curve-size) 0,
+    100% 0,
+    100% calc(100% - var(--curve-size)),
+    calc(100% - var(--curve-size)) 100%,
+    0 100%
+  );
+  border-radius: 16px;
 }
