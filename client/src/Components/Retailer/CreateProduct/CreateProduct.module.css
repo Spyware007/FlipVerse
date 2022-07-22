@@ -1,0 +1,20 @@
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.inner {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-direction: column; */
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin-right: 300px;
+}

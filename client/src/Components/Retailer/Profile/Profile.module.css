@@ -1,0 +1,14 @@
+.profile_card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 30px; */
+}
+.profile_pic {
+  width: 70%;
+}
+.inputs {
+  width: 70%;
+}

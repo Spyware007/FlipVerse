@@ -25,7 +25,7 @@ const Profile = () => {
                 // value={name}
                 label="Email Id"
                 name="email"
-                placeholder="Email Id"
+                placeholder="Email ID"
                 required
               />
               <InputField
