@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(28, 164, 182, 0.75);
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  position: fixed;
+  left: 10%;
+  width: 80%;
+  min-height: 400px;
+  top: 20vh;
+  padding: 2rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  perspective: 1000px;
+  transition: all 0.35s;
+  background-color: blue;
+  animation: slide-down 300ms ease-out forwards, blink 5s linear 0s infinite;
+  /* background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .modal {
+    position: fixed;
+    left: 0%;
+    width: 100%;
+    min-height: 400px;
+    top: 0;
+    height: 100vh;
+    padding: 2rem 1rem;
+    border-radius: 0;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+    z-index: 30;
+    animation: Modal_slide-down__5XyMQ 300ms ease-out forwards,
+      Modal_blink__4oe4L 5s linear 0s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    /* opacity: 0;
+      transform: translateY(-3rem); */
+    transform: rotateX(65deg) scale(0) translateY(30px);
+    transform-origin: 0% 50%;
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    /* opacity: 1;
+      transform: translateY(0); */
+    transform: rotateX(0) scale(1) translateY(0);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    box-shadow: 0px 0px 8px #fff;
+  }
+  10%,
+  20% {
+    box-shadow: 0px 0px 8px #000;
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    box-shadow: 0px 0px 8px #fff;
+  }
+  40%,
+  60%,
+  80% {
+    box-shadow: 0px 0px 8px #000;
+  }
+  to {
+    box-shadow: 0px 0px 8px #fff;
+  }
+}
+/* 
+  .parent {
+    perspective: 1000px;
+  }
+  .modal {
+    transform: rotateX(65deg) scale(0.75) translateY(30px);
+    transform-origin: 0% 50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s;
+  }
+  .modal.visible {
+    transform: rotateX(0) scale(1) translateY(0);
+    visibility: visible;
+    opacity: 1;
+  } */
