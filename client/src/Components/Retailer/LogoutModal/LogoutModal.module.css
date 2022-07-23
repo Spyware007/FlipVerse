@@ -1,0 +1,10 @@
+.text {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 60px;
+}

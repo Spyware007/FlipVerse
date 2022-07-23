@@ -1,7 +1,14 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import classes from "./Retailer.module.css";
 import { Card } from "../UI";
-import { Profile, ChangePass, CreateProduct, EditProfile, MyItems } from "./";
+import {
+  Profile,
+  ChangePass,
+  CreateProduct,
+  EditProfile,
+  MyItems,
+  LogoutModal,
+} from "./";
 import profile from "../../Assets/profile.svg";
 import editProfile from "../../Assets/edit.svg";
 import changePass from "../../Assets/changePass.svg";
@@ -48,9 +55,16 @@ const initialState = {
 
 const Retailer = () => {
   const [state, dispatch] = useReducer(reducerFunction, initialState);
-
+  const [show, setShow] = useState(false);
+  const showHandler = () => {
+    setShow(true);
+  };
+  const hideHandler = () => {
+    setShow(false);
+  };
   return (
     <>
+      {show && <LogoutModal onClose={hideHandler} />}
       <div className={classes.user_profile}>
         <div className={classes.user_nav}>
           <Card smooth width="25vw" height="80vh">
@@ -128,7 +142,7 @@ const Retailer = () => {
                   </div>
                 </li>
                 <li className={classes.link_container}>
-                  <div onClick={""} className={classes.link}>
+                  <div onClick={() => showHandler()} className={classes.link}>
                     Logout{" "}
                     <span>
                       <img className={classes.icon} src={logout} alt="icons" />

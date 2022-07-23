@@ -24,6 +24,7 @@
 .link_container {
   margin: 20px 30px;
   list-style-type: none;
+  cursor: pointer;
 }
 .link {
   color: #fff;

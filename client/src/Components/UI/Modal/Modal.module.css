@@ -10,7 +10,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 20;
-  background-color: rgba(28, 164, 182, 0.75);
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
 }
 
@@ -22,12 +22,12 @@
   top: 20vh;
   padding: 2rem 1rem;
   border-radius: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); */
   z-index: 30;
   perspective: 1000px;
   transition: all 0.35s;
-  background-color: blue;
-  animation: slide-down 300ms ease-out forwards, blink 5s linear 0s infinite;
+  /* background-color: blue; */
+  animation: slide-down 300ms ease-out forwards;
   /* background: rgba( 255, 255, 255, 0.2 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 20px );
@@ -35,7 +35,13 @@
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }
-
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px;
+}
 @media (min-width: 768px) {
   .modal {
     width: 40rem;

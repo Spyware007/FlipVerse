@@ -3,5 +3,6 @@ export { default as InputField } from "./InputField/InputField";
 export { default as Loading } from "./Loading/Loading";
 export { default as Card } from "./Card/Card";
 export { default as Logo } from "./Logo/Logo";
+export { default as Modal } from "./Modal/Modal";
 export { default as SingleProductCard } from "./SingleProductCard/SingleProductCard";
 export { default as ProductCard } from "./ProductCard/ProductCard";
