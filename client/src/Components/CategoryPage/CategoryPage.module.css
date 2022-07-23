@@ -1,0 +1,21 @@
+.category_page {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+}
+.category_page_text {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.category_page_products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}

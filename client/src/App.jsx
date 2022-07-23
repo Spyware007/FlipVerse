@@ -17,6 +17,7 @@ import {
 } from "./Components";
 
 import "./App.css";
+import CategoryPage from "./Components/CategoryPage/CategoryPage";
 
 const App = () => {
   const location = useLocation();
@@ -52,6 +53,7 @@ const App = () => {
                   element={<Retailer />}
                 ></Route>
                 <Route path="/user/dashboard" element={<User />}></Route>
+                <Route path="/category/:id" element={<CategoryPage />}></Route>
                 <Route path="/product/:productId" element={<Product />}></Route>
                 <Route path="/cart/:userId" element={<Cart />}></Route>
                 <Route path="*" element={<NotFound />}></Route>
