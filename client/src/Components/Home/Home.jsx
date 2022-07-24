@@ -1,7 +1,12 @@
 import React from "react";
+import { SplineModel } from "../UI";
 
 const Home = () => {
-  return <div></div>;
+  return (
+    <>
+      <SplineModel />
+    </>
+  );
 };
 
 export default Home;
