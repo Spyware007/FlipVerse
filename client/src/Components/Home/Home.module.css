@@ -1,0 +1,111 @@
+.home_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.landing_slide {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+}
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.landing_text {
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 60px;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40px;
+}
+.featured_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  overflow: hidden;
+}
+.featured_text {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 60px;
+}
+.featured_products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* column-gap: 20px; */
+  overflow-x: scroll;
+}
+.translated {
+  transform: perspective(200px) translateZ(-50px);
+}
+.translated1 {
+  transform: perspective(100px) translateZ(-50px);
+  /* margin-left: 5000px; */
+}
+.translated5 {
+  transform: perspective(100px) translateZ(-50px);
+  /* margin-right: 5000px; */
+}
+.our_products_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  row-gap: 60px;
+}
+.our_products_text {
+  font-size: 3rem;
+  color: #fff;
+  /* margin-bottom: 60px; */
+}
+.our_product1,
+.our_product2,
+.our_product3,
+.our_product4 {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  object-fit: cover;
+  background-position: center;
+  padding: 100px 200px;
+}
+.our_product1 {
+  background-image: url("../../Assets//Home//sneakers_featured.png");
+  align-items: flex-end;
+}
+.our_product2 {
+  background-image: url("../../Assets//Home//hoddies_featured.png");
+  align-items: flex-start;
+}
+.our_product3 {
+  background-image: url("../../Assets//Home//bags_featured.png");
+  align-items: flex-end;
+}
+.our_product4 {
+  background-image: url("../../Assets//Home//tshirts_featured.png");
+  align-items: flex-start;
+}
+.our_product_text {
+  font-size: 5rem;
+  color: #fff;
+  margin-bottom: 100px;
+}

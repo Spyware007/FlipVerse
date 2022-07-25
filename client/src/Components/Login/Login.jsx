@@ -1,9 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import { InputField, Button } from "../UI";
 import classes from "./Login.module.css";
 import LoginHero from "./LoginHero";
-
-import { InputField, Button } from "../UI";
-import { NavLink } from "react-router-dom";
 
 const Login = () => {
   return (

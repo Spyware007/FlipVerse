@@ -33,6 +33,8 @@
   },
   "dependencies": {
     "@splinetool/react-spline": "^2.2.1",
+    "axios": "^0.27.2",
     "react-router-dom": "^6.3.0"
-  }
+  },
+  "proxy": "http://localhost:6000/"
 }

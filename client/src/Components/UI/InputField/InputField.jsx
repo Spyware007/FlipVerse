@@ -8,6 +8,7 @@ const InputField = ({
   name,
   placeholder,
   type,
+  onChange,
   required,
 }) => {
   return (
@@ -21,6 +22,7 @@ const InputField = ({
           className={classes.form__field}
           placeholder={placeholder}
           required={required}
+          onChange={onChange}
         />
         {label && (
           <label className={classes.form__label} htmlFor={`${name}`}>

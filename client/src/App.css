@@ -38,6 +38,8 @@ html {
     #051225 81.89%,
     #040d1f 100.83%
   );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   transition: 0.5s ease;
   scroll-behavior: smooth;
   /* display: flex;
@@ -56,6 +58,8 @@ html {
     #051225 81.89%,
     #040d1f 100.83%
   );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
