@@ -1,0 +1,24 @@
+{
+  "name": "flipverse",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\"> <font size=\"5\"> <b> FLIP - VERSE 🔥</b></h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently 'cd client && npm start' 'cd server && npm start'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spyware007/FlipVerse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spyware007/FlipVerse/issues"
+  },
+  "homepage": "https://github.com/Spyware007/FlipVerse#readme",
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  }
+}

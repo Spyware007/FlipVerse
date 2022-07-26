@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import axios from "axios";
-import { API } from "../../config";
+// import { API } from "../../config";
 import sellerAuthReducer from "./sellerAuthReducer";
 import sellerAuthContext from "./sellerAuthContext";
 import setAuthToken from "../../utils/setAuthToken";
@@ -20,7 +20,7 @@ const SellerAuthState = (props) => {
     token: localStorage.getItem("token"),
     user: null,
     error: null,
-    isAuthenticated: null,
+    isAuthenticated: localStorage.getItem("token") ? true : false,
     loading: true,
   };
 
@@ -36,7 +36,11 @@ const SellerAuthState = (props) => {
       setAuthToken(localStorage.token);
     }
     try {
-      const res = await axios.post(`${API}/seller/login`, userData, config);
+      const res = await axios.get(
+        "http://localhost:8000/api/seller/profile",
+        userData,
+        config
+      );
       console.log(res);
       dispatch({ type: USER_LOADED, payload: res.data });
     } catch (error) {
@@ -52,14 +56,18 @@ const SellerAuthState = (props) => {
     };
 
     try {
-      const res = await axios.post(`${API}/seller/signup`, userData, config);
+      const res = await axios.post(
+        "http://localhost:8000/api/seller/signup",
+        userData,
+        config
+      );
       dispatch({ type: REGISTER_SUCCESS, payload: res.data });
-      // loadUser();
+      loadUser();
       // const data = res.json();
-      console.log(res);
+      // console.log(res);
     } catch (error) {
-      console.log(error);
-      // dispatch({ type: REGISTER_FAIL, payload: error.response.data.message });
+      // console.log(error);
+      dispatch({ type: REGISTER_FAIL, payload: error.message });
     }
   };
 
@@ -71,7 +79,11 @@ const SellerAuthState = (props) => {
     };
 
     try {
-      const res = await axios.post(`${API}/seller/login`, userData, config);
+      const res = await axios.post(
+        "http://localhost:8000/api/seller/login",
+        userData,
+        config
+      );
       dispatch({ type: LOGIN_SUCCESS, payload: res.data });
       loadUser();
     } catch (error) {

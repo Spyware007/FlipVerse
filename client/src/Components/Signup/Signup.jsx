@@ -1,11 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { sellerAuthContext } from "../../Contexts";
 import classes from "./Signup.module.css";
 import { Card, InputField, Button } from "../UI";
 import SignupHero from "./SignupHero";
 
 const Signup = (props) => {
+  const redirect = useNavigate();
   const { registerUser, error, clearErrors, isAuthenticated } =
     useContext(sellerAuthContext);
 
@@ -44,6 +45,8 @@ const Signup = (props) => {
       // AlertContext.setAlert("Passwords do not match", "danger"); add a state
     } else {
       registerUser({ name, email, password });
+
+      redirect("/");
     }
   };
   return (
@@ -109,7 +112,7 @@ const Signup = (props) => {
                   />
                 </div>
                 <p className={classes.signup_para}>
-                  Already login ?<NavLink to="/signup"> Sign Up</NavLink>
+                  Already a user?<NavLink to="/login"> Log In</NavLink>
                 </p>
                 {/* <div className={classes.btn}>
               <Button

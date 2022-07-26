@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { sellerAuthContext } from "../../Contexts";
 import { InputField, Button } from "../UI";
 import classes from "./Login.module.css";
 import LoginHero from "./LoginHero";
 
 const Login = () => {
+  const redirect = useNavigate();
   const { login, error, clearErrors, isAuthenticated } =
     useContext(sellerAuthContext);
 
@@ -41,6 +42,9 @@ const Login = () => {
       // AlertContext.setAlert("Passwords do not match", "danger"); add a state
     } else {
       login({ email, password });
+      if (isAuthenticated) {
+        redirect("/");
+      }
     }
   };
   return (

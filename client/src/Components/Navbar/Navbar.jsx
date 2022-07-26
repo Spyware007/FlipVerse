@@ -1,23 +1,26 @@
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect, useContext } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import cart_icon from "../../Assets/cart.svg";
 import profile_icon from "../../Assets/profile.svg";
+import { sellerAuthContext } from "../../Contexts";
+
 import { Logo } from "../UI";
 import classes from "./Navbar.module.css";
 
 const Navbar = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const redirect = useNavigate();
+  const { isAuthenticated, logout } = useContext(sellerAuthContext);
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isActive, setActive] = useState(false);
   const navHandler = () => {
     setActive((prevState) => !prevState);
     // disableScroll();
   };
-  // const disableScroll = () => {
-  //   document.body.classList.toggle("stop-scrolling");
-  // };
-  // useEffect(() => {
-  //   document.body.style.overflow = "hidden";
-  // }, []);
+  const logoutHandler = () => {
+    logout();
+    redirect("/login");
+  };
+
   return (
     <>
       <nav className={classes.navbar}>
@@ -61,14 +64,21 @@ const Navbar = () => {
             )}
           </ul>
           {isAuthenticated && (
-            <div className={classes.icons_container}>
-              <div className={classes.icon_container}>
-                <img className={classes.icon} src={cart_icon} alt="" />
+            <>
+              <li className={classes.link_container}>
+                <div onClick={logoutHandler} className={classes.link}>
+                  Logout
+                </div>
+              </li>
+              <div className={classes.icons_container}>
+                <div className={classes.icon_container}>
+                  <img className={classes.icon} src={cart_icon} alt="" />
+                </div>
+                <div className={classes.icon_container}>
+                  <img className={classes.icon} src={profile_icon} alt="" />
+                </div>
               </div>
-              <div className={classes.icon_container}>
-                <img className={classes.icon} src={profile_icon} alt="" />
-              </div>
-            </div>
+            </>
           )}
         </div>
         <div className={classes.btn}>
