@@ -74,3 +74,15 @@
 .form__field:invalid {
   box-shadow: none;
 }
+/* error */
+.error {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ff6694;
+}
+.errorpng {
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 30px;
+}
