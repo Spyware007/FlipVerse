@@ -78,3 +78,7 @@ a {
 a:hover {
   color: #c039ff;
 }
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}

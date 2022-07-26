@@ -54,3 +54,26 @@
   font-weight: 400;
   margin-left: 25px;
 }
+@media screen and (max-width: 1100px) {
+  .left_section {
+    display: none;
+  }
+  .right_section {
+    width: 100vw;
+    padding: 0 20px;
+  }
+  .inputs {
+    align-self: center;
+  }
+  .form {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inputs {
+    align-self: flex-start;
+  }
+  .login_para {
+    white-space: normal;
+  }
+}

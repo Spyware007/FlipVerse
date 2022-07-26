@@ -47,6 +47,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  column-gap: 30px;
 }
 .signup_para {
   white-space: nowrap;
@@ -63,4 +64,15 @@
   flex-direction: column;
   color: #fff;
   /* margin-top: 280px; */
+}
+@media screen and (max-width: 1100px) {
+  .right_section {
+    display: none;
+  }
+  .signup {
+    padding: 0;
+  }
+  .left_section {
+    width: 100vw;
+  }
 }

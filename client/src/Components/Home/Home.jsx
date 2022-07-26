@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Button, ProductCard, SplineModel } from "../UI";
 import classes from "./Home.module.css";
 import trial1 from "../../Assets/trial1.png";
@@ -8,6 +8,11 @@ import trial4 from "../../Assets/trial4.png";
 import trial5 from "../../Assets/trial5.png";
 
 const Home = () => {
+  const exploreRef = useRef(null);
+  const scrollDown = () => {
+    exploreRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <div className={classes.home_page}>
@@ -18,9 +23,10 @@ const Home = () => {
             </h1>
             <div className={classes.btn}>
               <Button
-                // onClick={handleClick}
+                onClick={scrollDown}
                 label="Explore"
                 filled
+                href="explore"
               />
               <Button
                 // onClick={handleClick}
@@ -34,7 +40,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className={classes.featured_section}>
+        <div ref={exploreRef} className={classes.featured_section}>
           <h1 className={classes.featured_text}>Featured Products</h1>
           <div className={classes.featured_products}>
             <div className={classes.translated1}>
@@ -52,7 +58,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-
         <div className={classes.our_products_section}>
           <h1 className={classes.our_products_text}>Our Products</h1>
           <div className={classes.our_product1}>

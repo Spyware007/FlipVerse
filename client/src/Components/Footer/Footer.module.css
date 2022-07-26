@@ -97,3 +97,20 @@
     color: #ff6e6e;
   }
 }
+
+@media screen and (max-width: 850px) {
+  .footer_section,
+  .footer_top {
+    height: auto;
+  }
+  .footer_top {
+    align-items: center;
+  }
+  .footer_bottom {
+    flex-direction: column;
+  }
+  /* .footer_resp {
+    display: flex;
+    justify-self: center;
+  } */
+}

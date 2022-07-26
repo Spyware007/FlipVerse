@@ -109,3 +109,50 @@
   color: #fff;
   margin-bottom: 100px;
 }
+@media screen and (max-width: 1000px) {
+  .home_page {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  .landing_slide {
+    align-items: flex-start;
+    margin-top: 100px;
+    height: 70vh;
+  }
+  .landing_text {
+    font-size: 3rem;
+  }
+  .model {
+    display: none;
+  }
+  .featured_section {
+    overflow: hidden;
+  }
+  .featured_text {
+    white-space: nowrap;
+    font-size: 2rem;
+  }
+  .featured_products {
+    column-gap: 20px;
+    overflow: scroll;
+    width: 100%;
+  }
+  .our_products_section {
+    /* overflow: hidden; */
+    gap: 20px;
+  }
+  .our_products_text {
+    white-space: nowrap;
+    font-size: 2rem;
+  }
+  .our_product_text {
+    white-space: nowrap;
+    font-size: 3rem;
+  }
+  .our_product1,
+  .our_product2,
+  .our_product3,
+  .our_product4 {
+    height: 40vh;
+  }
+}

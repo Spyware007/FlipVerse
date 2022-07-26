@@ -99,7 +99,12 @@ const Signup = (props) => {
                 <div className={classes.btn}>
                   <Button
                     // onClick={handleClick}
-                    label="Create"
+                    label="Create User"
+                    filled
+                  />
+                  <Button
+                    // onClick={handleClick}
+                    label="Create Seller"
                     filled
                   />
                 </div>
