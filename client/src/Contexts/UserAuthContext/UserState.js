@@ -1,8 +1,8 @@
 import React, { useReducer } from "react";
 import axios from "axios";
 // import { API } from "../../config";
-import sellerAuthReducer from "./sellerAuthReducer";
-import sellerAuthContext from "./sellerAuthContext";
+import userAuthReducer from "./sellerAuthReducer";
+import userAuthContext from "./sellerAuthContext";
 import setAuthToken from "../../utils/setAuthToken";
 import {
   REGISTER_SUCCESS,
@@ -15,18 +15,18 @@ import {
   CLEAR_ERRORS,
 } from "../types";
 
-const SellerAuthState = (props) => {
+const UserAuthState = (props) => {
   const initialState = {
     token: localStorage.getItem("token"),
-    seller: null,
-    sellerError: null,
+    user: null,
+    error: null,
     isAuthenticated: null,
     loading: true,
   };
 
-  const [state, dispatch] = useReducer(sellerAuthReducer, initialState);
+  const [state, dispatch] = useReducer(userAuthReducer, initialState);
 
-  const loadSeller = async (userData) => {
+  const loadUser = async (userData) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const SellerAuthState = (props) => {
     }
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/seller/profile",
+        "http://localhost:8000/api/user/profile",
         userData,
         config
       );
@@ -48,7 +48,7 @@ const SellerAuthState = (props) => {
     }
   };
 
-  const registerSeller = async (userData) => {
+  const registerUser = async (userData) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -57,12 +57,12 @@ const SellerAuthState = (props) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/seller/signup",
+        "http://localhost:8000/api/user/signup",
         userData,
         config
       );
       dispatch({ type: REGISTER_SUCCESS, payload: res.data });
-      loadSeller();
+      loadUser();
       // const data = res.json();
       // console.log(res);
     } catch (error) {
@@ -71,7 +71,7 @@ const SellerAuthState = (props) => {
     }
   };
 
-  const loginSeller = async (userData) => {
+  const login = async (userData) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -80,43 +80,43 @@ const SellerAuthState = (props) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/seller/login",
+        "http://localhost:8000/api/user/login",
         userData,
         config
       );
       dispatch({ type: LOGIN_SUCCESS, payload: res.data });
-      loadSeller();
+      loadUser();
     } catch (error) {
       dispatch({ type: LOGIN_FAIL, payload: error.response.data.message });
     }
   };
 
-  const logoutSeller = () => {
+  const logout = () => {
     dispatch({ type: LOGOUT });
   };
 
-  const clearSellerErrors = () => {
+  const clearErrors = () => {
     dispatch({ type: CLEAR_ERRORS });
   };
 
   return (
-    <sellerAuthContext.Provider
+    <userAuthContext.Provider
       value={{
         token: state.token,
-        seller: state.user,
-        sellerError: state.sellerError,
+        user: state.user,
+        error: state.error,
         isAuthenticated: state.isAuthenticated,
         loading: state.loading,
-        registerSeller,
-        clearSellerErrors,
-        loadSeller,
-        loginSeller,
-        logoutSeller,
+        registerUser,
+        clearErrors,
+        loadUser,
+        login,
+        logout,
       }}
     >
       {props.children}
-    </sellerAuthContext.Provider>
+    </userAuthContext.Provider>
   );
 };
 
-export default SellerAuthState;
+export default UserAuthState;

@@ -1,26 +1,29 @@
 import React, { useState, useContext, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { sellerAuthContext } from "../../Contexts";
+import { sellerAuthContext, userAuthContext } from "../../Contexts";
 import classes from "./Signup.module.css";
 import { Card, InputField, Button } from "../UI";
 import SignupHero from "./SignupHero";
 
 const Signup = (props) => {
   const redirect = useNavigate();
-  const { registerUser, error, clearErrors, isAuthenticated } =
-    useContext(sellerAuthContext);
+  const {
+    registerSeller,
+    sellerError,
+    clearSellerErrors,
+    isSellerAuthenticated,
+  } = useContext(sellerAuthContext);
+  const { register, error, clearErrors, isAuthenticated } =
+    useContext(userAuthContext);
 
   useEffect(() => {
-    // if (isAuthenticated) {
-    //   props.history.push("/");
-    // }
-
-    if (error) {
-      // AlertContext.setAlert(error, "danger");
+    if (sellerError) {
+      clearSellerErrors();
+    } else if (error) {
       clearErrors();
     }
     //eslint-disable-next-line
-  }, [error, isAuthenticated]); //,props.history]
+  }, [sellerError, isSellerAuthenticated, error, isAuthenticated]); //,props.history]
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -37,6 +40,19 @@ const Signup = (props) => {
     });
   };
 
+  const onSubmitSellerHandler = (e) => {
+    e.preventDefault();
+    if (name === "" || email === "" || password === "") {
+      // AlertContext.setAlert("Please enter all fields", "danger"); add a state
+    } else if (password !== password2) {
+      // AlertContext.setAlert("Passwords do not match", "danger"); add a state
+    } else {
+      registerSeller({ name, email, password });
+      if (isSellerAuthenticated) {
+        redirect("/");
+      }
+    }
+  };
   const onSubmitHandler = (e) => {
     e.preventDefault();
     if (name === "" || email === "" || password === "") {
@@ -44,11 +60,13 @@ const Signup = (props) => {
     } else if (password !== password2) {
       // AlertContext.setAlert("Passwords do not match", "danger"); add a state
     } else {
-      registerUser({ name, email, password });
-
-      redirect("/");
+      register({ name, email, password });
+      if (isAuthenticated) {
+        redirect("/");
+      }
     }
   };
+
   return (
     <>
       <div className={classes.signup}>
@@ -56,7 +74,7 @@ const Signup = (props) => {
           <Card width="500px" height="600px" padding="0px">
             <div className={classes.form_container}>
               <h1 className={classes.signup_text}>Create Account.</h1>
-              <form className={classes.form} onSubmit={onSubmitHandler}>
+              <form className={classes.form}>
                 <div className={classes.inputs}>
                   <InputField
                     // reference={nameRef}
@@ -101,12 +119,12 @@ const Signup = (props) => {
                 </div>
                 <div className={classes.btn}>
                   <Button
-                    // onClick={handleClick}
+                    onClick={onSubmitHandler}
                     label="Create User"
                     filled
                   />
                   <Button
-                    // onClick={handleClick}
+                    onClick={onSubmitSellerHandler}
                     label="Create Seller"
                     filled
                   />
