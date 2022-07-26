@@ -42,7 +42,7 @@
 .user_sections {
   display: flex;
   align-self: center;
-  margin-bottom: 170px;
+  margin: 170px 0;
 }
 .icon {
   width: 30px;

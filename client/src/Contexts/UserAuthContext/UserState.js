@@ -1,8 +1,8 @@
 import React, { useReducer } from "react";
 import axios from "axios";
 // import { API } from "../../config";
-import userAuthReducer from "./sellerAuthReducer";
-import userAuthContext from "./sellerAuthContext";
+import userAuthReducer from "./userAuthReducer";
+import userAuthContext from "./userAuthContext";
 import setAuthToken from "../../utils/setAuthToken";
 import {
   REGISTER_SUCCESS,
