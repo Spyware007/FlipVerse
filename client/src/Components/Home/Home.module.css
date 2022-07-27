@@ -62,12 +62,14 @@
   /* margin-right: 5000px; */
 }
 .our_products_section {
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 100px;
   row-gap: 60px;
+  padding: 0 100px;
 }
 .our_products_text {
   font-size: 3rem;
@@ -78,36 +80,56 @@
 .our_product2,
 .our_product3,
 .our_product4 {
-  width: 100vw;
-  height: 90vh;
+  width: 95vw;
+  height: 100vh;
+  border-radius: 30px;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
+  align-items: right;
+  flex-direction: row;
   object-fit: cover;
   background-position: center;
   padding: 100px 200px;
+  background-size: cover;
 }
 .our_product1 {
-  background-image: url("../../Assets//Home//sneakers_featured.png");
+  background-image: url("../../Assets//Home//sneakers.png");
   align-items: flex-end;
 }
 .our_product2 {
-  background-image: url("../../Assets//Home//hoddies_featured.png");
+  background-image: url("../../Assets//Home//hoodies.png");
   align-items: flex-start;
 }
 .our_product3 {
-  background-image: url("../../Assets//Home//bags_featured.png");
+  background-image: url("../../Assets//Home//bagpacks.png");
   align-items: flex-end;
 }
 .our_product4 {
-  background-image: url("../../Assets//Home//tshirts_featured.png");
+  background-image: url("../../Assets//Home//tshirts.png");
   align-items: flex-start;
+}
+.our_product_content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 60vw;
 }
 .our_product_text {
   font-size: 5rem;
   color: #fff;
   margin-bottom: 100px;
+}
+.product_small_images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.product_small_image1 {
+  width: 300px;
+}
+.product_small_image2 {
+  width: 200px;
 }
 @media screen and (max-width: 1000px) {
   .home_page {
@@ -122,9 +144,9 @@
   .landing_text {
     font-size: 3rem;
   }
-  .model {
+  /* .model {
     display: none;
-  }
+  } */
   .featured_section {
     overflow: hidden;
   }
@@ -154,5 +176,6 @@
   .our_product3,
   .our_product4 {
     height: 40vh;
+    border-radius: 10px;
   }
 }

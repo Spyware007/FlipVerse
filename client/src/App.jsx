@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { SellerPrivateRoute, UserPrivateRoute } from "./PrivateRoutes";
+
 import { Loading } from "./Components/UI";
 import { setAuthSellerToken, setAuthUserToken } from "./utils/setAuthToken";
 import sellerAuthContext from "./Contexts/SellerAuthContext/sellerAuthContext";
@@ -85,6 +86,7 @@ const App = () => {
 			</div>
 		</>
 	);
+
 };
 
 export default App;

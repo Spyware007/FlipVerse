@@ -1,0 +1,50 @@
+.landing_hero {
+  width: 50vw;
+}
+#bagpack {
+  animation: floating 5s ease-in-out infinite;
+  animation-play-state: running;
+  transition: all 0.2s ease-in;
+}
+#shoe {
+  animation: floating 3s ease-in-out infinite;
+  animation-play-state: running;
+  transition: all 0.2s ease-in;
+}
+#hoodie {
+  animation: floating 4s ease-in-out infinite;
+  animation-play-state: running;
+  transition: all 0.2s ease-in;
+}
+#small_triangle {
+  animation: flicker 1s ease-in-out infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 40px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#hoodie:hover,
+#bagpack:hover,
+#shoe:hover {
+  animation-play-state: paused, running;
+}
