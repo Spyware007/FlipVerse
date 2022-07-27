@@ -14,6 +14,7 @@
     "hardhat": "^2.10.1"
   },
   "dependencies": {
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@^0.3.0-beta.13",
     "@openzeppelin/contracts": "^4.7.1",
     "dotenv": "^16.0.1",
     "ethers": "^5.5.4",
