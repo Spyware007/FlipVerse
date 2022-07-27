@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import Seller from "../models/Seller.js";
 
 const sellerMiddleware = async (req, res, next) => {
-	const token = req.header("x-auth-token");
+	const token = req.header("x-auth-seller-token");
 	console.log(token);
 	try {
 		const decodedSeller = await jwt.verify(token, process.env.SECRET_KEY);

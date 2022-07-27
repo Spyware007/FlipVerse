@@ -3,7 +3,7 @@ import axios from "axios";
 // import { API } from "../../config";
 import sellerAuthReducer from "./sellerAuthReducer";
 import sellerAuthContext from "./sellerAuthContext";
-import setAuthToken from "../../utils/setAuthToken";
+import { setAuthSellerToken } from "../../utils/setAuthToken";
 import {
 	REGISTER_SUCCESS,
 	REGISTER_FAIL,
@@ -17,28 +17,49 @@ import {
 
 const SellerAuthState = (props) => {
 	const initialState = {
-		token: localStorage.getItem("token"),
-		seller: null,
+		token: localStorage.getItem("sellerToken"),
 		sellerError: null,
-		isAuthenticated: null,
+		isSellerAuthenticated: localStorage.getItem("sellerToken") ? true : false,
 		loading: true,
+		seller: null,
 	};
 
 	const [state, dispatch] = useReducer(sellerAuthReducer, initialState);
 
-	const loadSeller = async (userData) => {
+	const loadSellerIfTokenFound = async () => {
+		if (localStorage.sellerToken) {
+			setAuthSellerToken(localStorage.sellerToken);
+			const config = {
+				headers: {
+					"Content-Type": "application/json",
+				},
+			};
+			try {
+				const res = await axios.get(
+					"http://localhost:8000/api/seller/profile",
+					config,
+				);
+				dispatch({ type: USER_LOADED, payload: res.data });
+			} catch (error) {
+				dispatch({ type: AUTH_ERROR });
+			}
+		} else {
+			return;
+		}
+	};
+
+	const loadSeller = async () => {
 		const config = {
 			headers: {
 				"Content-Type": "application/json",
 			},
 		};
-		if (localStorage.token) {
-			setAuthToken(localStorage.token);
+		if (localStorage.selleToken) {
+			setAuthSellerToken(localStorage.sellerToken);
 		}
 		try {
 			const res = await axios.get(
 				"http://localhost:8000/api/seller/profile",
-				userData,
 				config,
 			);
 			console.log(res);
@@ -103,11 +124,12 @@ const SellerAuthState = (props) => {
 				token: state.token,
 				seller: state.user,
 				sellerError: state.sellerError,
-				isAuthenticated: state.isAuthenticated,
+				isSellerAuthenticated: state.isSellerAuthenticated,
 				loading: state.loading,
 				registerSeller,
 				clearSellerErrors,
 				loadSeller,
+				loadSellerIfTokenFound,
 				loginSeller,
 				logoutSeller,
 			}}
