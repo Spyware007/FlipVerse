@@ -45,24 +45,34 @@ const Signup = (props) => {
 		});
 	};
 
-	const onSubmitSellerHandler = (e) => {
+	const onSubmitSellerHandler = async (e) => {
 		e.preventDefault();
 		if (name === "" || email === "" || password === "") {
 			// AlertContext.setAlert("Please enter all fields", "danger"); add a state
 		} else if (password !== password2) {
 			// AlertContext.setAlert("Passwords do not match", "danger"); add a state
 		} else {
-			registerSeller({ name, email, password });
+			try {
+				const res = await registerSeller({ name, email, password });
+				redirect("/login");
+			} catch (error) {
+				console.log(error);
+			}
 		}
 	};
-	const onSubmitHandler = (e) => {
+	const onSubmitHandler = async (e) => {
 		e.preventDefault();
 		if (name === "" || email === "" || password === "") {
 			// AlertContext.setAlert("Please enter all fields", "danger"); add a state
 		} else if (password !== password2) {
 			// AlertContext.setAlert("Passwords do not match", "danger"); add a state
 		} else {
-			registerUser({ name, email, password });
+			try {
+				const res = await registerUser({ name, email, password });
+				redirect("/login");
+			} catch (error) {
+				console.log(error);
+			}
 		}
 	};
 

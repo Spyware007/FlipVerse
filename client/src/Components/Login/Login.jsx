@@ -39,22 +39,32 @@ const Login = () => {
 		});
 	};
 
-	const onSubmitSellerHandler = (e) => {
+	const onSubmitSellerHandler = async (e) => {
 		e.preventDefault();
 		if (email === "" || password === "") {
 			// AlertContext.setAlert("Please enter all fields", "danger"); add a state
 			// AlertContext.setAlert("Passwords do not match", "danger"); add a state
 		} else {
-			loginSeller({ email, password });
+			try {
+				await loginSeller({ email, password });
+				redirect("/");
+			} catch (error) {
+				console.log(error);
+			}
 		}
 	};
-	const onSubmitHandler = (e) => {
+	const onSubmitHandler = async (e) => {
 		e.preventDefault();
 		if (email === "" || password === "") {
 			// AlertContext.setAlert("Please enter all fields", "danger"); add a state
 			// AlertContext.setAlert("Passwords do not match", "danger"); add a state
 		} else {
-			login({ email, password });
+			try {
+				await login({ email, password });
+				redirect("/");
+			} catch (error) {
+				console.log(error);
+			}
 		}
 	};
 	return (

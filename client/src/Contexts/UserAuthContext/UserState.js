@@ -43,8 +43,6 @@ const UserAuthState = (props) => {
 			} catch (error) {
 				dispatch({ type: AUTH_ERROR });
 			}
-		} else {
-			return;
 		}
 	};
 
@@ -54,6 +52,7 @@ const UserAuthState = (props) => {
 				"Content-Type": "application/json",
 			},
 		};
+		// console.log(localStorage.userToken);
 		if (localStorage.userToken) {
 			setAuthUserToken(localStorage.userToken);
 		}
@@ -79,7 +78,7 @@ const UserAuthState = (props) => {
 				config,
 			);
 			dispatch({ type: REGISTER_SUCCESS, payload: res.data });
-			loadUser();
+			// loadUser();
 		} catch (error) {
 			// console.log(error);
 			dispatch({ type: REGISTER_FAIL, payload: error.message });
