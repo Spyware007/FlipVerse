@@ -2,8 +2,8 @@ import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 
 const userAuthMiddleware = async (req, res, next) => {
-	const token = req.header("x-auth-token");
-
+	const token = req.header("x-auth-user-token");
+	console.log(token);
 	try {
 		const decodedUser = await jwt.verify(token, process.env.SECRET_KEY);
 

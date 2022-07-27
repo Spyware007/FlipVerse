@@ -1,155 +1,160 @@
 import React, { useState, useContext, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { sellerAuthContext, userAuthContext } from "../../Contexts";
+import sellerAuthContext from "../../Contexts/SellerAuthContext/sellerAuthContext";
+import userAuthContext from "../../Contexts/UserAuthContext/userAuthContext";
 import classes from "./Signup.module.css";
 import { Card, InputField, Button } from "../UI";
 import SignupHero from "./SignupHero";
 
 const Signup = (props) => {
-  const redirect = useNavigate();
-  const {
-    registerSeller,
-    sellerError,
-    clearSellerErrors,
-    isSellerAuthenticated,
-  } = useContext(sellerAuthContext);
-  const { register, error, clearErrors, isAuthenticated } =
-    useContext(userAuthContext);
+	const redirect = useNavigate();
+	const {
+		registerSeller,
+		sellerError,
+		clearSellerErrors,
+		isSellerAuthenticated,
+	} = useContext(sellerAuthContext);
 
-  useEffect(() => {
-    if (sellerError) {
-      clearSellerErrors();
-    } else if (error) {
-      clearErrors();
-    }
-    //eslint-disable-next-line
-  }, [sellerError, isSellerAuthenticated, error, isAuthenticated]); //,props.history]
-  const [user, setUser] = useState({
-    name: "",
-    email: "",
-    password: "",
-    password2: "",
-  });
+	const { registerUser, error, clearErrors, isUserAuthenticated } =
+		useContext(userAuthContext);
 
-  const { name, email, password, password2 } = user;
+	useEffect(() => {
+		if (isSellerAuthenticated || isUserAuthenticated) {
+			redirect("/");
+		}
+		if (sellerError) {
+			clearSellerErrors();
+		} else if (error) {
+			clearErrors();
+		}
+		//eslint-disable-next-line
+	}, [sellerError, isSellerAuthenticated, error, isUserAuthenticated]); //,props.history]
+	const [user, setUser] = useState({
+		name: "",
+		email: "",
+		password: "",
+		password2: "",
+	});
 
-  const onChangeHandler = (e) => {
-    setUser({
-      ...user,
-      [e.target.name]: e.target.value,
-    });
-  };
+	const { name, email, password, password2 } = user;
 
-  const onSubmitSellerHandler = (e) => {
-    e.preventDefault();
-    if (name === "" || email === "" || password === "") {
-      // AlertContext.setAlert("Please enter all fields", "danger"); add a state
-    } else if (password !== password2) {
-      // AlertContext.setAlert("Passwords do not match", "danger"); add a state
-    } else {
-      registerSeller({ name, email, password });
-      if (isSellerAuthenticated) {
-        redirect("/");
-      }
-    }
-  };
-  const onSubmitHandler = (e) => {
-    e.preventDefault();
-    if (name === "" || email === "" || password === "") {
-      // AlertContext.setAlert("Please enter all fields", "danger"); add a state
-    } else if (password !== password2) {
-      // AlertContext.setAlert("Passwords do not match", "danger"); add a state
-    } else {
-      register({ name, email, password });
-      if (isAuthenticated) {
-        redirect("/");
-      }
-    }
-  };
+	const onChangeHandler = (e) => {
+		setUser({
+			...user,
+			[e.target.name]: e.target.value,
+		});
+	};
 
-  return (
-    <>
-      <div className={classes.signup}>
-        <div className={classes.left_section}>
-          <Card width="500px" height="600px" padding="0px">
-            <div className={classes.form_container}>
-              <h1 className={classes.signup_text}>Create Account.</h1>
-              <form className={classes.form}>
-                <div className={classes.inputs}>
-                  <InputField
-                    // reference={nameRef}
-                    onChange={onChangeHandler}
-                    type="name"
-                    value={name}
-                    label="Name"
-                    name="name"
-                    placeholder="Name"
-                    required
-                  />
-                  <InputField
-                    // reference={nameRef}
-                    onChange={onChangeHandler}
-                    type="email"
-                    value={email}
-                    label="Email Address"
-                    name="email"
-                    placeholder="Email Address"
-                    required
-                  />
-                  <InputField
-                    // reference={nameRef}
-                    onChange={onChangeHandler}
-                    type="password"
-                    value={password}
-                    label="Password"
-                    name="password"
-                    placeholder="Password"
-                    required
-                  />
-                  <InputField
-                    // reference={nameRef}
-                    onChange={onChangeHandler}
-                    type="password"
-                    value={password2}
-                    label="Confirm Password"
-                    name="password2"
-                    placeholder="Confirm Password"
-                    required
-                  />
-                </div>
-                <div className={classes.btn}>
-                  <Button
-                    onClick={onSubmitHandler}
-                    label="Create User"
-                    filled
-                  />
-                  <Button
-                    onClick={onSubmitSellerHandler}
-                    label="Create Seller"
-                    filled
-                  />
-                </div>
-                <p className={classes.signup_para}>
-                  Already a user?<NavLink to="/login"> Log In</NavLink>
-                </p>
-                {/* <div className={classes.btn}>
+	const onSubmitSellerHandler = (e) => {
+		e.preventDefault();
+		if (name === "" || email === "" || password === "") {
+			// AlertContext.setAlert("Please enter all fields", "danger"); add a state
+		} else if (password !== password2) {
+			// AlertContext.setAlert("Passwords do not match", "danger"); add a state
+		} else {
+			registerSeller({ name, email, password });
+		}
+	};
+	const onSubmitHandler = (e) => {
+		e.preventDefault();
+		if (name === "" || email === "" || password === "") {
+			// AlertContext.setAlert("Please enter all fields", "danger"); add a state
+		} else if (password !== password2) {
+			// AlertContext.setAlert("Passwords do not match", "danger"); add a state
+		} else {
+			registerUser({ name, email, password });
+		}
+	};
+
+	return (
+		<>
+			<div className={classes.signup}>
+				<div className={classes.left_section}>
+					<Card width="500px" height="600px" padding="0px">
+						<div className={classes.form_container}>
+							<h1 className={classes.signup_text}>Create Account.</h1>
+							<form className={classes.form}>
+								<div className={classes.inputs}>
+									<InputField
+										// reference={nameRef}
+										onChange={onChangeHandler}
+										type="name"
+										value={name}
+										label="Name"
+										name="name"
+										placeholder="Name"
+										required
+									/>
+									<InputField
+										// reference={nameRef}
+										onChange={onChangeHandler}
+										type="email"
+										value={email}
+										label="Email Address"
+										name="email"
+										placeholder="Email Address"
+										required
+									/>
+									<InputField
+										// reference={nameRef}
+										onChange={onChangeHandler}
+										type="password"
+										value={password}
+										label="Password"
+										name="password"
+										placeholder="Password"
+										required
+									/>
+									<InputField
+										// reference={nameRef}
+										onChange={onChangeHandler}
+										type="password"
+										value={password2}
+										label="Confirm Password"
+										name="password2"
+										placeholder="Confirm Password"
+										required
+									/>
+								</div>
+								<div className={classes.btn}>
+									{!isUserAuthenticated ? (
+										<Button
+											onClick={onSubmitHandler}
+											label="Create User"
+											disabled={isUserAuthenticated}
+											filled
+										/>
+									) : null}
+									{!isSellerAuthenticated ? (
+										<Button
+											onClick={onSubmitSellerHandler}
+											label="Create Seller"
+											disabled={isSellerAuthenticated}
+											filled
+										/>
+									) : null}
+								</div>
+								<p className={classes.signup_para}>
+									Already a user?<NavLink to="/login"> Log In</NavLink>
+								</p>
+								{/* <div className={classes.btn}>
               <Button
                 // onClick={handleClick}
                 label="Sign Up"
                 // filled
               />
             </div> */}
-              </form>
-            </div>
-          </Card>
-        </div>
+							</form>
+						</div>
+					</Card>
+				</div>
 
-        <div className={classes.right_section}>
-          <SignupHero />
-        </div>
-      </div>
-    </>
-  );
+				<div className={classes.right_section}>
+					<SignupHero />
+				</div>
+			</div>
+		</>
+	);
 };
 
 export default Signup;
