@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { SellerState, UserState } from "./Contexts";
 import { SellerPrivateRoute, UserPrivateRoute } from "./PrivateRoutes";
 import { Loading } from "./Components/UI";
@@ -15,10 +15,10 @@ import {
   Footer,
   NotFound,
   Cart,
+  CategoryPage,
 } from "./Components";
 
 import "./App.css";
-import CategoryPage from "./Components/CategoryPage/CategoryPage";
 
 const App = () => {
   const location = useLocation();

@@ -10,6 +10,7 @@ import {
 } from "../controllers/seller.js";
 const sellerRouter = express.Router();
 import multer from "multer";
+import { getProductsReadyForSale } from "../controllers/product.js";
 
 const upload = multer({
 	fileFilter(req, file, cb) {
@@ -36,5 +37,9 @@ sellerRouter
 	.get(getProduct)
 	.put(upload.single("image"), sellerAuthMiddleware, uploadProductImage)
 	.delete(sellerAuthMiddleware, deleteProduct);
+
+sellerRouter
+	.route("/api/products/ready")
+	.get(sellerAuthMiddleware, getProductsReadyForSale);
 
 export default sellerRouter;
