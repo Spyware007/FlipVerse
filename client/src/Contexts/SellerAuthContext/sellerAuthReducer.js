@@ -14,15 +14,14 @@ export default (state, action) => {
 	switch (action.type) {
 		case REGISTER_SUCCESS:
 		case LOGIN_SUCCESS:
-			console.log(action.payload.token);
-			localStorage.setItem("token", action.payload.token);
-			console.log("fsd");
+			localStorage.setItem("sellerToken", action.payload.token);
 			return {
 				...state,
 				...action.payload,
 				isSellerAuthenticated: true,
 				loading: false,
 				token: action.payload.token,
+				seller: action.payload,
 			};
 		case USER_LOADED:
 			return {
@@ -30,20 +29,20 @@ export default (state, action) => {
 				isSellerAuthenticated: true,
 				sellerError: null,
 				loading: false,
-				user: action.payload,
+				seller: action.payload,
 			};
 		case REGISTER_FAIL:
 		case LOGIN_FAIL:
 		case LOGOUT:
 		case AUTH_ERROR:
-			localStorage.removeItem("token");
+			localStorage.removeItem("sellerToken");
 			return {
 				...state,
 				isSellerAuthenticated: false,
 				loading: false,
 				sellerError: action.payload,
 				token: null,
-				user: null,
+				seller: null,
 			};
 		case CLEAR_ERRORS:
 			return {

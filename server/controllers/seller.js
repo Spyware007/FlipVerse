@@ -14,11 +14,10 @@ const getSellerProfile = asyncHandler(async (req, res) => {
 		throw new Error("Seller doesn't exist");
 	}
 
-	const { name, email, role, _id, image, address } = seller;
+	const { name, email, _id, image, address } = seller;
 	res.json({
 		name,
 		email,
-		role,
 		_id,
 		image,
 		address,

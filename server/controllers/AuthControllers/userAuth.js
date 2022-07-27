@@ -17,16 +17,16 @@ const createUser = asyncHandler(async (req, res) => {
 	let { name, email, password, role, address } = req.body;
 	password = password.toString();
 
-	if (!name || !email || !password || !validateEmail(email) || !address) {
+	if (!name || !email || !password || !validateEmail(email)) {
 		res.status(404).json({ message: "Please provide valid credentials" });
-		// throw new Error("Please provide valid credentials");
+		throw new Error("Please provide valid credentials");
 	}
 
 	const isUser = await User.findOne({ email });
 
 	if (isUser) {
 		res.status(404).json({ message: "User already exists." });
-		// throw new Error();
+		return;
 	}
 
 	const user = new User({
@@ -49,14 +49,14 @@ const loginUser = asyncHandler(async (req, res) => {
 	const { email, password } = req.body;
 	if (!validateEmail(email)) {
 		res.status(404).json({ message: "Please enter valid email" });
-		throw new Error();
+		return;
 	}
 
 	const user = await User.findUserByCredentials(email, password);
 
 	if (!user) {
 		res.status(404).json("Please enter correct email and password.");
-		// throw new Error();
+		return;
 	}
 
 	const token = await user.generateAuthToken();
