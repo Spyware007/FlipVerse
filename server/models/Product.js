@@ -28,6 +28,10 @@ const productSchema = new Schema(
 			type: Boolean,
 			default: false,
 		},
+		isReadyForSale: {
+			type: Boolean,
+			default: false,
+		},
 		createdBy: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "Seller",
