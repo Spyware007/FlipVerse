@@ -62,7 +62,6 @@ const SellerAuthState = (props) => {
 				"http://localhost:8000/api/seller/profile",
 				config,
 			);
-			console.log(res);
 			dispatch({ type: USER_LOADED, payload: res.data });
 		} catch (error) {
 			dispatch({ type: AUTH_ERROR });
@@ -83,7 +82,7 @@ const SellerAuthState = (props) => {
 				config,
 			);
 			dispatch({ type: REGISTER_SUCCESS, payload: res.data });
-			loadSeller();
+			// loadSeller();
 		} catch (error) {
 			// console.log(error);
 			dispatch({ type: REGISTER_FAIL, payload: error.message });

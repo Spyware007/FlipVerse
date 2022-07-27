@@ -13,12 +13,18 @@ import {
 export default (state, action) => {
 	switch (action.type) {
 		case REGISTER_SUCCESS:
+			return {
+				...state,
+				isSellerAuthenticated: false,
+				loading: false,
+				token: action.payload.token,
+				seller: action.payload,
+			};
 		case LOGIN_SUCCESS:
 			localStorage.setItem("sellerToken", action.payload.token);
 			return {
 				...state,
-				...action.payload,
-				isSellerAuthenticated: true,
+				isSellerAuthenticated: false,
 				loading: false,
 				token: action.payload.token,
 				seller: action.payload,
