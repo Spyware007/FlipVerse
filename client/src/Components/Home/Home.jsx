@@ -72,30 +72,28 @@ const Home = () => {
         <div className={classes.our_products_section}>
           <h1 className={classes.our_products_text}>Our Products</h1>
           <div className={classes.our_product1}>
-            <div className={classes.our_product_content}>
-              <div className={classes.product_small_images}>
-                <img
-                  src={shoe1}
-                  className={classes.product_small_image1}
-                  alt=""
-                />
-                <img
-                  src={shoe2}
-                  className={classes.product_small_image2}
-                  alt=""
-                />
-              </div>
-              <div>
-                <h1 className={classes.our_product_text}>Sneakers</h1>
-                <Button label="Explore" filled />
-              </div>
+            <div className={classes.product_small_images}>
+              <img
+                src={shoe1}
+                className={classes.product_small_image1}
+                alt=""
+              />
+              <img
+                src={shoe2}
+                className={classes.product_small_image2}
+                alt=""
+              />
+            </div>
+            <div className={classes.content}>
+              <h1 className={classes.our_product_text}>Sneakers</h1>
+              <Button label="Explore" filled padding="15px 40px" />
             </div>
           </div>
           <div className={classes.our_product2}>
             <div>
-              <div>
+              <div className={classes.content}>
                 <h1 className={classes.our_product_text}>Hoddies</h1>
-                <Button label="Explore" filled />
+                <Button label="Explore" filled padding="15px 40px" />
               </div>
             </div>
             <div className={classes.product_small_images}>
@@ -114,30 +112,20 @@ const Home = () => {
           </div>
 
           <div className={classes.our_product3}>
-            <div>
-              <div className={classes.product_small_images}>
-                <img
-                  src={bag1}
-                  className={classes.product_small_image1}
-                  alt=""
-                />
-                <img
-                  src={bag2}
-                  className={classes.product_small_image2}
-                  alt=""
-                />
-              </div>
-              <div>
-                <h1 className={classes.our_product_text}>BagPacks</h1>
-                <Button label="Explore" filled />
-              </div>
+            <div className={classes.product_small_images}>
+              <img src={bag1} className={classes.product_small_image1} alt="" />
+              <img src={bag2} className={classes.product_small_image2} alt="" />
+            </div>
+            <div className={classes.content}>
+              <h1 className={classes.our_product_text}>Bagpacks</h1>
+              <Button label="Explore" filled padding="15px 40px" />
             </div>
           </div>
           <div className={classes.our_product4}>
             <div>
-              <div>
+              <div className={classes.content}>
                 <h1 className={classes.our_product_text}>T-shirts</h1>
-                <Button label="Explore" filled />
+                <Button label="Explore" filled padding="15px 40px" />
               </div>
             </div>
             <div className={classes.product_small_images}>

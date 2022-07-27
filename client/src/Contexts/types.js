@@ -8,3 +8,5 @@ export const LOGOUT = "LOGOUT";
 export const CLEAR_ERRORS = "CLEAR_ERRORS";
 export const ADD_PRODUCT = "ADD_PRODUCT";
 export const ADD_PRODUCT_FAIL = "ADD_PRODUCT_FAIL";
+export const ADD_IMAGE = "ADD_IMAGE";
+export const ADD_IMAGE_FAIL = "ADD_IMAGE_FAIL";

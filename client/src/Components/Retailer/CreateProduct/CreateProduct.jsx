@@ -4,7 +4,9 @@ import classes from "./CreateProduct.module.css";
 import { sellerAuthContext } from "../../../Contexts";
 
 const CreateProduct = () => {
-  const { addProduct, seller } = useContext(sellerAuthContext);
+  const { addProduct, seller, addImageToProduct, products } =
+    useContext(sellerAuthContext);
+  console.log(products.product);
 
   const [img, setImg] = useState();
   const [product, setProduct] = useState({
@@ -29,7 +31,7 @@ const CreateProduct = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-
+    // console.log(seller);
     if (
       title === "" ||
       brand === "" ||
@@ -42,6 +44,7 @@ const CreateProduct = () => {
     } else {
       try {
         await addProduct(product);
+        await addImageToProduct(img, seller, products.product._id);
       } catch (error) {
         console.log(error);
       }

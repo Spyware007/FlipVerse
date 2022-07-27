@@ -17,8 +17,8 @@ const MyItems = () => {
               const product = p.product;
               return (
                 <ProductCard
-                  image={trial1}
-                  name={product.name}
+                  image={""}
+                  name={product.title}
                   price={product.price}
                 />
               );

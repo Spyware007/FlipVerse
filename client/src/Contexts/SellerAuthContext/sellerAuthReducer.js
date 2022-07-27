@@ -9,6 +9,8 @@ import {
   CLEAR_ERRORS,
   ADD_PRODUCT,
   ADD_PRODUCT_FAIL,
+  ADD_IMAGE,
+  ADD_IMAGE_FAIL,
 } from "../types";
 
 // eslint-disable-next-line
@@ -58,17 +60,18 @@ export default (state, action) => {
         sellerError: null,
       };
     case ADD_PRODUCT:
+    case ADD_IMAGE:
       return {
         ...state,
         products: [...state.products, action.payload],
       };
-    case ADD_PRODUCT_FAIL: {
+    case ADD_PRODUCT_FAIL:
+    case ADD_IMAGE_FAIL:
       return {
         ...state,
         products: [...state.products],
         productError: "Product Create Failed",
       };
-    }
     default:
       return state;
   }
