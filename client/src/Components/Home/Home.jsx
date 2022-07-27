@@ -1,6 +1,16 @@
 import React, { useRef } from "react";
-import { Button, ProductCard, SplineModel } from "../UI";
+import { Button, ProductCard, LandingHero } from "../UI";
 import classes from "./Home.module.css";
+import {
+  shoe1,
+  shoe2,
+  tshirt1,
+  tshirt2,
+  bag1,
+  bag2,
+  hoodie1,
+  hoodie2,
+} from "../../Assets/Home";
 import trial1 from "../../Assets/trial1.png";
 import trial2 from "../../Assets/trial2.png";
 import trial3 from "../../Assets/trial3.png";
@@ -36,7 +46,8 @@ const Home = () => {
             </div>
           </div>
           <div className={classes.model}>
-            <SplineModel />
+            {/* <SplineModel /> */}
+            <LandingHero />
           </div>
         </div>
 
@@ -61,20 +72,86 @@ const Home = () => {
         <div className={classes.our_products_section}>
           <h1 className={classes.our_products_text}>Our Products</h1>
           <div className={classes.our_product1}>
-            <h1 className={classes.our_product_text}>Sneakers</h1>
-            <Button label="Explore" filled />
+            <div className={classes.our_product_content}>
+              <div className={classes.product_small_images}>
+                <img
+                  src={shoe1}
+                  className={classes.product_small_image1}
+                  alt=""
+                />
+                <img
+                  src={shoe2}
+                  className={classes.product_small_image2}
+                  alt=""
+                />
+              </div>
+              <div>
+                <h1 className={classes.our_product_text}>Sneakers</h1>
+                <Button label="Explore" filled />
+              </div>
+            </div>
           </div>
           <div className={classes.our_product2}>
-            <h1 className={classes.our_product_text}>Hoddies</h1>
-            <Button label="Explore" filled />
+            <div>
+              <div>
+                <h1 className={classes.our_product_text}>Hoddies</h1>
+                <Button label="Explore" filled />
+              </div>
+            </div>
+            <div className={classes.product_small_images}>
+              <img
+                src={hoodie1}
+                className={classes.product_small_image1}
+                alt=""
+              />
+
+              <img
+                src={hoodie2}
+                className={classes.product_small_image2}
+                alt=""
+              />
+            </div>
           </div>
+
           <div className={classes.our_product3}>
-            <h1 className={classes.our_product_text}>BagPacks</h1>
-            <Button label="Explore" filled />
+            <div>
+              <div className={classes.product_small_images}>
+                <img
+                  src={bag1}
+                  className={classes.product_small_image1}
+                  alt=""
+                />
+                <img
+                  src={bag2}
+                  className={classes.product_small_image2}
+                  alt=""
+                />
+              </div>
+              <div>
+                <h1 className={classes.our_product_text}>BagPacks</h1>
+                <Button label="Explore" filled />
+              </div>
+            </div>
           </div>
           <div className={classes.our_product4}>
-            <h1 className={classes.our_product_text}>T-shirts</h1>
-            <Button label="Explore" filled />
+            <div>
+              <div>
+                <h1 className={classes.our_product_text}>T-shirts</h1>
+                <Button label="Explore" filled />
+              </div>
+            </div>
+            <div className={classes.product_small_images}>
+              <img
+                src={tshirt1}
+                className={classes.product_small_image1}
+                alt=""
+              />
+              <img
+                src={tshirt2}
+                className={classes.product_small_image2}
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>

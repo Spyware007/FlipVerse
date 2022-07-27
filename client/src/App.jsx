@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { SellerState, UserState } from "./Contexts";
 import { SellerPrivateRoute, UserPrivateRoute } from "./PrivateRoutes";
-import { Loading } from "./Components/UI";
+import { LandingHero, Loading } from "./Components/UI";
 import {
   Home,
   Login,
@@ -79,6 +79,7 @@ const App = () => {
                   {/* <Route path="*" element={<Navigate to="/" />} /> */}
                 </Routes>
                 <Footer />
+                {/* <LandingHero /> */}
               </>
             )}
           </div>
