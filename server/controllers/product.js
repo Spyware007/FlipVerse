@@ -2,9 +2,10 @@ import Product from "../models/Product.js";
 import asyncHandler from "express-async-handler";
 import { getIndexOfProduct, verifyId } from "../utils/helpers.js";
 import User from "../models/User.js";
+import Seller from "../models/Seller.js";
 
 const getProducts = asyncHandler(async (req, res) => {
-	const products = await Product.find({ sold: false });
+	const products = await Product.find({ sold: false, isReadyForSale: false });
 	res.status(201).json({ products });
 });
 
@@ -118,11 +119,11 @@ const purchaseProduct = asyncHandler(async (req, res) => {
 		throw new Error("Product already purchased");
 	}
 
-	product.sold = true;
-	purchasedProducts.push(id);
+	product.isReadyForSale = true;
+	// purchasedProducts.push(id);
 	await product.save();
 	await req.user.save();
-	res.status(200).json({ message: "Purchased product successfully" });
+	res.status(200).json({ message: "Ordered successfully" });
 });
 
 const getWishListedProducts = asyncHandler(async (req, res) => {
@@ -137,6 +138,17 @@ const getPurchasedProducts = asyncHandler(async (req, res) => {
 	res.status(200).json({ purchasedProducts: user.purchasedProducts });
 });
 
+const getProductsReadyForSale = asyncHandler(async (req, res) => {
+	let productsReadyForSale = await Seller.findById(req.seller._id)
+		.populate("products")
+		.exec();
+
+	const nwp = productsReadyForSale.products.filter((p) => {
+		return p.isReadyForSale === true;
+	});
+	res.status(200).json({ productsReadyForSale: nwp });
+});
+
 export {
 	getProducts,
 	getWishListedProducts,
@@ -145,4 +157,5 @@ export {
 	purchaseProduct,
 	getPurchasedProducts,
 	getProductsByCategory,
+	getProductsReadyForSale,
 };
