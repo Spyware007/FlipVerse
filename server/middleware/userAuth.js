@@ -13,6 +13,7 @@ const userAuthMiddleware = async (req, res, next) => {
 		});
 
 		if (!user) {
+			res.status(400).json({ message: "User not found" });
 			throw new Error("Could not find user");
 		}
 

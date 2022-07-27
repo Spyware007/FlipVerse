@@ -13,6 +13,7 @@ const sellerMiddleware = async (req, res, next) => {
 		});
 
 		if (!seller) {
+			res.status(400).json({ message: "Seller not found" });
 			throw new Error("Could not find seller");
 		}
 

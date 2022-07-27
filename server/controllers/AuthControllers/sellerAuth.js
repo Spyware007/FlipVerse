@@ -25,6 +25,7 @@ const createSeller = asyncHandler(async (req, res) => {
 
 	if (isSeller) {
 		res.status(404).json({ message: "Seller already exists" });
+		return;
 		// throw new Error("Seller already exists.");
 	}
 
@@ -46,6 +47,7 @@ const loginSeller = asyncHandler(async (req, res) => {
 	const { email, password } = req.body;
 	if (!validateEmail(email)) {
 		res.status(404).json({ message: "Please enter valid email" });
+		return;
 	}
 
 	const seller = await Seller.findSellerByCredentials(email, password);
@@ -54,7 +56,7 @@ const loginSeller = asyncHandler(async (req, res) => {
 		res
 			.status(404)
 			.json({ message: "Please enter correct email and password." });
-		// throw new Error("");
+		return;
 	}
 
 	const token = await seller.generateAuthToken();
