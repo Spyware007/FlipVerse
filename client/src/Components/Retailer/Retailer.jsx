@@ -14,6 +14,7 @@ import editProfile from "../../Assets/edit.svg";
 import changePass from "../../Assets/changePass.svg";
 import purchased from "../../Assets/purchased.svg";
 import logout from "../../Assets/logout.svg";
+import create from "../../Assets/create.svg";
 
 const reducerFunction = (state, action) => {
   switch (action.type) {
@@ -118,11 +119,7 @@ const Retailer = () => {
                   >
                     Create Product{" "}
                     <span>
-                      <img
-                        className={classes.icon}
-                        // src={createProduct}
-                        alt="icons"
-                      />
+                      <img className={classes.icon} src={create} alt="icons" />
                     </span>
                   </div>
                 </li>

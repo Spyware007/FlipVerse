@@ -1,20 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Button, Card, ProductCard, InputField } from "../../UI";
 import classes from "./CreateProduct.module.css";
+import { sellerAuthContext } from "../../../Contexts";
 
 const CreateProduct = () => {
+  const { addProduct, seller } = useContext(sellerAuthContext);
+
   const [img, setImg] = useState();
   const [product, setProduct] = useState({
-    product_name: "",
+    title: "",
     brand: "",
     category: "",
-    warranty: "",
     price: "",
     description: "",
   });
 
-  const { product_name, brand, category, warranty, price, description } =
-    product;
+  const { title, brand, category, price, description } = product;
   const onChangeHandler = (e) => {
     setProduct({
       ...product,
@@ -26,14 +27,35 @@ const CreateProduct = () => {
     setImg(URL.createObjectURL(file));
   };
 
+  const submitHandler = async (e) => {
+    e.preventDefault();
+
+    if (
+      title === "" ||
+      brand === "" ||
+      category === "" ||
+      price === "" ||
+      description === ""
+    ) {
+      // AlertContext.setAlert("Please enter all fields", "danger"); add a state
+      alert("please fill all filed");
+    } else {
+      try {
+        await addProduct(product);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
+
   return (
     <>
       <div className={classes.create_product_section}>
         <Card width="900px" height="750px">
-          <div className={classes.outer}>
+          <form className={classes.outer} onSubmit={submitHandler}>
             <div className={classes.inner}>
               <div>
-                <ProductCard image={img} name={product_name} price={price} />
+                <ProductCard image={img} name={title} price={price} />
                 <input
                   className={classes.custom_file_input}
                   type="file"
@@ -45,9 +67,9 @@ const CreateProduct = () => {
                   onChange={onChangeHandler}
                   // reference={nameRef}
                   type="name"
-                  value={product_name}
+                  value={title}
                   label="Product Name"
-                  name="product_name"
+                  name="title"
                   placeholder="Product Name"
                   required
                 />
@@ -81,7 +103,7 @@ const CreateProduct = () => {
                   placeholder="Price"
                   required
                 />
-                <InputField
+                {/* <InputField
                   onChange={onChangeHandler}
                   // reference={nameRef}
                   type="date"
@@ -90,7 +112,7 @@ const CreateProduct = () => {
                   name="warranty"
                   placeholder="Warranty Period"
                   required
-                />
+                /> */}
               </div>
             </div>
             <div>
@@ -107,7 +129,7 @@ const CreateProduct = () => {
             <div>
               <Button filled label="Create" />
             </div>
-          </div>
+          </form>
         </Card>
       </div>
     </>
