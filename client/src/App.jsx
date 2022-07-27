@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { SellerState, UserState } from "./Contexts";
+import { SellerPrivateRoute, UserPrivateRoute } from "./PrivateRoutes";
 import { Loading } from "./Components/UI";
 import {
   Home,
@@ -51,9 +52,20 @@ const App = () => {
                   <Route path="/verifynft" element={<VerifyNft />}></Route>
                   <Route
                     path="/retailer/dashboard"
-                    element={<Retailer />}
+                    element={
+                      <SellerPrivateRoute>
+                        <Retailer />
+                      </SellerPrivateRoute>
+                    }
                   ></Route>
-                  <Route path="/user/dashboard" element={<User />}></Route>
+                  <Route
+                    path="/user/dashboard"
+                    element={
+                      <UserPrivateRoute>
+                        <User />
+                      </UserPrivateRoute>
+                    }
+                  ></Route>
                   <Route
                     path="/category/:id"
                     element={<CategoryPage />}
