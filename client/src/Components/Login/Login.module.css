@@ -47,6 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  column-gap: 30px;
 }
 .login_para {
   white-space: nowrap;

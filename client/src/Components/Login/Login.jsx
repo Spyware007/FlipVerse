@@ -1,26 +1,30 @@
 import React, { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { sellerAuthContext } from "../../Contexts";
+import { sellerAuthContext, userAuthContext } from "../../Contexts";
 import { InputField, Button } from "../UI";
 import classes from "./Login.module.css";
 import LoginHero from "./LoginHero";
 
 const Login = () => {
   const redirect = useNavigate();
-  const { login, error, clearErrors, isAuthenticated } =
+  const { loginSeller, sellerError, clearSellerErrors, isSellerAuthenticated } =
     useContext(sellerAuthContext);
+  const { login, error, clearErrors, isAuthenticated } =
+    useContext(userAuthContext);
 
   useEffect(() => {
     // if (isAuthenticated) {
     //   props.history.push("/");
     // }
 
-    if (error) {
+    if (sellerError) {
       // AlertContext.setAlert(error, "danger");
+      clearSellerErrors();
+    } else if (error) {
       clearErrors();
     }
     //eslint-disable-next-line
-  }, [error, isAuthenticated]); //,props.history]
+  }, [sellerError, error, isSellerAuthenticated, isAuthenticated]); //,props.history]
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -35,6 +39,18 @@ const Login = () => {
     });
   };
 
+  const onSubmitSellerHandler = (e) => {
+    e.preventDefault();
+    if (email === "" || password === "") {
+      // AlertContext.setAlert("Please enter all fields", "danger"); add a state
+      // AlertContext.setAlert("Passwords do not match", "danger"); add a state
+    } else {
+      loginSeller({ email, password });
+      if (isSellerAuthenticated) {
+        redirect("/");
+      }
+    }
+  };
   const onSubmitHandler = (e) => {
     e.preventDefault();
     if (email === "" || password === "") {
@@ -80,10 +96,11 @@ const Login = () => {
             </div>
             <div className={classes.btn}>
               <Button
-                // onClick={handleClick}
-                label="Log In"
+                onClick={onSubmitSellerHandler}
+                label="Seller Log In"
                 filled
               />
+              <Button onClick={onSubmitHandler} label="User Log In" filled />
             </div>
             <p className={classes.login_para}>
               Don&apos;t have an account ?

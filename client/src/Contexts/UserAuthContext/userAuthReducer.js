@@ -19,15 +19,15 @@ export default (state, action) => {
       return {
         ...state,
         ...action.payload,
-        isSellerAuthenticated: true,
+        isAuthenticated: true,
         loading: false,
         token: action.payload.token,
       };
     case USER_LOADED:
       return {
         ...state,
-        isSellerAuthenticated: true,
-        sellerError: null,
+        isAuthenticated: true,
+        error: null,
         loading: false,
         user: action.payload,
       };
@@ -38,16 +38,16 @@ export default (state, action) => {
       localStorage.removeItem("token");
       return {
         ...state,
-        isSellerAuthenticated: false,
+        isAuthenticated: false,
         loading: false,
-        sellerError: action.payload,
+        error: action.payload,
         token: null,
         user: null,
       };
     case CLEAR_ERRORS:
       return {
         ...state,
-        sellerError: null,
+        error: null,
       };
     default:
       return state;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import classes from "./Footer.module.css";
 import { NavLink } from "react-router-dom";
 import spider from "../../Assets/spider.png";
@@ -10,9 +10,15 @@ import {
   nishantLink,
   saurabhLink,
 } from "../../Constants/social.contact";
+import { sellerAuthContext, userAuthContext } from "../../Contexts";
 
 const Footer = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const { isSellerAuthenticated } = useContext(sellerAuthContext);
+  const { isAuthenticated } = useContext(userAuthContext);
+
+  const authenticated = isSellerAuthenticated || isAuthenticated;
 
   return (
     <>
@@ -36,7 +42,7 @@ const Footer = () => {
             <NavLink to="/verifynft" className={classes.links}>
               Verify NFT
             </NavLink>
-            {isAuthenticated && (
+            {authenticated && (
               <>
                 <NavLink to="/" className={classes.links}>
                   Cart
@@ -46,7 +52,7 @@ const Footer = () => {
                 </NavLink>
               </>
             )}
-            {!isAuthenticated && (
+            {!authenticated && (
               <>
                 <NavLink to="/login" className={classes.links}>
                   Login
