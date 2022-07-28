@@ -1,6 +1,8 @@
 import React, { useEffect, useContext } from "react";
+import { useMoralis } from "react-moralis";
 import { Button, ProductCard, SingleProductCard } from "../UI";
 import { useParams, useNavigate } from "react-router-dom";
+import { Button } from "@web3uikit/core";
 import classes from "./Product.module.css";
 import rs_icon from "../../Assets/rs_icon.png";
 import {
@@ -11,11 +13,14 @@ import {
 
 const Product = () => {
 	const redirect = useNavigate();
+
 	const { getSingleProduct, product, orderProduct } =
 		useContext(productContext);
 	const { isSellerAuthenticated } = useContext(sellerAuthContext);
 	const { isUserAuthenticated } = useContext(userAuthContext);
 	const { productId } = useParams();
+
+	const { isWeb3Enabled, enableWeb3 } = useMoralis();
 
 	useEffect(() => {
 		getSingleProduct(productId);
@@ -96,6 +101,7 @@ const Product = () => {
                 Add to Cart
                 <CartIcon />
               </Button> */}
+							<Button moralisAuth={false} />
 						</div>
 					</div>
 				</div>
