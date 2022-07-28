@@ -53,4 +53,20 @@
   .side_nav {
     display: none;
   }
+  .icon {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .link_container {
+    margin: 20px 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .link_container {
+    margin: 20px 0;
+  }
+  .nav_links_container {
+    padding-left: 25px;
+  }
 }

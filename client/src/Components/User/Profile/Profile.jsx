@@ -7,8 +7,8 @@ const Profile = () => {
   const { user } = useContext(userAuthContext);
   return (
     <>
-      <div className="">
-        <Card smooth width="900px" height="400px">
+      <div className={classes.profile_container}>
+        <Card smooth width="auto" height="300px">
           <div className={classes.profile_card}>
             <div className={classes.profile_pic}></div>
             <div className={classes.inputs}>

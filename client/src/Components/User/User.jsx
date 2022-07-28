@@ -123,7 +123,7 @@ const User = () => {
                 </li>
                 <li className={classes.link_container}>
                   <div onClick={() => showHandler()} className={classes.link}>
-                    Logout{" "}
+                    <span className={classes.side_nav}>Logout </span>
                     <span>
                       <img className={classes.icon} src={logout} alt="icons" />
                     </span>
