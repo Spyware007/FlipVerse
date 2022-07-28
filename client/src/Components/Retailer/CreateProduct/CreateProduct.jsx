@@ -7,7 +7,7 @@ const CreateProduct = () => {
 	const { addProduct } = useContext(sellerAuthContext);
 	// console.log(products.product);
 
-	const [img, setImg] = useState();
+	const [img, setImg] = useState(null);
 	const [product, setProduct] = useState({
 		title: "",
 		brand: "",
@@ -42,18 +42,15 @@ const CreateProduct = () => {
 			alert("please fill all filed");
 		} else {
 			const dataArray = new FormData();
-			dataArray.append(title);
-			dataArray.append(brand);
-			dataArray.append(category);
-			dataArray.append(price);
-			dataArray.append(description);
-			dataArray.append(title);
-			dataArray.append(img);
+			dataArray.append("title", title);
+			dataArray.append("brand", brand);
+			dataArray.append("category", category);
+			dataArray.append("price", price);
+			dataArray.append("description", description);
+			dataArray.append("image", img["0"], img["0"].name);
 			console.log(dataArray);
 			try {
-				// product = [...product, img];
 				await addProduct(dataArray);
-				// await addImageToProduct(img, seller, products.product._id);
 			} catch (error) {
 				console.log(error);
 			}
