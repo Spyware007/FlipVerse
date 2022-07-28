@@ -20,9 +20,11 @@ import {
   NotFound,
   Cart,
   CategoryPage,
+  Explore,
 } from "./Components";
 
 import "./App.css";
+// import Explore from "./Components/Explore/Explore";
 
 if (localStorage.sellerToken) {
   setAuthSellerToken(localStorage.sellerToken);
@@ -77,6 +79,7 @@ const App = () => {
               <Route path="/category/:id" element={<CategoryPage />}></Route>
               <Route path="/product/:productId" element={<Product />}></Route>
               <Route path="/cart" element={<Cart />}></Route>
+              <Route path="/explore" element={<Explore />}></Route>
               <Route path="*" element={<NotFound />}></Route>
               {/* <Route path="*" element={<Navigate to="/" />} /> */}
             </Routes>
