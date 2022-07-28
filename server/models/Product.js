@@ -24,6 +24,10 @@ const productSchema = new Schema(
 		image: {
 			type: Buffer,
 		},
+		hasWarranty: {
+			type: Boolean,
+			default: false,
+		},
 		sold: {
 			type: Boolean,
 			default: false,

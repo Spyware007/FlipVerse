@@ -54,7 +54,7 @@ const updateSellerProfile = asyncHandler(async (req, res) => {
 });
 
 const createProduct = asyncHandler(async (req, res) => {
-	const { title, category, price, brand, description } = req.body;
+	const { title, category, price, brand, description, hasWarranty } = req.body;
 
 	console.log(req.body);
 	console.log(req.body.image);
@@ -72,6 +72,7 @@ const createProduct = asyncHandler(async (req, res) => {
 		category,
 		description,
 		image: imageBuffer,
+		hasWarranty: hasWarranty ? true : false,
 		createdBy: req.seller._id,
 	});
 
