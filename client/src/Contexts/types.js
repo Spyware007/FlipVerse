@@ -18,3 +18,4 @@ export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 // Product
 export const BUY_PRODUCT = "BUY_PRODUCT";
 export const BUY_PRODUCT_FAIL = "BUY_PRODUCT_FAIL";
+export const GET_ALL_PRODUCTS = "GET_ALL_PRODUCTS";
