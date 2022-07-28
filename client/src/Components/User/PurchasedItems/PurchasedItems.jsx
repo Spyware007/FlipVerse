@@ -8,7 +8,7 @@ const PurchasedItems = () => {
     <>
       <div className={classes.purchased_products}>
         <h1 className={classes.text}>Purchased Items</h1>
-        <Card smooth width="980px" height="auto">
+        <Card smooth width="auto" height="auto">
           <div className={classes.cards_container}>
             <ProductCard image={trial1} />
             <ProductCard image={trial1} />

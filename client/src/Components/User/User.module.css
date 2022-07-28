@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 50px;
-  padding-right: 70px;
+  /* padding-right: 70px; */
 }
 .nav_links_container {
   width: 100%;
@@ -48,4 +48,25 @@
 .icon {
   width: 30px;
   margin-left: 8px;
+}
+@media screen and (max-width: 1200px) {
+  .side_nav {
+    display: none;
+  }
+  .icon {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .link_container {
+    margin: 20px 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .link_container {
+    margin: 20px 0;
+  }
+  .nav_links_container {
+    padding-left: 25px;
+  }
 }

@@ -77,7 +77,7 @@ const Retailer = () => {
                     onClick={() => dispatch({ type: "profile" })}
                     className={classes.link}
                   >
-                    Your Profile{" "}
+                    <span className={classes.side_nav}>Your Profile </span>
                     <span>
                       <img className={classes.icon} src={profile} alt="icons" />
                     </span>
@@ -88,7 +88,7 @@ const Retailer = () => {
                     onClick={() => dispatch({ type: "editProfile" })}
                     className={classes.link}
                   >
-                    Edit Profile{" "}
+                    <span className={classes.side_nav}>Edit Profile </span>
                     <span>
                       <img
                         className={classes.icon}
@@ -103,7 +103,7 @@ const Retailer = () => {
                     onClick={() => dispatch({ type: "myItems" })}
                     className={classes.link}
                   >
-                    My Items{" "}
+                    <span className={classes.side_nav}>My Items </span>
                     <span>
                       <img
                         className={classes.icon}
@@ -118,7 +118,7 @@ const Retailer = () => {
                     onClick={() => dispatch({ type: "createProduct" })}
                     className={classes.link}
                   >
-                    Create Product{" "}
+                    <span className={classes.side_nav}>Create Product </span>
                     <span>
                       <img className={classes.icon} src={create} alt="icons" />
                     </span>
@@ -129,7 +129,7 @@ const Retailer = () => {
                     onClick={() => dispatch({ type: "changePass" })}
                     className={classes.link}
                   >
-                    Change Password{" "}
+                    <span className={classes.side_nav}>Change Password </span>
                     <span>
                       <img
                         className={classes.icon}
@@ -141,7 +141,7 @@ const Retailer = () => {
                 </li>
                 <li className={classes.link_container}>
                   <div onClick={() => showHandler()} className={classes.link}>
-                    Logout{" "}
+                    <span className={classes.side_nav}>Logout </span>
                     <span>
                       <img className={classes.icon} src={logout} alt="icons" />
                     </span>

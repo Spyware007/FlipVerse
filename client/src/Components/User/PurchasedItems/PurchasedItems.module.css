@@ -1,11 +1,14 @@
+.purchased_products {
+  margin: 0 20px;
+}
 .cards_container {
   display: flex;
   flex-wrap: wrap;
   overflow-x: scroll;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 20px;
+  gap: 15px;
+  padding: 10px;
 }
 .text {
   font-size: 2rem;
