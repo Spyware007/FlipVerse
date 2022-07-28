@@ -1,14 +1,13 @@
 .cards_container {
-  display: flex;
-  flex-wrap: wrap;
-  overflow-x: scroll;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding: 20px;
 }
 .text {
-  font-size: 2rem;
-  color: rgb(0, 183, 255);
-  margin: 20px 0;
+	font-size: 2rem;
+	color: rgb(0, 183, 255);
+	margin: 20px 0;
 }
