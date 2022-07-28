@@ -23,7 +23,13 @@ const Explore = () => {
         <div className={classes.cart_products}>
           {allProducts.map((p, i) => {
             return (
-              <ProductCard image={p.image} name={p.title} price={p.price} />
+              <ProductCard
+                key={i}
+                id={p._id}
+                image={p.image}
+                name={p.title}
+                price={p.price}
+              />
             );
           })}
         </div>
