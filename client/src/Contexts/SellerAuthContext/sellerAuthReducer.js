@@ -12,6 +12,8 @@ import {
   ADD_IMAGE,
   ADD_IMAGE_FAIL,
   GET_SELLER_PRODUCTS,
+  UPDATE_IMAGE,
+  UPDATE_PROFILE,
 } from "../types";
 
 // eslint-disable-next-line
@@ -77,6 +79,12 @@ export default (state, action) => {
       return {
         ...state,
         products: action.payload,
+      };
+    case UPDATE_IMAGE:
+    case UPDATE_PROFILE:
+      return {
+        ...state,
+        seller: action.payload,
       };
     default:
       return state;

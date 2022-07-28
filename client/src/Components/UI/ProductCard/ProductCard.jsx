@@ -13,6 +13,7 @@ const ProductCard = ({
   innerWidth = "230px",
   innerHeight = "250px",
   id,
+  alt = "product_image",
   show = false,
   disabled,
 }) => {
@@ -23,16 +24,12 @@ const ProductCard = ({
           <div className={classes.content_container}>
             <Card width={innerWidth} height={innerHeight}>
               {show ? (
-                <img
-                  className={classes.image}
-                  src={image}
-                  alt="product_image"
-                />
+                <img className={classes.image} src={image} alt={alt} />
               ) : (
                 <img
                   className={classes.image}
                   src={`data:image/jpeg;base64, ${image}`}
-                  alt="product_image"
+                  alt={alt}
                 />
               )}
             </Card>

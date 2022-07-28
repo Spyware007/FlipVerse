@@ -11,11 +11,11 @@ import {
   hoodie1,
   hoodie2,
 } from "../../Assets/Home";
-import trial1 from "../../Assets/trial1.png";
-import trial2 from "../../Assets/trial2.png";
-import trial3 from "../../Assets/trial3.png";
-import trial4 from "../../Assets/trial4.png";
-import trial5 from "../../Assets/trial5.png";
+import trial1 from "../../Assets/Home/1.png";
+import trial2 from "../../Assets/Home/2.png";
+import trial3 from "../../Assets/Home/3.png";
+import trial4 from "../../Assets/Home/4.png";
+import trial5 from "../../Assets/Home/5.png";
 import wave from "../../Assets/Home/waves.svg";
 
 const Home = () => {
@@ -57,17 +57,47 @@ const Home = () => {
           <h1 className={classes.featured_text}>Featured Products</h1>
           <div className={classes.featured_products}>
             <div className={classes.translated1}>
-              <ProductCard image={trial1} />
+              <ProductCard
+                show
+                name="Future Neck Rounded T-shirt"
+                price="239"
+                image={trial1}
+                id="62e2f81ce3b9bf471a9055f6"
+              />
             </div>
             <div className={classes.translated}>
-              <ProductCard image={trial2} />
+              <ProductCard
+                show
+                name="Full Sleeve Color Block Men Sweatshirt"
+                price="649"
+                image={trial2}
+                id="62e2fa38e3b9bf471a90561e"
+              />
             </div>
-            <ProductCard image={trial3} />
+            <ProductCard
+              show
+              name="Sports Sneakers Shoes for Men"
+              price="277"
+              image={trial3}
+              id="62e2fb08e3b9bf471a905630"
+            />
             <div className={classes.translated}>
-              <ProductCard image={trial4} />
+              <ProductCard
+                show
+                name="Backpack Fizz Bag (Grey)"
+                price="1169"
+                image={trial4}
+                id="62e2fc07e3b9bf471a905642"
+              />
             </div>
             <div className={classes.translated5}>
-              <ProductCard image={trial5} />
+              <ProductCard
+                show
+                name="Badminton Shoes For Men (Yellow)"
+                price="2922"
+                image={trial5}
+                id="62e2fcc3e3b9bf471a905654"
+              />
             </div>
           </div>
         </div>

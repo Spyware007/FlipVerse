@@ -11,6 +11,8 @@ import {
   REMOVE_FROM_CART,
   BUY_PRODUCT,
   BUY_PRODUCT_FAIL,
+  UPDATE_IMAGE,
+  UPDATE_PROFILE,
 } from "../types";
 
 // eslint-disable-next-line
@@ -63,6 +65,12 @@ export default (state, action) => {
     case BUY_PRODUCT:
       return {
         ...state,
+      };
+    case UPDATE_IMAGE:
+    case UPDATE_PROFILE:
+      return {
+        ...state,
+        user: action.payload,
       };
     default:
       return state;

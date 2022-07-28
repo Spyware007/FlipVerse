@@ -1,5 +1,6 @@
 .profile_container {
-  padding-right: 400px;
+  padding-right: 40px;
+  margin-left: 50px;
 }
 .profile_card {
   width: 100%;
@@ -8,8 +9,10 @@
   justify-content: space-between;
   align-items: center;
   /* padding: 30px; */
-  padding-right: 200px;
+  /* padding-right: 200px; */
+  padding: 30px;
 }
+
 .profile_pic {
   width: 70%;
 }
