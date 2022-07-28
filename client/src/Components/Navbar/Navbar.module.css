@@ -1,105 +1,91 @@
 .navbar {
-  padding: 0 60px;
-  padding-top: 40px;
+  background: transparent;
+  height: 80px;
+  display: flex;
   width: 100vw;
-  height: 10vh;
-  display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.logo_container,
-.nav_links_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.nav_links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.link_container {
-  margin: 0 30px;
-  list-style-type: none;
-}
-.link {
-  color: #fff;
   font-size: 1.5rem;
+  padding: 0px 60px;
+  padding-top: 40px;
+  color: #fff;
+}
+
+.navbar_logo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+  font-size: 2rem;
 }
-.link:hover {
-  color: #e4abff;
+
+.fa-firstdraft {
+  margin-left: 0.5rem;
+  font-size: 1.6rem;
 }
-.icons_container {
+
+.nav_menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav_item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  column-gap: 40px;
+  justify-content: center;
+  height: 80px;
+  margin: 0 20px;
 }
-/* hamburger */
-.btn {
-  display: none;
-}
-.icon {
-  /* background-color: #9eeff5; */
-  background-color: transparent;
 
-  border: 0;
+.nav_links {
+  color: white;
+  text-decoration: none;
   cursor: pointer;
-  padding: 0;
-  height: 30px;
-  width: 30px;
+  /* padding: 0.5rem 1rem; */
 }
-.cart_icon {
-  width: 50px;
-  height: 50px;
-}
-.icon:focus {
-  outline: 0;
-}
-.icon .line {
-  background-color: #af7ffe;
-  /* box-shadow: 4px 4px 0px #3f7fbf; */
-  height: 7px;
-  display: block;
-  margin: 10px 0px;
-  width: 40px;
-  border-radius: 20px;
-  transform: rotate(-505deg) translateY(-3.5px) translateX(-2.5px);
 
-  transition: transform 0.4s ease-in;
+.nav_links:hover {
+  /* background-color: #1888ff; */
+  /* border-radius: 4px; */
+  transition: all 0.2s ease-out;
 }
-.icon .line2 {
-  width: 55px;
-  transform: rotate(490deg) translateY(17.5px);
+
+.fa-bars {
+  color: #fff;
 }
-.nav_links_container.active + .btn .icon .line1 {
-  transform: rotate(0deg) translateY(0px) translateX(0px);
-}
-.nav_links_container.active + .btn .icon .line2 {
-  transform: rotate(0deg) translateY(0px);
-  /* width: 40px; */
-}
-.nav_links_container.active {
+
+.nav_links_mobile {
   display: none;
 }
-@media screen and (max-width: 1100px) {
-  .navbar {
-    height: auto;
-    padding-top: 0px;
-  }
-  .btn {
-    display: block;
-  }
-  .nav_links_container {
-    width: 100vw;
+
+.menu_icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .nav_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+    width: 100%;
     height: 90vh;
     position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 80px;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav_menu.active {
     background: linear-gradient(
       240.32deg,
       #5b1188 10.2%,
@@ -108,15 +94,67 @@
       #051225 81.89%,
       #040d1f 100.83%
     );
-    z-index: 222;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
   }
+
   .nav_links {
-    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
   }
-  .link_container {
-    margin: 20px 40px;
+
+  .nav_links:hover {
+    /* background-color: #1888ff; */
+    border-radius: 0;
   }
-  .link {
-    font-size: 40px;
+
+  .navbar_logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* transform: translate(25%, 50%); */
   }
+
+  .menu_icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .nav_links_mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    background: #1888ff;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .nav_links_mobile:hover {
+    /* background: #fff; */
+    /* color: #1888ff; */
+    transition: 250ms;
+  }
+}
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
