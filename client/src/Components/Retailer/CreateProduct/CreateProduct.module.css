@@ -1,5 +1,6 @@
 .create_product_section {
   padding-top: 150px;
+  height: auto;
 }
 .outer {
   display: flex;
@@ -7,10 +8,14 @@
   align-items: center;
   flex-direction: column;
   row-gap: 40px;
+  height: auto;
+  padding-bottom: 20px;
 }
 .inner {
   padding: 20px;
   width: 100%;
+  height: auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,4 +53,52 @@
 }
 .custom_file_input:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+/* checkbox */
+.checkbox {
+  margin: 40px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 100px;
+}
+.checkbox_label {
+  white-space: nowrap;
+  font-size: 17px;
+  color: #e4abff;
+  pointer-events: none;
+  font-weight: 600;
+}
+.myinput[type="checkbox"] {
+  /* width: 200px; */
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #808080;
+  content: "";
+  background: #fff;
+}
+/* description_area */
+.description_area {
+  all: unset;
+  width: 650px;
+  height: 150px;
+  border: 4px solid;
+  border-image: linear-gradient(
+    90deg,
+    #cc00ff 50%,
+    rgba(255, 255, 255, 0) 104.81%
+  );
+  border-width: 4px;
+
+  border-image-slice: 1;
+  padding: 10px;
+}
+.description_area::placeholder {
+  white-space: nowrap;
+  font-size: 17px;
+  color: #e4abff;
+  pointer-events: none;
+  font-weight: 600;
 }

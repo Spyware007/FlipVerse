@@ -79,7 +79,7 @@ const CreateProduct = () => {
   return (
     <>
       <div className={classes.create_product_section}>
-        <Card width="900px" height="750px">
+        <Card width="900px" height="auto">
           <form className={classes.outer} onSubmit={submitHandler}>
             <div className={classes.inner}>
               <div>
@@ -135,15 +135,24 @@ const CreateProduct = () => {
                   placeholder="Price"
                   required
                 />
-                <label htmlFor="warranty-check"> Enable Warranty</label>
-                <input
-                  onChange={onChangeHandler}
-                  type="checkbox"
-                  value={hasWarranty}
-                  id="warranty-check"
-                  name="hasWarranty"
-                  required
-                />
+                <div className={classes.checkbox}>
+                  <label
+                    className={classes.checkbox_label}
+                    htmlFor="warranty-check"
+                  >
+                    {" "}
+                    Enable Warranty
+                  </label>
+                  <input
+                    className={classes.myinput}
+                    onChange={onChangeHandler}
+                    type="checkbox"
+                    value={hasWarranty}
+                    id="warranty-check"
+                    name="hasWarranty"
+                    required
+                  />
+                </div>
                 {hasWarranty ? (
                   <InputField
                     onChange={onChangeHandler}
@@ -158,7 +167,7 @@ const CreateProduct = () => {
               </div>
             </div>
             <div>
-              <InputField
+              <textarea
                 onChange={onChangeHandler}
                 type="name"
                 value={description}
@@ -166,6 +175,7 @@ const CreateProduct = () => {
                 name="description"
                 placeholder="Description"
                 required
+                className={classes.description_area}
               />
             </div>
             <div>
