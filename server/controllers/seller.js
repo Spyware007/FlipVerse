@@ -174,6 +174,8 @@ const getProduct = asyncHandler(async (req, res) => {
 		description,
 		category,
 		price,
+		isReadyForSale,
+		walletAddress,
 		hasWarranty,
 		warrantyDurationInSeconds,
 	} = product;
@@ -185,6 +187,8 @@ const getProduct = asyncHandler(async (req, res) => {
 		hasWarranty,
 		warrantyDurationInSeconds,
 		description,
+		isReadyForSale,
+		walletAddress,
 		image: product.image ? base64Image : "",
 		price,
 		category,
