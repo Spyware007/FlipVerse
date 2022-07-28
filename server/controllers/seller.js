@@ -76,6 +76,14 @@ const createProduct = asyncHandler(async (req, res) => {
 	res.status(201).json({ product, message: "Product created successfully" });
 });
 
+const getSellerProducts = asyncHandler(async (req, res) => {
+	const sellerProducts = await Seller.findById(req.seller._id)
+		.populate("products")
+		.exec();
+
+	res.status(200).json({ sellerProducts });
+});
+
 const getProduct = asyncHandler(async (req, res) => {
 	const {
 		params: { id },
@@ -111,7 +119,6 @@ const getProduct = asyncHandler(async (req, res) => {
 		description,
 		image: product.image ? base64Image : "",
 		price,
-
 		category,
 	});
 });
@@ -168,6 +175,7 @@ export {
 	getSellerProfile,
 	updateSellerProfile,
 	uploadProductImage,
+	getSellerProducts,
 	createProduct,
 	deleteProduct,
 	getProduct,

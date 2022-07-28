@@ -121,7 +121,7 @@ const SellerAuthState = (props) => {
 		<sellerAuthContext.Provider
 			value={{
 				token: state.token,
-				seller: state.user,
+				seller: state.seller,
 				sellerError: state.sellerError,
 				isSellerAuthenticated: state.isSellerAuthenticated,
 				loading: state.loading,
