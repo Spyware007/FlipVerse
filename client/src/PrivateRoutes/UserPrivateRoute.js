@@ -3,8 +3,8 @@ import { Navigate } from "react-router-dom";
 import { userAuthContext } from "../Contexts";
 
 export const SellerPrivateRoute = ({ children }) => {
-  const { isAuthenticated } = useContext(userAuthContext);
-  if (isAuthenticated) {
+  const { isUserAuthenticated } = useContext(userAuthContext);
+  if (isUserAuthenticated) {
     return children;
   }
 

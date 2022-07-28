@@ -22,7 +22,7 @@ const MyItems = () => {
               return (
                 <ProductCard
                   key={i}
-                  image={""}
+                  image={p.image}
                   name={p.title}
                   price={p.price}
                 />

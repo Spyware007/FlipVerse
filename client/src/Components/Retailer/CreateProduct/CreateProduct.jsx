@@ -6,7 +6,7 @@ import { sellerAuthContext } from "../../../Contexts";
 const CreateProduct = () => {
   const { addProduct, seller, addImageToProduct, products } =
     useContext(sellerAuthContext);
-  console.log(products.product);
+  // console.log(products.product);
 
   const [img, setImg] = useState();
   const [product, setProduct] = useState({
@@ -18,6 +18,7 @@ const CreateProduct = () => {
   });
 
   const { title, brand, category, price, description } = product;
+
   const onChangeHandler = (e) => {
     setProduct({
       ...product,
@@ -27,6 +28,7 @@ const CreateProduct = () => {
   const onImageChange = (e) => {
     const [file] = e.target.files;
     setImg(URL.createObjectURL(file));
+    console.log(file);
   };
 
   const submitHandler = async (e) => {
@@ -43,8 +45,9 @@ const CreateProduct = () => {
       alert("please fill all filed");
     } else {
       try {
+        product = [...product, img];
         await addProduct(product);
-        await addImageToProduct(img, seller, products.product._id);
+        // await addImageToProduct(img, seller, products.product._id);
       } catch (error) {
         console.log(error);
       }

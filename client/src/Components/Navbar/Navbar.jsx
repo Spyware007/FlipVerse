@@ -77,7 +77,7 @@ const Navbar = () => {
                 </div>
               </li>
               <div className={classes.icons_container}>
-                <NavLink to="/">
+                <NavLink to="/cart">
                   <div className={classes.icon_container}>
                     <img className={classes.icon} src={cart_icon} alt="" />
                   </div>
