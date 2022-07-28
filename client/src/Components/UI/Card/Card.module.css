@@ -8,7 +8,7 @@
   position: relative;
   isolation: isolate;
 
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(83, 83, 83, 0.15) 0px 48px 100px 0px;
   clip-path: polygon(
     0% var(--curve-size),
     var(--curve-size) 0,
@@ -29,4 +29,12 @@
     0 100%
   );
   border-radius: 16px;
+  border: 1.5px solid;
+
+  border-image-source: linear-gradient(
+      277.11deg,
+      rgba(0, 0, 0, 0) 0%,
+      #ffffff 100%
+    ),
+    linear-gradient(277.11deg, #ffffff 0%, #000000 100%);
 }

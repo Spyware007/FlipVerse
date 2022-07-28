@@ -88,6 +88,7 @@ const CreateProduct = () => {
                   show={true}
                   name={title}
                   price={price}
+                  disabled
                 />
                 <input
                   className={classes.custom_file_input}
@@ -166,7 +167,7 @@ const CreateProduct = () => {
                 ) : null}
               </div>
             </div>
-            <div>
+            <div className={classes.rounded}>
               <textarea
                 onChange={onChangeHandler}
                 type="name"

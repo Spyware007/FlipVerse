@@ -14,9 +14,10 @@ const ProductCard = ({
   innerHeight = "250px",
   id,
   show = false,
+  disabled,
 }) => {
   return (
-    <Link to={`/product/${id}`}>
+    <Link to={!disabled ? `/product/${id}` : ""}>
       <div className={classes.product_card}>
         <Card width={outerWidth} height={outerHeight} styles>
           <div className={classes.content_container}>

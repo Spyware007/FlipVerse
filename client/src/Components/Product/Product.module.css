@@ -64,6 +64,10 @@
   margin-bottom: 150px;
   flex-wrap: wrap;
 }
+.product_description {
+  word-break: break-all;
+  white-space: normal;
+}
 @media screen and (max-width: 1100px) {
   .product_page {
     margin-top: 30px;
