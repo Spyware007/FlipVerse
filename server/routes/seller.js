@@ -8,6 +8,7 @@ import {
 	deleteProduct,
 	getSellerProducts,
 	getProduct,
+	confirmPurchaseOfProduct,
 } from "../controllers/seller.js";
 const sellerRouter = express.Router();
 import multer from "multer";
@@ -40,6 +41,7 @@ sellerRouter
 sellerRouter
 	.route("/api/product/:id")
 	.get(getProduct)
+	.post(sellerAuthMiddleware, confirmPurchaseOfProduct)
 	.put(upload.single("image"), sellerAuthMiddleware, uploadProductImage)
 	.delete(sellerAuthMiddleware, deleteProduct);
 
