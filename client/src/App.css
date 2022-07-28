@@ -1,84 +1,105 @@
 @font-face {
-  font-family: Starcraft-Italic;
-  font-display: swap;
-  unicode-range: U+000-5FF;
-  src: local("Combatron"),
-    url("./Fonts/Starcraft-Italic.otf") format("opentype");
+	font-family: Starcraft-Italic;
+	font-display: swap;
+	unicode-range: U+000-5FF;
+	src: local("Combatron"),
+		url("./Fonts/Starcraft-Italic.otf") format("opentype");
 }
 @font-face {
-  font-family: Starcraft-Normal;
-  font-display: swap;
-  unicode-range: U+000-5FF;
-  src: local("Combatron"),
-    url("./Fonts/Starcraft-Normal.ttf") format("truetype");
+	font-family: Starcraft-Normal;
+	font-display: swap;
+	unicode-range: U+000-5FF;
+	src: local("Combatron"),
+		url("./Fonts/Starcraft-Normal.ttf") format("truetype");
 }
 @font-face {
-  font-family: Starcraft;
-  font-display: swap;
-  unicode-range: U+000-5FF;
-  src: local("Combatron"), url("./Fonts/Starcraft.otf") format("opentype");
+	font-family: Starcraft;
+	font-display: swap;
+	unicode-range: U+000-5FF;
+	src: local("Combatron"), url("./Fonts/Starcraft.otf") format("opentype");
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* border: 2px solid red; */
-  font-family: "Orbitron", sans-serif;
-  /* font-family: Starcraft; */
-  /* overflow-x: hidden; */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* border: 2px solid red; */
+	font-family: "Orbitron", sans-serif;
+	/* font-family: Starcraft; */
+	/* overflow-x: hidden; */
 }
 body,
 html {
-  background: linear-gradient(
-    240.32deg,
-    #5b1188 10.2%,
-    #2c185b 36.02%,
-    #081e3a 50.45%,
-    #051225 81.89%,
-    #040d1f 100.83%
-  );
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  transition: 0.5s ease;
-  scroll-behavior: smooth;
-  /* display: flex;
+	overflow-x: hidden;
+	background: linear-gradient(
+		240.32deg,
+		#5b1188 10.2%,
+		#2c185b 36.02%,
+		#081e3a 50.45%,
+		#051225 81.89%,
+		#040d1f 100.83%
+	);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	transition: 0.5s ease;
+	scroll-behavior: smooth;
+	/* display: flex;
   justify-content: center;
   align-items: center; */
 }
+body::-webkit-scrollbar {
+	width: 0.65rem;
+}
+
+body::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: linear-gradient(to bottom, rgb(21, 219, 209), rgb(141, 76, 221));
+	border-radius: 30px;
+	padding: 10px;
+	transition: all 0.5s ease-in-out;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(to top, rgb(21, 219, 209), rgb(141, 76, 221));
+	cursor: pointer;
+	width: 4rem;
+}
 .App {
-  width: 100vw;
-  height: auto;
-  min-height: 100vh; /*Change when necessary*/
-  background: linear-gradient(
-    240.32deg,
-    #5b1188 10.2%,
-    #2c185b 36.02%,
-    #081e3a 50.45%,
-    #051225 81.89%,
-    #040d1f 100.83%
-  );
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+	width: 100vw;
+	height: auto;
+	min-height: 100vh; /*Change when necessary*/
+	background: linear-gradient(
+		240.32deg,
+		#5b1188 10.2%,
+		#2c185b 36.02%,
+		#081e3a 50.45%,
+		#051225 81.89%,
+		#040d1f 100.83%
+	);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 .image {
-  object-fit: cover;
-  width: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 a {
-  all: unset;
-  cursor: pointer;
-  color: #e4abff;
-  transition: all 0.3s ease-in-out;
+	all: unset;
+	cursor: pointer;
+	color: #e4abff;
+	transition: all 0.3s ease-in-out;
 }
 a:hover {
-  color: #c039ff;
+	color: #c039ff;
 }
 .stop-scrolling {
-  height: 100%;
-  overflow: hidden;
+	height: 100%;
+	overflow: hidden;
 }
