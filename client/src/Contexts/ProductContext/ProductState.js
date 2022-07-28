@@ -9,7 +9,7 @@ import { GET_ALL_PRODUCTS, GET_SINGLE_PRODUCT } from "../types";
 const ProductState = (props) => {
   const initialState = {
     allProducts: [],
-    product: null,
+    product: {},
   };
 
   const [state, dispatch] = useReducer(productReducer, initialState);
@@ -23,14 +23,14 @@ const ProductState = (props) => {
 
     try {
       const res = await axios.get(`/api/product/${id}`, config);
-      // console.log(res);
+      console.log(res);
       dispatch({ type: GET_SINGLE_PRODUCT, payload: res.data });
     } catch (error) {
       console.log(error);
       //   dispatch({ type: ADD_PRODUCT_FAIL, payload: error.message });
     }
   };
-  const getAllProducts = async (formData) => {
+  const getAllProducts = async () => {
     const config = {
       headers: {
         "Content-Type": "application/json",

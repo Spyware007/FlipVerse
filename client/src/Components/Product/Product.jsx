@@ -1,24 +1,30 @@
 import React, { useEffect, useContext } from "react";
 import { Button, ProductCard, SingleProductCard } from "../UI";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import classes from "./Product.module.css";
 import rs_icon from "../../Assets/rs_icon.png";
-import trial1 from "../../Assets/trial1.png";
-import trial2 from "../../Assets/trial2.png";
-import trial3 from "../../Assets/trial3.png";
-import trial4 from "../../Assets/trial4.png";
-import trial5 from "../../Assets/trial5.png";
-import CartIcon from "../UI/CartIcon/CartIcon";
-import { productContext } from "../../Contexts";
+import {
+  productContext,
+  sellerAuthContext,
+  userAuthContext,
+} from "../../Contexts";
 
 const Product = () => {
+  const redirect = useNavigate();
   const { getSingleProduct, product } = useContext(productContext);
+  const { isSellerAuthenticated } = useContext(sellerAuthContext);
+  const { isUserAuthenticated } = useContext(userAuthContext);
   const { productId } = useParams();
   useEffect(() => {
     getSingleProduct(productId);
   }, [product]);
   const { title, brand, description, price, image } = product;
   const handleClick = () => {};
+  const unauthorized = () => {
+    redirect("/");
+  };
+  const authorizedPerson = isSellerAuthenticated || isUserAuthenticated;
+
   return (
     <>
       <div className={classes.product_page}>
@@ -34,12 +40,30 @@ const Product = () => {
               <span className={classes.price}>{price}</span>
             </div>
             <div className={classes.btn}>
-              <Button
-                onClick={handleClick}
-                label="BUY"
-                padding="0.5em 11em"
-                filled
-              />
+              {isSellerAuthenticated && (
+                <Button
+                  // onClick={handleClick}
+                  label="DISPATCH"
+                  padding="0.5em 11em"
+                  filled
+                />
+              )}
+              {isUserAuthenticated && (
+                <Button
+                  onClick={handleClick}
+                  label="BUY"
+                  padding="0.5em 11em"
+                  filled
+                />
+              )}
+              {!authorizedPerson && (
+                <Button
+                  onClick={unauthorized}
+                  label="LOGIN"
+                  padding="0.5em 11em"
+                  filled
+                />
+              )}
               {/* <Button
                 // onClick={handleClick}
                 // label="Add to Cart"
@@ -55,10 +79,10 @@ const Product = () => {
         <div className={classes.similar_container}>
           <h1 className={classes.similar_text}>Similar Products</h1>
           <div className={classes.similar_products}>
-            <ProductCard image={trial2} />
-            <ProductCard image={trial3} />
-            <ProductCard image={trial4} />
-            <ProductCard image={trial5} />
+            <ProductCard image={""} />
+            <ProductCard image={""} />
+            <ProductCard image={""} />
+            <ProductCard image={""} />
           </div>
         </div>
       </div>
