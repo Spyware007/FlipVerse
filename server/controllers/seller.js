@@ -55,11 +55,13 @@ const updateSellerProfile = asyncHandler(async (req, res) => {
 
 const createProduct = asyncHandler(async (req, res) => {
 	const { title, category, price, brand, description } = req.body;
-
+	console.log(req.files[0]);
 	if (!title || !category || price < 1) {
 		res.status(400);
 		throw new Error("Please provide valid details");
 	}
+
+	const imageBuffer = req.files[0].buffer ? req.files[0].buffer : null;
 
 	const product = new Product({
 		title,
@@ -67,6 +69,7 @@ const createProduct = asyncHandler(async (req, res) => {
 		brand,
 		category,
 		description,
+		image: imageBuffer,
 		createdBy: req.seller._id,
 	});
 
@@ -81,7 +84,40 @@ const getSellerProducts = asyncHandler(async (req, res) => {
 		.populate("products")
 		.exec();
 
-	res.status(200).json({ sellerProducts: sellerProducts.products });
+	const finalProducts = sellerProducts.products.map((product) => {
+		if (product.image) {
+			let buffer = Buffer.from(product.image);
+			let base64Image = buffer.toString("base64");
+			const {
+				title,
+				description,
+				price,
+				category,
+				brand,
+				createdBy,
+				createdAt,
+				updatedAt,
+				sold,
+				isReadyForSale,
+			} = product;
+			return {
+				image: base64Image,
+				title,
+				description,
+				price,
+				category,
+				createdBy,
+				createdAt,
+				updatedAt,
+				brand,
+				sold,
+				isReadyForSale,
+			};
+		} else {
+			return product;
+		}
+	});
+	res.status(200).json({ sellerProducts: finalProducts });
 });
 
 const getProduct = asyncHandler(async (req, res) => {
@@ -89,6 +125,7 @@ const getProduct = asyncHandler(async (req, res) => {
 		params: { id },
 	} = req;
 
+	console.log(id);
 	const pId = id.toString();
 	if (!verifyId(pId)) {
 		res.status(400);
@@ -100,7 +137,7 @@ const getProduct = asyncHandler(async (req, res) => {
 		.exec();
 
 	if (!product) {
-		res.status(404);
+		res.status(404).json({ message: "Product not found" });
 		throw new Error("Product not found");
 	}
 

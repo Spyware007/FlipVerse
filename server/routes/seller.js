@@ -24,6 +24,7 @@ const upload = multer({
 		fileSize: 1000000,
 	},
 });
+// const upload = multer();
 
 sellerRouter
 	.route("/api/seller/profile")
@@ -34,7 +35,7 @@ sellerRouter
 sellerRouter
 	.route("/api/product")
 	.get(sellerAuthMiddleware, getSellerProducts)
-	.post(sellerAuthMiddleware, createProduct);
+	.post(upload.any(), sellerAuthMiddleware, createProduct);
 
 sellerRouter
 	.route("/api/product/:id")
