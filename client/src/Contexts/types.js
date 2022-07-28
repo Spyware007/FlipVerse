@@ -20,3 +20,6 @@ export const BUY_PRODUCT = "BUY_PRODUCT";
 export const BUY_PRODUCT_FAIL = "BUY_PRODUCT_FAIL";
 export const GET_ALL_PRODUCTS = "GET_ALL_PRODUCTS";
 export const GET_SINGLE_PRODUCT = "GET_SINGLE_PRODUCT";
+// Retailer Image
+export const UPDATE_IMAGE = "UPDATE_IMAGE";
+export const UPDATE_PROFILE = "UPDATE_PROFILE";

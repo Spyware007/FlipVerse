@@ -18,6 +18,8 @@ import {
   ADD_IMAGE,
   ADD_IMAGE_FAIL,
   GET_SELLER_PRODUCTS,
+  UPDATE_IMAGE,
+  UPDATE_PROFILE,
 } from "../types";
 
 const SellerAuthState = (props) => {
@@ -184,6 +186,39 @@ const SellerAuthState = (props) => {
     }
   };
 
+  // Update Profile
+
+  const updateImage = async () => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    try {
+      const res = await axios.put(`/api/product/`, config);
+      dispatch({ type: UPDATE_IMAGE, payload: res.data });
+    } catch (error) {
+      // console.log(error);
+      // dispatch({ type: ADD_IMAGE_FAIL, payload: error.message });
+      console.log(error);
+    }
+  };
+  const updateProfile = async (user) => {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+    try {
+      const res = await axios.put(`/api/seller/profile`, user, config);
+      dispatch({ type: UPDATE_PROFILE, payload: res.data });
+    } catch (error) {
+      // console.log(error);
+      // dispatch({ type: ADD_IMAGE_FAIL, payload: error.message });
+      console.log(error);
+    }
+  };
+
   return (
     <sellerAuthContext.Provider
       value={{
@@ -202,6 +237,8 @@ const SellerAuthState = (props) => {
         addProduct,
         addImageToProduct,
         getSellerProducts,
+        updateImage,
+        updateProfile,
       }}
     >
       {props.children}
