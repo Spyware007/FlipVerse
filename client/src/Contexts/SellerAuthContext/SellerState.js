@@ -27,6 +27,7 @@ const SellerAuthState = (props) => {
     isSellerAuthenticated: localStorage.getItem("sellerToken") ? true : false,
     loading: true,
     seller: null,
+    itemsReadyToBeBought: [],
     products: [],
   };
 
@@ -41,7 +42,10 @@ const SellerAuthState = (props) => {
         },
       };
       try {
-        const res = await axios.get("/api/seller/profile", config);
+        const res = await axios.get(
+          "http://localhost:8000/api/seller/profile",
+          config
+        );
         dispatch({ type: USER_LOADED, payload: res.data });
       } catch (error) {
         dispatch({ type: AUTH_ERROR });
@@ -61,7 +65,10 @@ const SellerAuthState = (props) => {
       setAuthSellerToken(localStorage.sellerToken);
     }
     try {
-      const res = await axios.get("/api/seller/profile", config);
+      const res = await axios.get(
+        "http://localhost:8000/api/seller/profile",
+        config
+      );
       dispatch({ type: USER_LOADED, payload: res.data });
     } catch (error) {
       dispatch({ type: AUTH_ERROR });
@@ -76,7 +83,11 @@ const SellerAuthState = (props) => {
     };
 
     try {
-      const res = await axios.post("/api/seller/signup", userData, config);
+      const res = await axios.post(
+        "http://localhost:8000/api/seller/signup",
+        userData,
+        config
+      );
       dispatch({ type: REGISTER_SUCCESS, payload: res.data });
       // loadSeller();
     } catch (error) {
@@ -93,7 +104,11 @@ const SellerAuthState = (props) => {
     };
 
     try {
-      const res = await axios.post("/api/seller/login", userData, config);
+      const res = await axios.post(
+        "http://localhost:8000/api/seller/login",
+        userData,
+        config
+      );
       console.log(res);
       dispatch({ type: LOGIN_SUCCESS, payload: res.data });
     } catch (error) {
@@ -142,7 +157,11 @@ const SellerAuthState = (props) => {
     };
     const data = { image, seller };
     try {
-      const res = await axios.put(`/api/product/${id}`, data, config);
+      const res = await axios.put(
+        `http://localhost:8000/api/product/${id}`,
+        data,
+        config
+      );
       dispatch({ type: ADD_IMAGE, payload: res.data });
     } catch (error) {
       // console.log(error);
@@ -158,7 +177,6 @@ const SellerAuthState = (props) => {
     try {
       const res = await axios.get(`/api/product/`, config);
       dispatch({ type: GET_SELLER_PRODUCTS, payload: res.data.sellerProducts });
-      console.log(res);
     } catch (error) {
       // console.log(error);
       // dispatch({ type: ADD_IMAGE_FAIL, payload: error.message });

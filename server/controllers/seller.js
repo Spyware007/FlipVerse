@@ -54,10 +54,21 @@ const updateSellerProfile = asyncHandler(async (req, res) => {
 });
 
 const createProduct = asyncHandler(async (req, res) => {
-	const { title, category, price, brand, description } = req.body;
+	const {
+		title,
+		category,
+		price,
+		brand,
+		description,
+		hasWarranty,
+		warrantyDuration,
+	} = req.body;
 
-	console.log(req.body);
-	console.log(req.body.image);
+	const warrantyDurationInSeconds =
+		parseInt(warrantyDuration) * 365 * 24 * 60 * 60;
+
+	console.log(warrantyDurationInSeconds);
+
 	if (!title || !category || price < 1) {
 		res.status(400).json({ message: "Please Provide valid details" });
 		throw new Error("Please provide valid details");
@@ -72,6 +83,8 @@ const createProduct = asyncHandler(async (req, res) => {
 		category,
 		description,
 		image: imageBuffer,
+		warrantyDurationInSeconds,
+		hasWarranty: hasWarranty ? true : false,
 		createdBy: req.seller._id,
 	});
 
