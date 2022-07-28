@@ -39,6 +39,10 @@ const productSchema = new Schema(
 			type: Boolean,
 			default: false,
 		},
+		orderedBy: {
+			type: mongoose.Schema.Types.ObjectId,
+			ref: "User",
+		},
 		createdBy: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "Seller",
