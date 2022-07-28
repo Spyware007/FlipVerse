@@ -45,7 +45,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className={classes.link_container}>
-              <NavLink className={classes.link} to="/">
+              <NavLink className={classes.link} to="/explore">
                 Explore
               </NavLink>
             </li>

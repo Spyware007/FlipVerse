@@ -16,9 +16,9 @@ const Footer = () => {
   // const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const { isSellerAuthenticated } = useContext(sellerAuthContext);
-  const { isAuthenticated } = useContext(userAuthContext);
+  const { isUserAuthenticated } = useContext(userAuthContext);
 
-  const authenticated = isSellerAuthenticated || isAuthenticated;
+  const authenticated = isSellerAuthenticated || isUserAuthenticated;
 
   return (
     <>
@@ -36,7 +36,7 @@ const Footer = () => {
             <NavLink to="/" className={classes.links}>
               Home
             </NavLink>
-            <NavLink to="/" className={classes.links}>
+            <NavLink to="/explore" className={classes.links}>
               Explore
             </NavLink>
             <NavLink to="/verifynft" className={classes.links}>
@@ -44,10 +44,17 @@ const Footer = () => {
             </NavLink>
             {authenticated && (
               <>
-                <NavLink to="/" className={classes.links}>
+                <NavLink to="/cart" className={classes.links}>
                   Cart
                 </NavLink>
-                <NavLink to="/" className={classes.links}>
+                <NavLink
+                  to={
+                    isSellerAuthenticated
+                      ? "/retailer/dashboard"
+                      : "/user/dashboard"
+                  }
+                  className={classes.links}
+                >
                   Profile
                 </NavLink>
               </>
