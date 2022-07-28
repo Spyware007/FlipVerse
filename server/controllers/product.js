@@ -6,7 +6,40 @@ import Seller from "../models/Seller.js";
 
 const getProducts = asyncHandler(async (req, res) => {
 	const products = await Product.find({ sold: false, isReadyForSale: false });
-	res.status(201).json({ products });
+	const finalProducts = products.map((product) => {
+		if (product.image) {
+			let buffer = Buffer.from(product.image);
+			let base64Image = buffer.toString("base64");
+			const {
+				title,
+				description,
+				price,
+				category,
+				brand,
+				createdBy,
+				createdAt,
+				updatedAt,
+				sold,
+				isReadyForSale,
+			} = product;
+			return {
+				image: base64Image,
+				title,
+				description,
+				price,
+				category,
+				createdBy,
+				createdAt,
+				updatedAt,
+				brand,
+				sold,
+				isReadyForSale,
+			};
+		} else {
+			return product;
+		}
+	});
+	res.status(201).json({ products: finalProducts });
 });
 
 const getProductsByCategory = asyncHandler(async (req, res) => {
@@ -19,7 +52,41 @@ const getProductsByCategory = asyncHandler(async (req, res) => {
 	}
 
 	const products = await Product.find({ category });
-	res.status(200).json({ products });
+
+	const finalProducts = products.map((product) => {
+		if (product.image) {
+			let buffer = Buffer.from(product.image);
+			let base64Image = buffer.toString("base64");
+			const {
+				title,
+				description,
+				price,
+				category,
+				brand,
+				createdBy,
+				createdAt,
+				updatedAt,
+				sold,
+				isReadyForSale,
+			} = product;
+			return {
+				image: base64Image,
+				title,
+				description,
+				price,
+				category,
+				createdBy,
+				createdAt,
+				updatedAt,
+				brand,
+				sold,
+				isReadyForSale,
+			};
+		} else {
+			return product;
+		}
+	});
+	res.status(200).json({ products: finalProducts });
 });
 
 const addProductToWishList = asyncHandler(async (req, res) => {
@@ -132,10 +199,44 @@ const getWishListedProducts = asyncHandler(async (req, res) => {
 });
 
 const getPurchasedProducts = asyncHandler(async (req, res) => {
-	const user = await User.findById(req.user._id)
+	const purchasedProducts = await User.findById(req.user._id)
 		.populate("purchasedProducts")
 		.exec();
-	res.status(200).json({ purchasedProducts: user.purchasedProducts });
+	const finalProducts = purchasedProducts.products.map((product) => {
+		if (product.image) {
+			let buffer = Buffer.from(product.image);
+			let base64Image = buffer.toString("base64");
+			const {
+				title,
+				description,
+				price,
+				category,
+				brand,
+				createdBy,
+				createdAt,
+				updatedAt,
+				sold,
+				isReadyForSale,
+			} = product;
+			return {
+				image: base64Image,
+				title,
+				description,
+				price,
+				category,
+				createdBy,
+				createdAt,
+				updatedAt,
+				brand,
+				sold,
+				isReadyForSale,
+			};
+		} else {
+			return product;
+		}
+	});
+
+	res.status(200).json({ purchasedProducts: finalProducts });
 });
 
 const getProductsReadyForSale = asyncHandler(async (req, res) => {
@@ -143,10 +244,44 @@ const getProductsReadyForSale = asyncHandler(async (req, res) => {
 		.populate("products")
 		.exec();
 
-	const nwp = productsReadyForSale.products.filter((p) => {
+	const filteredProducts = productsReadyForSale.products.filter((p) => {
 		return p.isReadyForSale === true;
 	});
-	res.status(200).json({ productsReadyForSale: nwp });
+
+	const finalProducts = filteredProducts.map((product) => {
+		if (product.image) {
+			let buffer = Buffer.from(product.image);
+			let base64Image = buffer.toString("base64");
+			const {
+				title,
+				description,
+				price,
+				category,
+				brand,
+				createdBy,
+				createdAt,
+				updatedAt,
+				sold,
+				isReadyForSale,
+			} = product;
+			return {
+				image: base64Image,
+				title,
+				description,
+				price,
+				category,
+				createdBy,
+				createdAt,
+				updatedAt,
+				brand,
+				sold,
+				isReadyForSale,
+			};
+		} else {
+			return product;
+		}
+	});
+	res.status(200).json({ productsReadyForSale: finalProducts });
 });
 
 export {
