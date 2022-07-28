@@ -28,6 +28,9 @@ const productSchema = new Schema(
 			type: Boolean,
 			default: false,
 		},
+		warrantyDurationInSeconds: {
+			type: Number,
+		},
 		sold: {
 			type: Boolean,
 			default: false,

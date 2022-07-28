@@ -14,11 +14,25 @@ const CreateProduct = () => {
 		category: "",
 		price: "",
 		description: "",
+		hasWarranty: false,
+		warrantyDuration: 0,
 	});
 
-	const { title, brand, category, price, description } = product;
+	const {
+		title,
+		brand,
+		category,
+		price,
+		description,
+		hasWarranty,
+		warrantyDuration,
+	} = product;
 
 	const onChangeHandler = (e) => {
+		if (e.target.name === "hasWarranty") {
+			setProduct({ ...product, hasWarranty: !hasWarranty });
+			return;
+		}
 		setProduct({
 			...product,
 			[e.target.name]: e.target.value,
@@ -47,6 +61,8 @@ const CreateProduct = () => {
 			dataArray.append("category", category);
 			dataArray.append("price", price);
 			dataArray.append("description", description);
+			dataArray.append("hasWarranty", hasWarranty);
+			dataArray.append("warrantyDuration", warrantyDuration);
 			dataArray.append("image", img["0"], img["0"].name);
 			console.log(dataArray);
 			try {
@@ -104,7 +120,6 @@ const CreateProduct = () => {
 								/>
 								<InputField
 									onChange={onChangeHandler}
-									// reference={nameRef}
 									type="number"
 									value={price}
 									label="Price"
@@ -112,16 +127,26 @@ const CreateProduct = () => {
 									placeholder="Price"
 									required
 								/>
-								{/* <InputField
-                  onChange={onChangeHandler}
-                  // reference={nameRef}
-                  type="date"
-                  value={warranty}
-                  label="Warranty Period"
-                  name="warranty"
-                  placeholder="Warranty Period"
-                  required
-                /> */}
+								<label htmlFor="warranty-check"> Enable Warranty</label>
+								<input
+									onChange={onChangeHandler}
+									type="checkbox"
+									value={hasWarranty}
+									id="warranty-check"
+									name="hasWarranty"
+									required
+								/>
+								{hasWarranty ? (
+									<InputField
+										onChange={onChangeHandler}
+										type="number"
+										value={warrantyDuration}
+										label="Warranty Period (In Years)"
+										name="warrantyDuration"
+										placeholder="Warranty Period"
+										required
+									/>
+								) : null}
 							</div>
 						</div>
 						<div>
