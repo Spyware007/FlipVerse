@@ -10,6 +10,7 @@ import trial5 from "../../Assets/trial5.png";
 import CartIcon from "../UI/CartIcon/CartIcon";
 
 const Product = () => {
+  const handleClick = () => {};
   return (
     <>
       <div className={classes.product_page}>
@@ -32,12 +33,12 @@ const Product = () => {
             </div>
             <div className={classes.btn}>
               <Button
-                // onClick={handleClick}
+                onClick={handleClick}
                 label="BUY"
                 padding="0.5em 11em"
                 filled
               />
-              <Button
+              {/* <Button
                 // onClick={handleClick}
                 // label="Add to Cart"
                 padding="0.5em 8em"
@@ -45,7 +46,7 @@ const Product = () => {
               >
                 Add to Cart
                 <CartIcon />
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>

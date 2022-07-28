@@ -10,3 +10,4 @@ export { default as Cart } from "./Cart/Cart";
 export { default as Footer } from "./Footer/Footer";
 export { default as NotFound } from "./NotFound/NotFound";
 export { default as CategoryPage } from "./CategoryPage/CategoryPage";
+export { default as Explore } from "./Explore/Explore";
