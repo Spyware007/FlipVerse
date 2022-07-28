@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Button, ProductCard, LandingHero } from "../UI";
+import { CustomButton, ProductCard, LandingHero } from "../UI";
 import classes from "./Home.module.css";
 import {
   shoe1,
@@ -33,13 +33,13 @@ const Home = () => {
               Giving the best <br /> e-commerce <br /> experience
             </h1>
             <div className={classes.btn}>
-              <Button
+              <CustomButton
                 onClick={scrollDown}
                 label="Explore"
                 filled
                 href="explore"
               />
-              <Button
+              <CustomButton
                 // onClick={handleClick}
                 label="Become a Seller"
                 // filled
@@ -88,7 +88,7 @@ const Home = () => {
             </div>
             <div className={classes.content}>
               <h1 className={classes.our_product_text}>Sneakers</h1>
-              <Button
+              <CustomButton
                 label="Explore"
                 filled
                 padding="20px 80px"
@@ -100,7 +100,7 @@ const Home = () => {
             <div>
               <div className={classes.content}>
                 <h1 className={classes.our_product_text}>Hoddies</h1>
-                <Button
+                <CustomButton
                   label="Explore"
                   filled
                   padding="20px 80px"
@@ -130,7 +130,7 @@ const Home = () => {
             </div>
             <div className={classes.content}>
               <h1 className={classes.our_product_text}>Bagpacks</h1>
-              <Button
+              <CustomButton
                 label="Explore"
                 filled
                 padding="20px 80px"
@@ -142,7 +142,7 @@ const Home = () => {
             <div>
               <div className={classes.content}>
                 <h1 className={classes.our_product_text}>T-shirts</h1>
-                <Button
+                <CustomButton
                   label="Explore"
                   filled
                   padding="20px 80px"

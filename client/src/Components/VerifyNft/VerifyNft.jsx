@@ -1,6 +1,6 @@
 import React from "react";
 import VerifyHero from "./VerifyHero";
-import { InputField, Button, Card } from "../UI";
+import { InputField, CustomButton, Card } from "../UI";
 import classes from "./VerifyNft.module.css";
 
 const VerifyNft = () => {
@@ -30,7 +30,7 @@ const VerifyNft = () => {
                 />
               </div>
               <div className={classes.btn}>
-                <Button
+                <CustomButton
                   // onClick={handleClick}
                   label="Verify"
                   filled

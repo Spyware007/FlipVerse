@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Button, Card, ProductCard, InputField } from "../../UI";
+import { CustomButton, Card, ProductCard, InputField } from "../../UI";
 import classes from "./CreateProduct.module.css";
 import { sellerAuthContext } from "../../../Contexts";
 
@@ -180,7 +180,7 @@ const CreateProduct = () => {
               />
             </div>
             <div>
-              <Button filled label="Create" />
+              <CustomButton filled label="Create" />
             </div>
           </form>
         </Card>

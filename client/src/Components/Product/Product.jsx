@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { useMoralis } from "react-moralis";
-import { Button, ProductCard, SingleProductCard } from "../UI";
+import { CustomButton, ProductCard, SingleProductCard } from "../UI";
 import { useParams, useNavigate } from "react-router-dom";
 import { ConnectButton } from "@web3uikit/web3";
 import classes from "./Product.module.css";
@@ -69,7 +69,7 @@ const Product = () => {
 						)}
 						<div className={classes.btn}>
 							{isSellerAuthenticated && isReadyForSale && (
-								<Button
+								<CustomButton
 									// onClick={handleClick}
 									label="DISPATCH"
 									padding="0.5em 11em"
@@ -77,7 +77,7 @@ const Product = () => {
 								/>
 							)}
 							{isUserAuthenticated && (
-								<Button
+								<CustomButton
 									onClick={() => handleClick(productId)}
 									label="BUY"
 									padding="0.5em 11em"
@@ -85,14 +85,14 @@ const Product = () => {
 								/>
 							)}
 							{!authorizedPerson && (
-								<Button
+								<CustomButton
 									onClick={unauthorized}
 									label="LOGIN"
 									padding="0.5em 11em"
 									filled
 								/>
 							)}
-							{/* <Button
+							{/* <CustomButton
                 // onClick={handleClick}
                 // label="Add to Cart"
                 padding="0.5em 8em"
