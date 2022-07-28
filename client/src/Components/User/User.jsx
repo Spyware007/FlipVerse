@@ -70,7 +70,7 @@ const User = () => {
                     onClick={() => dispatch({ type: "profile" })}
                     className={classes.link}
                   >
-                    Your Profile{" "}
+                    <span className={classes.side_nav}>Your Profile </span>
                     <span>
                       <img className={classes.icon} src={profile} alt="icons" />
                     </span>
@@ -81,7 +81,7 @@ const User = () => {
                     onClick={() => dispatch({ type: "editProfile" })}
                     className={classes.link}
                   >
-                    Edit Profile{" "}
+                    <span className={classes.side_nav}>Edit Profile </span>
                     <span>
                       <img
                         className={classes.icon}
@@ -96,7 +96,7 @@ const User = () => {
                     onClick={() => dispatch({ type: "purchasedItems" })}
                     className={classes.link}
                   >
-                    Purchased Items{" "}
+                    <span className={classes.side_nav}>Purchased Items </span>
                     <span>
                       <img
                         className={classes.icon}
@@ -111,7 +111,7 @@ const User = () => {
                     onClick={() => dispatch({ type: "changePass" })}
                     className={classes.link}
                   >
-                    Change Password{" "}
+                    <span className={classes.side_nav}>Change Password </span>
                     <span>
                       <img
                         className={classes.icon}
