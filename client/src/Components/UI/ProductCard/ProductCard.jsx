@@ -13,6 +13,7 @@ const ProductCard = ({
   innerWidth = "230px",
   innerHeight = "250px",
   id,
+  show = false,
 }) => {
   return (
     <Link to={`/product/${id}`}>
@@ -20,11 +21,19 @@ const ProductCard = ({
         <Card width={outerWidth} height={outerHeight} styles>
           <div className={classes.content_container}>
             <Card width={innerWidth} height={innerHeight}>
-              <img
-                className={classes.image}
-                src={`data:image/jpeg;base64, ${image}`}
-                alt="product_image"
-              />
+              {show ? (
+                <img
+                  className={classes.image}
+                  src={image}
+                  alt="product_image"
+                />
+              ) : (
+                <img
+                  className={classes.image}
+                  src={`data:image/jpeg;base64, ${image}`}
+                  alt="product_image"
+                />
+              )}
             </Card>
             <h4 className={classes.name}>{name}</h4>
             <div className={classes.price_container}>
