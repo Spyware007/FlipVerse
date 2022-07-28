@@ -81,7 +81,7 @@ const getSellerProducts = asyncHandler(async (req, res) => {
 		.populate("products")
 		.exec();
 
-	res.status(200).json({ sellerProducts });
+	res.status(200).json({ sellerProducts: sellerProducts.products });
 });
 
 const getProduct = asyncHandler(async (req, res) => {
