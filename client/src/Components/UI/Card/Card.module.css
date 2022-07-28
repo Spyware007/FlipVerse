@@ -1,7 +1,7 @@
 .card,
 .smooth_card {
   --curve-size: 1.5em;
-  overflow: scroll;
+  /* overflow: scroll; */
   --color: #afffff;
   color: var(--color);
   background-color: rgb(255, 255, 255, 0.1);

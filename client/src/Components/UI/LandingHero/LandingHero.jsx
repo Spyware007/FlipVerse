@@ -24,7 +24,7 @@ const LandingHero = () => {
             d="M343.124 567.735C406.262 567.735 463.446 558.119 504.865 542.556C525.572 534.776 542.366 525.498 553.992 515.17C565.618 504.842 572.122 493.418 572.122 481.363C572.122 469.307 565.618 457.884 553.992 447.556C542.366 437.227 525.572 427.95 504.865 420.169C463.446 404.606 406.262 394.991 343.124 394.991C279.986 394.991 222.802 404.606 181.384 420.169C160.677 427.95 143.883 437.227 132.256 447.556C120.631 457.884 114.126 469.307 114.126 481.363C114.126 493.418 120.631 504.842 132.256 515.17C143.883 525.498 160.677 534.776 181.384 542.556C222.802 558.119 279.986 567.735 343.124 567.735Z"
             fill="#2B014B"
             stroke="url(#paint1_linear_900_9378)"
-            stroke-width="1.04411"
+            strokeWidth="1.04411"
           />
           <path
             id={classes.small_triangle}
@@ -40,7 +40,7 @@ const LandingHero = () => {
                 ry="14.1603"
                 transform="rotate(14.6215 446.249 190.237)"
                 fill="black"
-                fill-opacity="0.8"
+                fillOpacity="0.8"
               />
             </g>
             <g id="71nh46JncWL 1" filter="url(#filter1_d_900_9378)">
@@ -50,7 +50,7 @@ const LandingHero = () => {
                 width="202.018"
                 height="197.549"
                 fill="url(#pattern0)"
-                shape-rendering="crispEdges"
+                shapeRendering="crispEdges"
               />
             </g>
           </g>
@@ -82,7 +82,7 @@ const LandingHero = () => {
             <path
               d="M476.989 473.408C476.989 480.962 473.102 488.185 466.015 494.783C458.927 501.382 448.656 507.336 435.942 512.343C410.517 522.354 375.375 528.552 336.544 528.552C297.713 528.552 262.571 522.354 237.145 512.343C224.432 507.336 214.161 501.382 207.073 494.783C199.985 488.185 196.099 480.962 196.099 473.408C196.099 465.855 199.985 458.632 207.073 452.033C214.161 445.435 224.432 439.48 237.145 434.474C262.571 424.463 297.713 418.265 336.544 418.265C375.375 418.265 410.517 424.463 435.942 434.474C448.656 439.48 458.927 445.435 466.015 452.033C473.102 458.632 476.989 465.855 476.989 473.408Z"
               stroke="url(#paint4_linear_900_9378)"
-              stroke-width="0.522053"
+              strokeWidth="0.522053"
             />
           </g>
         </g>
@@ -94,9 +94,9 @@ const LandingHero = () => {
             width="327.479"
             height="186.796"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -115,9 +115,9 @@ const LandingHero = () => {
             width="284.018"
             height="279.549"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -183,9 +183,9 @@ const LandingHero = () => {
             width="332.573"
             height="161.971"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
@@ -219,8 +219,8 @@ const LandingHero = () => {
             y2="23.7859"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0.401563" stop-color="#6F8EFF" stop-opacity="0.2" />
-            <stop offset="0.868981" stop-color="#0038FF" stop-opacity="0" />
+            <stop offset="0.401563" stopColor="#6F8EFF" stopOpacity="0.2" />
+            <stop offset="0.868981" stopColor="#0038FF" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint1_linear_900_9378"
@@ -230,8 +230,8 @@ const LandingHero = () => {
             y2="449.82"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0.000136252" stop-color="white" />
-            <stop offset="1" stop-opacity="0" />
+            <stop offset="0.000136252" stopColor="white" />
+            <stop offset="1" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint2_linear_900_9378"
@@ -241,8 +241,8 @@ const LandingHero = () => {
             y2="184.317"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0.401563" stop-color="#6F8EFF" stop-opacity="0.2" />
-            <stop offset="0.868981" stop-color="#0038FF" stop-opacity="0" />
+            <stop offset="0.401563" stopColor="#6F8EFF" stopOpacity="0.2" />
+            <stop offset="0.868981" stopColor="#0038FF" stopOpacity="0" />
           </linearGradient>
           <radialGradient
             id="paint3_radial_900_9378"
@@ -252,8 +252,8 @@ const LandingHero = () => {
             gradientUnits="userSpaceOnUse"
             gradientTransform="translate(339.012 418.004) rotate(89.7316) scale(117.119 297.436)"
           >
-            <stop stop-color="#F4F8FF" />
-            <stop offset="1" stop-color="#0085FF" />
+            <stop stopColor="#F4F8FF" />
+            <stop offset="1" stopColor="#0085FF" />
           </radialGradient>
           <linearGradient
             id="paint4_linear_900_9378"
@@ -263,8 +263,8 @@ const LandingHero = () => {
             y2="336.817"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="white" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop stopColor="white" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
           </linearGradient>
           <image
             id="image0_900_9378"

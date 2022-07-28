@@ -13,6 +13,10 @@ import {
 	LOGIN_SUCCESS,
 	LOGOUT,
 	CLEAR_ERRORS,
+	ADD_PRODUCT,
+	ADD_PRODUCT_FAIL,
+	ADD_IMAGE,
+	ADD_IMAGE_FAIL,
 } from "../types";
 
 const SellerAuthState = (props) => {
@@ -22,6 +26,7 @@ const SellerAuthState = (props) => {
 		isSellerAuthenticated: localStorage.getItem("sellerToken") ? true : false,
 		loading: true,
 		seller: null,
+		products: [],
 	};
 
 	const [state, dispatch] = useReducer(sellerAuthReducer, initialState);
@@ -117,11 +122,60 @@ const SellerAuthState = (props) => {
 		dispatch({ type: CLEAR_ERRORS });
 	};
 
+	//   Product State
+
+	const addProduct = async (formData) => {
+		const config = {
+			headers: {
+				"Content-Type": "application/json",
+			},
+		};
+
+		try {
+			const res = await axios.post(
+				"http://localhost:8000/api/product",
+				formData,
+				config,
+			);
+			// const res2 = await axios.put(
+			//   `http://localhost:8000/api/product/${sellerId}`,
+			//   image,
+			//   config
+			// );
+			// const res = { res1, res2 };
+			dispatch({ type: ADD_PRODUCT, payload: res.data });
+		} catch (error) {
+			// console.log(error);
+			dispatch({ type: ADD_PRODUCT_FAIL, payload: error.message });
+		}
+	};
+
+	const addImageToProduct = async (image, seller, id) => {
+		const config = {
+			headers: {
+				"Content-Type": "application/json",
+			},
+		};
+		const data = { image, seller };
+		try {
+			const res = await axios.put(
+				`http://localhost:8000/api/product/${id}`,
+				data,
+				config,
+			);
+			dispatch({ type: ADD_IMAGE, payload: res.data });
+		} catch (error) {
+			// console.log(error);
+			dispatch({ type: ADD_IMAGE_FAIL, payload: error.message });
+		}
+	};
+
 	return (
 		<sellerAuthContext.Provider
 			value={{
 				token: state.token,
 				seller: state.seller,
+				products: state.products,
 				sellerError: state.sellerError,
 				isSellerAuthenticated: state.isSellerAuthenticated,
 				loading: state.loading,
@@ -131,6 +185,8 @@ const SellerAuthState = (props) => {
 				loadSellerIfTokenFound,
 				loginSeller,
 				logoutSeller,
+				addProduct,
+				addImageToProduct,
 			}}
 		>
 			{props.children}

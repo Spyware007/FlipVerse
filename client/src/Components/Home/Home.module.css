@@ -84,7 +84,7 @@
   height: 100vh;
   border-radius: 30px;
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   align-items: right;
   flex-direction: row;
   object-fit: cover;
@@ -94,7 +94,8 @@
 }
 .our_product1 {
   background-image: url("../../Assets//Home//sneakers.png");
-  align-items: flex-end;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 .our_product2 {
   background-image: url("../../Assets//Home//hoodies.png");
@@ -102,7 +103,8 @@
 }
 .our_product3 {
   background-image: url("../../Assets//Home//bagpacks.png");
-  align-items: flex-end;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 .our_product4 {
   background-image: url("../../Assets//Home//tshirts.png");
@@ -112,7 +114,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  width: 60vw;
+  width: 80vw;
 }
 .our_product_text {
   font-size: 5rem;
@@ -127,9 +129,26 @@
 }
 .product_small_image1 {
   width: 300px;
+  animation: floating 5s ease-in-out infinite;
 }
+
 .product_small_image2 {
   width: 200px;
+  animation: floating 5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 40px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
+  }
 }
 @media screen and (max-width: 1000px) {
   .home_page {
@@ -170,6 +189,7 @@
   .our_product_text {
     white-space: nowrap;
     font-size: 3rem;
+    margin-bottom: 20px;
   }
   .our_product1,
   .our_product2,
@@ -177,5 +197,17 @@
   .our_product4 {
     height: 40vh;
     border-radius: 10px;
+    padding: 20px 40px;
+  }
+  .product_small_image1 {
+    width: 0;
+  }
+  .product_small_image2 {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product_small_image1 {
+    display: none;
   }
 }
