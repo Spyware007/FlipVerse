@@ -11,7 +11,8 @@ import {
 
 const Product = () => {
 	const redirect = useNavigate();
-	const { getSingleProduct, product } = useContext(productContext);
+	const { getSingleProduct, product, orderProduct } =
+		useContext(productContext);
 	const { isSellerAuthenticated } = useContext(sellerAuthContext);
 	const { isUserAuthenticated } = useContext(userAuthContext);
 	const { productId } = useParams();
@@ -30,7 +31,12 @@ const Product = () => {
 		hasWarranty,
 		warrantyDurationInSeconds,
 	} = product;
-	const handleClick = () => {};
+
+	const handleClick = (pId) => {
+		orderProduct(pId);
+	};
+
+	console.log(isReadyForSale);
 	const unauthorized = () => {
 		redirect("/");
 	};
@@ -67,7 +73,7 @@ const Product = () => {
 							)}
 							{isUserAuthenticated && (
 								<Button
-									onClick={handleClick}
+									onClick={() => handleClick(productId)}
 									label="BUY"
 									padding="0.5em 11em"
 									filled
