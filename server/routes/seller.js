@@ -6,6 +6,7 @@ import {
 	updateSellerProfile,
 	uploadProductImage,
 	deleteProduct,
+	getSellerProducts,
 	getProduct,
 } from "../controllers/seller.js";
 const sellerRouter = express.Router();
@@ -30,7 +31,10 @@ sellerRouter
 	.put(sellerAuthMiddleware, updateSellerProfile);
 
 // Product routes
-sellerRouter.route("/api/product").post(sellerAuthMiddleware, createProduct);
+sellerRouter
+	.route("/api/product")
+	.get(sellerAuthMiddleware, getSellerProducts)
+	.post(sellerAuthMiddleware, createProduct);
 
 sellerRouter
 	.route("/api/product/:id")
