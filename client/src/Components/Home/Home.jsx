@@ -16,6 +16,7 @@ import trial2 from "../../Assets/trial2.png";
 import trial3 from "../../Assets/trial3.png";
 import trial4 from "../../Assets/trial4.png";
 import trial5 from "../../Assets/trial5.png";
+import wave from "../../Assets/Home/waves.svg";
 
 const Home = () => {
   const exploreRef = useRef(null);
@@ -52,6 +53,7 @@ const Home = () => {
         </div>
 
         <div ref={exploreRef} className={classes.featured_section}>
+          {/* <img src={wave} style={{ height: "300px" }} alt="wave" /> */}
           <h1 className={classes.featured_text}>Featured Products</h1>
           <div className={classes.featured_products}>
             <div className={classes.translated1}>
@@ -86,14 +88,24 @@ const Home = () => {
             </div>
             <div className={classes.content}>
               <h1 className={classes.our_product_text}>Sneakers</h1>
-              <Button label="Explore" filled padding="15px 40px" />
+              <Button
+                label="Explore"
+                filled
+                padding="20px 80px"
+                fontSize="23px"
+              />
             </div>
           </div>
           <div className={classes.our_product2}>
             <div>
               <div className={classes.content}>
                 <h1 className={classes.our_product_text}>Hoddies</h1>
-                <Button label="Explore" filled padding="15px 40px" />
+                <Button
+                  label="Explore"
+                  filled
+                  padding="20px 80px"
+                  fontSize="23px"
+                />
               </div>
             </div>
             <div className={classes.product_small_images}>
@@ -118,14 +130,24 @@ const Home = () => {
             </div>
             <div className={classes.content}>
               <h1 className={classes.our_product_text}>Bagpacks</h1>
-              <Button label="Explore" filled padding="15px 40px" />
+              <Button
+                label="Explore"
+                filled
+                padding="20px 80px"
+                fontSize="23px"
+              />
             </div>
           </div>
           <div className={classes.our_product4}>
             <div>
               <div className={classes.content}>
                 <h1 className={classes.our_product_text}>T-shirts</h1>
-                <Button label="Explore" filled padding="15px 40px" />
+                <Button
+                  label="Explore"
+                  filled
+                  padding="20px 80px"
+                  fontSize="23px"
+                />
               </div>
             </div>
             <div className={classes.product_small_images}>

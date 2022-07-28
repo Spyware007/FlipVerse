@@ -6,9 +6,9 @@ import trial1 from "../../../Assets/trial1.png";
 const PurchasedItems = () => {
   return (
     <>
-      <div>
+      <div className={classes.purchased_products}>
         <h1 className={classes.text}>Purchased Items</h1>
-        <Card smooth width="980px" height="560px">
+        <Card smooth width="980px" height="auto">
           <div className={classes.cards_container}>
             <ProductCard image={trial1} />
             <ProductCard image={trial1} />

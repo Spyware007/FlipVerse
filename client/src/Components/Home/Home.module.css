@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 60px;
   padding: 0 80px;
 }
 .landing {
@@ -23,6 +24,7 @@
   font-size: 4rem;
   color: #fff;
   margin-bottom: 60px;
+  margin-left: 20px;
 }
 .btn {
   display: flex;
@@ -39,9 +41,11 @@
   overflow: hidden;
 }
 .featured_text {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #fff;
   margin-bottom: 60px;
+  text-shadow: 4px 8px 0px #0937b6;
+  font-weight: 800;
 }
 .featured_products {
   display: flex;
@@ -72,9 +76,11 @@
   padding: 0 100px;
 }
 .our_products_text {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #fff;
   /* margin-bottom: 60px; */
+  text-shadow: 4px 8px 0px #0937b6;
+  font-weight: 800;
 }
 .our_product1,
 .our_product2,
@@ -89,8 +95,9 @@
   flex-direction: row;
   object-fit: cover;
   background-position: center;
-  padding: 100px 200px;
-  background-size: cover;
+  padding: 150px 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .our_product1 {
   background-image: url("../../Assets//Home//sneakers.png");
@@ -100,6 +107,8 @@
 .our_product2 {
   background-image: url("../../Assets//Home//hoodies.png");
   align-items: flex-start;
+
+  padding: 150px 150px;
 }
 .our_product3 {
   background-image: url("../../Assets//Home//bagpacks.png");
@@ -109,6 +118,8 @@
 .our_product4 {
   background-image: url("../../Assets//Home//tshirts.png");
   align-items: flex-start;
+
+  padding: 150px 150px;
 }
 .our_product_content {
   display: flex;
@@ -119,7 +130,8 @@
 .our_product_text {
   font-size: 5rem;
   color: #fff;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
+  text-align: left;
 }
 .product_small_images {
   display: flex;
@@ -210,4 +222,10 @@
   .product_small_image1 {
     display: none;
   }
+}
+/* pLaying */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
