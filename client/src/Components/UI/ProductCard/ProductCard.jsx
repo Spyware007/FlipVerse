@@ -12,7 +12,7 @@ const ProductCard = ({
   outerHeight = "390px",
   innerWidth = "230px",
   innerHeight = "250px",
-  id = "123",
+  id,
 }) => {
   return (
     <Link to={`/product/${id}`}>

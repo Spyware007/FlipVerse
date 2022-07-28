@@ -16,7 +16,7 @@ const Product = () => {
       <div className={classes.product_page}>
         <div className={classes.product}>
           <div>
-            <SingleProductCard image={trial1} />
+            <SingleProductCard />
           </div>
           <div className={classes.product_content}>
             <h1 className={classes.product_name}>Abstract 3D Digital Art</h1>
