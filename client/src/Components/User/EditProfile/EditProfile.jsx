@@ -28,7 +28,8 @@ const EditProfile = () => {
 
   const onImageUpdateHandler = (e) => {
     e.preventDefault();
-    updateImage(img);
+    updateImage(user, img);
+    console.log(img);
   };
 
   const onUpdateProfileHandler = (e) => {

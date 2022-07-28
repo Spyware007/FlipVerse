@@ -76,7 +76,7 @@ const App = () => {
                   </UserPrivateRoute>
                 }
               ></Route>
-              <Route path="/category/:id" element={<CategoryPage />}></Route>
+              <Route path="/category" element={<CategoryPage />}></Route>
               <Route path="/product/:productId" element={<Product />}></Route>
               <Route path="/cart" element={<Cart />}></Route>
               <Route path="/explore" element={<Explore />}></Route>

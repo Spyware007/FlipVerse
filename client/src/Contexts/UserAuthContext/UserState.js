@@ -147,14 +147,15 @@ const UserAuthState = (props) => {
   };
 
   // Update image
-  const updateImage = async (img) => {
+  const updateImage = async (user, img) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
       },
     };
+    const FormData = { user, img };
     try {
-      const res = await axios.post(`/api/user/profile/image`, img, config);
+      const res = await axios.post(`/api/user/profile/image`, FormData, config);
       dispatch({ type: UPDATE_IMAGE, payload: res.data });
     } catch (error) {
       // console.log(error);
