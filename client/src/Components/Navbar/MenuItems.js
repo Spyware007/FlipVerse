@@ -1,18 +1,18 @@
 export const MenuItems = [
   {
     title: "Sneakers",
-    path: "/category/123",
+    path: "/category?category=shoes",
   },
   {
     title: "Hoodies",
-    path: "/category/123",
+    path: "/category?category=hoodies",
   },
   {
     title: "Bagpacks",
-    path: "/category/123",
+    path: "/category?category=bagpacks",
   },
   {
     title: "T-shirts",
-    path: "/categories/123",
+    path: "/category?category=tshirts",
   },
 ];

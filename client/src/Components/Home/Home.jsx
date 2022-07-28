@@ -1,5 +1,12 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
+// Components
+
 import { CustomButton, ProductCard, LandingHero } from "../UI";
+
+// Images
+
 import classes from "./Home.module.css";
 import {
   shoe1,
@@ -10,15 +17,21 @@ import {
   bag2,
   hoodie1,
   hoodie2,
+  trial1,
+  trial2,
+  trial3,
+  trial4,
+  trial5,
 } from "../../Assets/Home";
-import trial1 from "../../Assets/Home/1.png";
-import trial2 from "../../Assets/Home/2.png";
-import trial3 from "../../Assets/Home/3.png";
-import trial4 from "../../Assets/Home/4.png";
-import trial5 from "../../Assets/Home/5.png";
 import wave from "../../Assets/Home/waves.svg";
 
+// Contexts
+
+import { sellerAuthContext } from "../../Contexts";
+
 const Home = () => {
+  const redirect = useNavigate();
+  const { isSellerAuthenticated } = useContext(sellerAuthContext);
   const exploreRef = useRef(null);
   const scrollDown = () => {
     exploreRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -39,11 +52,13 @@ const Home = () => {
                 filled
                 href="explore"
               />
-              <CustomButton
-                // onClick={handleClick}
-                label="Become a Seller"
-                // filled
-              />
+              {!isSellerAuthenticated && (
+                <CustomButton
+                  // onClick={handleClick}
+                  label="Become a Seller"
+                  // filled
+                />
+              )}
             </div>
           </div>
           <div className={classes.model}>
@@ -121,20 +136,26 @@ const Home = () => {
               <CustomButton
                 label="Explore"
                 filled
-                padding="20px 80px"
+                padding="15px 40px"
                 fontSize="23px"
+                onClick={() => {
+                  redirect("/category?category=shoes");
+                }}
               />
             </div>
           </div>
           <div className={classes.our_product2}>
             <div>
               <div className={classes.content}>
-                <h1 className={classes.our_product_text}>Hoddies</h1>
+                <h1 className={classes.our_product_text}>Hoodies</h1>
                 <CustomButton
                   label="Explore"
                   filled
-                  padding="20px 80px"
+                  padding="15px 40px"
                   fontSize="23px"
+                  onClick={() => {
+                    redirect("/category?category=hoodies");
+                  }}
                 />
               </div>
             </div>
@@ -163,8 +184,11 @@ const Home = () => {
               <CustomButton
                 label="Explore"
                 filled
-                padding="20px 80px"
+                padding="15px 40px"
                 fontSize="23px"
+                onClick={() => {
+                  redirect("/category?category=bagpacks");
+                }}
               />
             </div>
           </div>
@@ -175,8 +199,11 @@ const Home = () => {
                 <CustomButton
                   label="Explore"
                   filled
-                  padding="20px 80px"
+                  padding="15px 40px"
                   fontSize="23px"
+                  onClick={() => {
+                    redirect("/category?category=tshirts");
+                  }}
                 />
               </div>
             </div>

@@ -6,3 +6,8 @@ export { default as shoe1 } from "./shoe1.png";
 export { default as shoe2 } from "./shoe2.png";
 export { default as tshirt1 } from "./tshirt1.png";
 export { default as tshirt2 } from "./tshirt2.png";
+export { default as trial1 } from "./1.png";
+export { default as trial2 } from "./2.png";
+export { default as trial3 } from "./3.png";
+export { default as trial4 } from "./4.png";
+export { default as trial5 } from "./5.png";
