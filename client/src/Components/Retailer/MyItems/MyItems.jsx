@@ -1,11 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import classes from "./MyItems.module.css";
 import { Card, ProductCard } from "../../UI";
 import trial1 from "../../../Assets/trial1.png";
 import { sellerAuthContext } from "../../../Contexts";
 
 const MyItems = () => {
-  const { products } = useContext(sellerAuthContext);
+  const { getSellerProducts, products } = useContext(sellerAuthContext);
+
+  useEffect(() => {
+    getSellerProducts();
+  }, []);
   console.log(products);
   return (
     <>
@@ -14,12 +18,13 @@ const MyItems = () => {
         <Card smooth width="980px" height="auto">
           <div className={classes.cards_container}>
             {products.map((p, i) => {
-              const product = p.product;
+              // const product = p.data.sellerProducts;
               return (
                 <ProductCard
+                  key={i}
                   image={""}
-                  name={product.title}
-                  price={product.price}
+                  name={p.title}
+                  price={p.price}
                 />
               );
             })}

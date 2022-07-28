@@ -1,5 +1,6 @@
 import React, { useReducer, useState } from "react";
 import classes from "./Retailer.module.css";
+
 import { Card } from "../UI";
 import {
   Profile,

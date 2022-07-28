@@ -1,6 +1,6 @@
 .user_profile {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -42,7 +42,7 @@
 .user_sections {
   display: flex;
   align-self: center;
-  margin: 170px 0;
+  /* margin: 170px 0; */
 }
 .icon {
   width: 30px;

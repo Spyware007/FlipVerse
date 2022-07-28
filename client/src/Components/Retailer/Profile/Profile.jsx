@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Profile.module.css";
-import { Card, InputField } from "../../UI";
+import { Card } from "../../UI";
+import { sellerAuthContext } from "../../../Contexts";
 
 const Profile = () => {
+  const { seller } = useContext(sellerAuthContext);
   return (
     <>
       <div className="">
@@ -10,33 +12,8 @@ const Profile = () => {
           <div className={classes.profile_card}>
             <div className={classes.profile_pic}></div>
             <div className={classes.inputs}>
-              <InputField
-                // reference={nameRef}
-                type="name"
-                // value={name}
-                label="Name"
-                name="email"
-                placeholder="Name"
-                required
-              />
-              <InputField
-                // reference={nameRef}
-                type="email"
-                // value={name}
-                label="Email Id"
-                name="email"
-                placeholder="Email ID"
-                required
-              />
-              <InputField
-                // reference={nameRef}
-                type="name"
-                // value={name}
-                label="Address"
-                name="address"
-                placeholder="Address"
-                required
-              />
+              <h2>Retailer Name:{seller.name}</h2>
+              <h2>Retailer Email:{seller.email}</h2>
             </div>
           </div>
         </Card>
