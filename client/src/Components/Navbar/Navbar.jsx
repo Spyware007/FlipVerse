@@ -68,34 +68,39 @@ const Navbar = () => {
                 </li>
               </>
             )}
-          </ul>
-          {authenticated && (
-            <>
-              <li className={classes.link_container}>
-                <div onClick={logoutHandler} className={classes.link}>
-                  Logout
+
+            {authenticated && (
+              <>
+                <li className={classes.link_container}>
+                  <div onClick={logoutHandler} className={classes.link}>
+                    Logout
+                  </div>
+                </li>
+                <div className={classes.icons_container}>
+                  <NavLink to="/cart">
+                    <div className={classes.icon_container}>
+                      <img
+                        className={classes.cart_icon}
+                        src={cart_icon}
+                        alt=""
+                      />
+                    </div>
+                  </NavLink>
+                  <NavLink
+                    to={
+                      isSellerAuthenticated
+                        ? "/retailer/dashboard"
+                        : "/user/dashboard"
+                    }
+                  >
+                    <div className={classes.icon_container}>
+                      <img className={classes.icon} src={profile_icon} alt="" />
+                    </div>
+                  </NavLink>
                 </div>
-              </li>
-              <div className={classes.icons_container}>
-                <NavLink to="/cart">
-                  <div className={classes.icon_container}>
-                    <img className={classes.cart_icon} src={cart_icon} alt="" />
-                  </div>
-                </NavLink>
-                <NavLink
-                  to={
-                    isSellerAuthenticated
-                      ? "/retailer/dashboard"
-                      : "/user/dashboard"
-                  }
-                >
-                  <div className={classes.icon_container}>
-                    <img className={classes.icon} src={profile_icon} alt="" />
-                  </div>
-                </NavLink>
-              </div>
-            </>
-          )}
+              </>
+            )}
+          </ul>
         </div>
         <div className={classes.btn}>
           <button className={classes.icon} onClick={navHandler}>

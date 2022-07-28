@@ -35,7 +35,7 @@ const MyItems = () => {
           </div>
         </Card>
         <h1 className={classes.text}>Products Ready for Sale</h1>
-        <Card smooth width="980px" height="auto">
+        <Card smooth width="auto" height="auto">
           <div className={classes.cards_container}>
             {products.map((p, i) => {
               // const product = p.data.sellerProducts;
