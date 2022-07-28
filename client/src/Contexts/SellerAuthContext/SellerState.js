@@ -27,6 +27,7 @@ const SellerAuthState = (props) => {
 		isSellerAuthenticated: localStorage.getItem("sellerToken") ? true : false,
 		loading: true,
 		seller: null,
+		itemsReadyToBeBought: [],
 		products: [],
 	};
 
@@ -176,7 +177,6 @@ const SellerAuthState = (props) => {
 		try {
 			const res = await axios.get(`/api/product/`, config);
 			dispatch({ type: GET_SELLER_PRODUCTS, payload: res.data.sellerProducts });
-			console.log(res);
 		} catch (error) {
 			// console.log(error);
 			// dispatch({ type: ADD_IMAGE_FAIL, payload: error.message });
