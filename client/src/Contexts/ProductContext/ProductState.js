@@ -23,12 +23,31 @@ const ProductState = (props) => {
 
 		try {
 			const res = await axios.get(`/api/product/${id}`, config);
+			console.log(res);
 			dispatch({ type: GET_SINGLE_PRODUCT, payload: res.data });
 		} catch (error) {
 			console.log(error);
 			//   dispatch({ type: ADD_PRODUCT_FAIL, payload: error.message });
 		}
 	};
+
+	const orderProduct = async (productId) => {
+		const config = {
+			headers: {
+				"Content-Type": "application/json",
+			},
+		};
+		try {
+			const res = await axios.post(
+				`/api/product/purchase/${productId}`,
+				config,
+			);
+			console.log(res);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
 	const getAllProducts = async () => {
 		const config = {
 			headers: {
@@ -53,6 +72,7 @@ const ProductState = (props) => {
 				product: state.product,
 				getSingleProduct,
 				getAllProducts,
+				orderProduct,
 			}}
 		>
 			{props.children}
