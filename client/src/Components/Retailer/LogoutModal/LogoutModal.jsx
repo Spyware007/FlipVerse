@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button, Modal } from "../../UI";
+import { CustomButton, Modal } from "../../UI";
 import classes from "./LogoutModal.module.css";
 import { sellerAuthContext } from "../../../Contexts";
 
@@ -10,8 +10,8 @@ const LogoutModal = (props) => {
     <Modal onClose={props.onClose}>
       <h1 className={classes.text}>Are you sure you want to logout?</h1>
       <div className={classes.btns}>
-        <Button label="Logout" onClick={logoutSeller} />
-        <Button label="Cancel" filled onClick={props.onClose} />
+        <CustomButton label="Logout" onClick={logoutSeller} />
+        <CustomButton label="Cancel" filled onClick={props.onClose} />
       </div>
     </Modal>
   );

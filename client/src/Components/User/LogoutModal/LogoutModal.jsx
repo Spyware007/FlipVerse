@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button, Modal } from "../../UI";
+import { CustomButton, Modal } from "../../UI";
 import { userAuthContext } from "../../../Contexts";
 import { useNavigate } from "react-router-dom";
 import classes from "./LogoutModal.module.css";
@@ -15,8 +15,8 @@ const LogoutModal = (props) => {
     <Modal onClose={props.onClose}>
       <h1 className={classes.text}>Are you sure you want to logout?</h1>
       <div className={classes.btns}>
-        <Button label="Logout" onClick={onClickLogout} />
-        <Button label="Cancel" filled onClick={props.onClose} />
+        <CustomButton label="Logout" onClick={onClickLogout} />
+        <CustomButton label="Cancel" filled onClick={props.onClose} />
       </div>
     </Modal>
   );

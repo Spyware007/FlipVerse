@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import sellerAuthContext from "../../Contexts/SellerAuthContext/sellerAuthContext";
 import userAuthContext from "../../Contexts/UserAuthContext/userAuthContext";
 import classes from "./Signup.module.css";
-import { Card, InputField, Button } from "../UI";
+import { Card, InputField, CustomButton } from "../UI";
 import SignupHero from "./SignupHero";
 
 const Signup = (props) => {
@@ -128,7 +128,7 @@ const Signup = (props) => {
                 </div>
                 <div className={classes.btn}>
                   {!isUserAuthenticated ? (
-                    <Button
+                    <CustomButton
                       onClick={onSubmitHandler}
                       label="Create User"
                       disabled={isUserAuthenticated}
@@ -136,7 +136,7 @@ const Signup = (props) => {
                     />
                   ) : null}
                   {!isSellerAuthenticated ? (
-                    <Button
+                    <CustomButton
                       onClick={onSubmitSellerHandler}
                       label="Create Seller"
                       disabled={isSellerAuthenticated}
@@ -148,7 +148,7 @@ const Signup = (props) => {
                   Already a user?<NavLink to="/login"> Log In</NavLink>
                 </p>
                 {/* <div className={classes.btn}>
-              <Button
+              <CustomButton
                 // onClick={handleClick}
                 label="Sign Up"
                 // filled

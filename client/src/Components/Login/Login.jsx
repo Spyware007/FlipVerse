@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { sellerAuthContext, userAuthContext } from "../../Contexts";
-import { InputField, Button } from "../UI";
+import { InputField, CustomButton } from "../UI";
 import classes from "./Login.module.css";
 import LoginHero from "./LoginHero";
 
@@ -100,7 +100,7 @@ const Login = () => {
             </div>
             <div className={classes.btn}>
               {!isUserAuthenticated ? (
-                <Button
+                <CustomButton
                   onClick={onSubmitHandler}
                   disabled={isUserAuthenticated}
                   label="User Log In"
@@ -108,7 +108,7 @@ const Login = () => {
                 />
               ) : null}
               {!isSellerAuthenticated ? (
-                <Button
+                <CustomButton
                   onClick={onSubmitSellerHandler}
                   label="Seller Log In"
                   disabled={isSellerAuthenticated}
@@ -121,7 +121,7 @@ const Login = () => {
               <NavLink to="/signup"> Create an Account</NavLink>
             </p>
             {/* <div className={classes.btn}>
-              <Button
+              <CustomButton
                 // onClick={handleClick}
                 label="Sign Up"
                 // filled

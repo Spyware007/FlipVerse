@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./ChangePass.module.css";
-import { Card, InputField, Button } from "../../UI";
+import { Card, InputField, CustomButton } from "../../UI";
 
 const ChangePass = () => {
   return (
@@ -27,7 +27,7 @@ const ChangePass = () => {
               required
             />
           </div>
-          <Button filled label="Change Password" />
+          <CustomButton filled label="Change Password" />
         </div>
       </Card>
     </>
