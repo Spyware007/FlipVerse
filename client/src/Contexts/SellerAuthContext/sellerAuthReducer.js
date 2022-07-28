@@ -11,6 +11,7 @@ import {
   ADD_PRODUCT_FAIL,
   ADD_IMAGE,
   ADD_IMAGE_FAIL,
+  GET_SELLER_PRODUCTS,
 } from "../types";
 
 // eslint-disable-next-line
@@ -71,6 +72,11 @@ export default (state, action) => {
         ...state,
         products: [...state.products],
         productError: "Product Create Failed",
+      };
+    case GET_SELLER_PRODUCTS:
+      return {
+        ...state,
+        products: action.payload,
       };
     default:
       return state;

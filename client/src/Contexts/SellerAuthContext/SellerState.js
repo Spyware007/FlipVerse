@@ -17,6 +17,7 @@ import {
   ADD_PRODUCT_FAIL,
   ADD_IMAGE,
   ADD_IMAGE_FAIL,
+  GET_SELLER_PRODUCTS,
 } from "../types";
 
 const SellerAuthState = (props) => {
@@ -177,7 +178,7 @@ const SellerAuthState = (props) => {
     };
     try {
       const res = await axios.get(`/api/product/`, config);
-      // dispatch({ type: ADD_IMAGE, payload: res.data });
+      dispatch({ type: GET_SELLER_PRODUCTS, payload: res.data.sellerProducts });
       console.log(res);
     } catch (error) {
       // console.log(error);

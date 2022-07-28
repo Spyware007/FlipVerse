@@ -10,3 +10,4 @@ export const ADD_PRODUCT = "ADD_PRODUCT";
 export const ADD_PRODUCT_FAIL = "ADD_PRODUCT_FAIL";
 export const ADD_IMAGE = "ADD_IMAGE";
 export const ADD_IMAGE_FAIL = "ADD_IMAGE_FAIL";
+export const GET_SELLER_PRODUCTS = "GET_SELLER_PRODUCTS";
