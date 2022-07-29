@@ -13,10 +13,12 @@ const EditProfile = () => {
   const { name, email } = user;
   const [img, setImg] = useState(null);
   const [imgPreview, setImgPreview] = useState(null);
+
   const onImageChange = (e) => {
     const [file] = e.target.files;
     setImgPreview(URL.createObjectURL(file));
-    setImg(e.target.files);
+    setImg(file);
+    // console.log(file);
   };
   const onChangeHandler = (e) => {
     setUser({
@@ -27,7 +29,10 @@ const EditProfile = () => {
 
   const onImageUpdateHandler = (e) => {
     e.preventDefault();
-    updateImage(img);
+    const dataArray = new FormData();
+    dataArray.append("image", img, img.name);
+    console.log(img);
+    updateImage(dataArray);
   };
 
   const onUpdateProfileHandler = (e) => {

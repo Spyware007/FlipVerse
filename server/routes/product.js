@@ -13,7 +13,7 @@ import userAuthMiddleware from "../middleware/userAuth.js";
 const productRouter = express.Router();
 
 productRouter.route("/api/products").get(getProducts);
-productRouter.route("/api/products/category").get(getProductsByCategory);
+productRouter.route("/api/products/category").post(getProductsByCategory);
 
 productRouter
   .route("/api/user/wishlist")

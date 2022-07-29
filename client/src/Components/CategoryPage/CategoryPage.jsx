@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import queryString from "query-string";
 import { useLocation } from "react-router-dom";
 import classes from "./CategoryPage.module.css";
@@ -12,7 +12,10 @@ const CategoryPage = () => {
   const { search } = useLocation();
   const values = queryString.parse(search);
   const { category } = values;
-  getCategorizedProducts(search);
+  console.log(category);
+  useEffect(() => {
+    getCategorizedProducts(category);
+  }, []);
 
   return (
     <>
