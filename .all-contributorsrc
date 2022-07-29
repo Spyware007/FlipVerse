@@ -1,0 +1,27 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Spyware007",
+      "name": "OM GAWANDE",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89961974?v=4",
+      "profile": "https://github.com/Spyware007",
+      "contributions": [
+        "code",
+        "ideas",
+        "projectManagement",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "FlipVerse",
+  "projectOwner": "Spyware007",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
