@@ -61,7 +61,7 @@ const updateSellerProfile = asyncHandler(async (req, res) => {
 });
 
 const uploadSellerImage = asyncHandler(async (req, res) => {
-  console.log(req.file);
+  // console.log(req.file);
   req.seller.image = req.file.buffer;
   await req.seller.save();
   res.status(201).json({ message: "Image added successfully" });

@@ -31,7 +31,7 @@ const EditProfile = () => {
     e.preventDefault();
     const dataArray = new FormData();
     dataArray.append("image", img, img.name);
-    console.log(img);
+    // console.log(img);
     updateImage(dataArray);
   };
 
