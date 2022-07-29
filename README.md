@@ -1,9 +1,12 @@
+<div align = "center">
+<img  width="50px" src = "./readme_assets/logo.png">
+  </div>
 <h1 align="center"> <font size="5"> <b> FLIP - VERSE 🔥</b></h1>
-
 <!-- PROJECT LOGO -->
 <br />
+
 <div align = "center">
-<img src = "">
+<img src = "./readme_assets/mockup_main.png">
   </div>
 
 ---
@@ -32,9 +35,20 @@ customers to receive the physical product along with a digital version of it.<br
 
 ---
 
+### WEB 3.0 :
+
+- Hardhat <img width="35px" src = "./readme_assets/hardhat.png">
+  </div>
+- Moralis <img width="35px" src = "./readme_assets/moralis.svg">
+  </div>
+- Solidity <img width="15px" src = "./readme_assets/solidity.png">
+  </div>
+- Ethereum <img width="25px" src = "./readme_assets/ethereum.png">
+  </div>
+
 ### Frontend :
 
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white">
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 
 ### Backend :
 

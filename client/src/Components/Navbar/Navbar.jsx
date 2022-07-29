@@ -129,22 +129,23 @@ const Navbar = () => {
                       />
                     </div>
                   </NavLink> */}
-
-                <NavLink
-                  to={
-                    isSellerAuthenticated
-                      ? "/retailer/dashboard"
-                      : "/user/dashboard"
-                  }
-                >
-                  <div className={classes.icon_container}>
-                    <img
-                      className={classes.icon}
-                      src={profile_icon}
-                      alt="profileicon"
-                    />
-                  </div>
-                </NavLink>
+                <li>
+                  <NavLink
+                    to={
+                      isSellerAuthenticated
+                        ? "/retailer/dashboard"
+                        : "/user/dashboard"
+                    }
+                  >
+                    <div className={classes.icon_container}>
+                      <img
+                        className={classes.icon}
+                        src={profile_icon}
+                        alt="profileicon"
+                      />
+                    </div>
+                  </NavLink>
+                </li>
               </>
             )}
           </ul>
