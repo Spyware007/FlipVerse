@@ -13,11 +13,27 @@
 
 ---
 
-<div style="display:flex, column-gap:10px ">
-<img width="300px" src = "./readme_assets/create_account.png">
-<img width="300px" src = "./readme_assets/log_in.png">
-<img width="300px" src = "./readme_assets/flipkart_grid.png">
-  </div>
+<div style="display:flex ">
+<img width="500px" src = "./readme_assets/flipkart_grid.png">
+</div>
+<table>
+  <tr>
+    <td><img width="500px" src = "./readme_assets/create_account.png"></td>
+    <td><img width="500px" src = "./readme_assets/log_in.png"></td>
+  </tr>
+  <tr>
+    <td><img width="500px" src = "./readme_assets/mockup_main.png"></td>
+    <td><img width="500px" src = "./readme_assets/retailer_profile.png"></td>
+  </tr>
+  <tr>
+    <td><img width="500px" src = "./readme_assets/verify_warranty.png"></td>
+    <td><img width="500px" src = "./readme_assets/product_page.png"></td>
+  </tr>
+  <tr>
+    <td><img width="500px" src = "./readme_assets/customer_profile.png"></td>
+    <td><img width="500px" src = "./readme_assets/popup.png"></td>
+  </tr>
+</table>
 
 ---
 
@@ -37,7 +53,7 @@ customers to receive the physical product along with a digital version of it.<br
 ● Customers can then use the digital NFT to verify the authenticity of their product, prove their ownership of their product, and transfer ownership of them upon resale.<br>
 ● The brand/retailer should also be able to tie the digital NFT to its warranty program, allowing owners to trackrepairs and replacements to the original item.<br>
 ● Decay the NFT once the warranty is over.<br>
-● You can use the Polygon blockchain to deploy your solution and demo the final product as a web prototype<br>
+● WE used the Polygon blockchain to deploy our solution and demo the final product as a web prototype<br>
 
 ---
 
