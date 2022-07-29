@@ -19,6 +19,27 @@ const ProductState = (props) => {
 
 	const [state, dispatch] = useReducer(productReducer, initialState);
 
+	const dispatchProductWithWarranty = async (id, tokenId) => {
+		const config = {
+			headers: {
+				"Content-Type": "application/json",
+			},
+		};
+
+		try {
+			const res = await axios.post(
+				`/api/product/${id}`,
+				{ tId: tokenId },
+				config,
+			);
+			console.log(res.data);
+			// dispatch({ type: GET_SINGLE_PRODUCT, payload: res.data });
+		} catch (error) {
+			console.log(error);
+			//   dispatch({ type: ADD_PRODUCT_FAIL, payload: error.message });
+		}
+	};
+
 	const getSingleProduct = async (id) => {
 		const config = {
 			headers: {
@@ -97,6 +118,7 @@ const ProductState = (props) => {
 				getAllProducts,
 				orderProduct,
 				getCategorizedProducts,
+				dispatchProductWithWarranty,
 			}}
 		>
 			{props.children}
