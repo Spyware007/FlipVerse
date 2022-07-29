@@ -68,7 +68,15 @@
 .menu_icon {
   display: none;
 }
-
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon_container {
+  margin-top: 20px;
+  margin-left: 20px;
+}
 @media screen and (max-width: 960px) {
   .nav_menu {
     display: flex;
@@ -152,9 +160,7 @@
     /* color: #1888ff; */
     transition: 250ms;
   }
-}
-.align {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .icon_container {
+    margin-left: 0;
+  }
 }
