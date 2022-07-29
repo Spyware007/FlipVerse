@@ -90,3 +90,7 @@
     gap: 30px;
   }
 }
+.notfound {
+  color: rgb(169, 169, 169);
+  font-size: 20px;
+}

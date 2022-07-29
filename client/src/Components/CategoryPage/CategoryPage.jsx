@@ -16,7 +16,7 @@ const CategoryPage = () => {
   useEffect(() => {
     getCategorizedProducts(category);
     console.log(categorizedProducts);
-  }, []);
+  }, [category]);
   return (
     <>
       <div className={classes.category_page}>
