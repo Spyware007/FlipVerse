@@ -14,9 +14,9 @@
 ---
 
 <div style="display:flex, column-gap:10px ">
-<img width="150px" src = "./readme_assets/create_account.png">
-<img width="150px" src = "./readme_assets/log_in.png">
-<img width="150px" src = "./readme_assets/flipkart_grid.png">
+<img width="300px" src = "./readme_assets/create_account.png">
+<img width="300px" src = "./readme_assets/log_in.png">
+<img width="300px" src = "./readme_assets/flipkart_grid.png">
   </div>
 
 ---
