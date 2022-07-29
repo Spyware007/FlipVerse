@@ -5,8 +5,15 @@
 <!-- PROJECT LOGO -->
 <br />
 
+---
+
 <div align = "center">
 <img src = "./readme_assets/mockup_main.png">
+  </div>
+
+---
+
+<img width="300px" src = "./readme_assets/flipkart_grid.png">
   </div>
 
 ---
