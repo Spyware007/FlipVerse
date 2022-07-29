@@ -1,13 +1,14 @@
-<div align = "center">
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<img  width="50px" src = "./readme_assets/logo.png">
-  </div>
-<h1 align="center"> <font size="5"> <b> FLIP - VERSE 🔥</b></h1>
-<!-- PROJECT LOGO -->
-<br />
+--- 
 
+<div align = "center">
+<img  width="100px" src = "./readme_assets/logo.png">
+
+<h1 align="center"> <font size="5"> <b> FlipVerse </b></h1>
+<!-- PROJECT LOGO -->
+
+<h2><b>🔗 Blockchain-based eCommerce warranty system using NFTs</b></h2>
+  </div>
+  
 ---
 
 <div align = "center">
