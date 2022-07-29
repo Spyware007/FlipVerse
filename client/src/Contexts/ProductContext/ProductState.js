@@ -14,7 +14,7 @@ const ProductState = (props) => {
   const initialState = {
     allProducts: [],
     product: {},
-    categorizedProducts: [],
+    categorizedProducts: null,
   };
 
   const [state, dispatch] = useReducer(productReducer, initialState);
@@ -105,7 +105,7 @@ const ProductState = (props) => {
         config
       );
       console.log(res);
-      dispatch({ type: GET_ALL_PRODUCTS, payload: res.data });
+      dispatch({ type: GET_PRODUCTS_BY_CATEGORY, payload: res.data });
     } catch (error) {
       console.log(error);
       //   dispatch({ type: ADD_PRODUCT_FAIL, payload: error.message });
