@@ -2,7 +2,6 @@ import React, { useEffect, useContext } from "react";
 import { useMoralis } from "react-moralis";
 import { CustomButton, ProductCard, SingleProductCard } from "../UI";
 import { useParams, useNavigate } from "react-router-dom";
-import { ConnectButton } from "@web3uikit/web3";
 import classes from "./Product.module.css";
 import rs_icon from "../../Assets/rs_icon.png";
 import {
@@ -101,7 +100,6 @@ const Product = () => {
                 Add to Cart
                 <CartIcon />
               </Button> */}
-							<ConnectButton moralisAuth={false} />
 						</div>
 					</div>
 				</div>
