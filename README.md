@@ -88,6 +88,7 @@ customers to receive the physical product along with a digital version of it.<br
 ### Designed On:
 
 ![Figma](https://img.shields.io/badge/Figma-FbbE99?style=for-the-badge&logo=figma&logoColor=white)
+#### Figma File : [Figma Design Link](https://www.figma.com/file/WRhwvCUDoIyLwGBzBd0U9n/Flipkart-Grid-4.0)
 
 ## Glimpse ✨
 
