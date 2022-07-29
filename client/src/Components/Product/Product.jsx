@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from "react";
 import { useMoralis } from "react-moralis";
 import { CustomButton, ProductCard, SingleProductCard } from "../UI";
 import { useParams, useNavigate } from "react-router-dom";
+import { Button } from "@web3uikit/core";
 import classes from "./Product.module.css";
 import rs_icon from "../../Assets/rs_icon.png";
 import {
@@ -28,6 +29,7 @@ const Product = () => {
 	const {
 		title,
 		brand,
+		category,
 		description,
 		price,
 		isReadyForSale,
@@ -55,6 +57,8 @@ const Product = () => {
 					</div>
 					<div className={classes.product_content}>
 						<h1 className={classes.product_name}>{title}</h1>
+						<h2 className={classes.product_name}>Brand: {brand}</h2>
+						<h3 className={classes.product_name}>Category: {category}</h3>
 						<p className={classes.product_description}>{description}</p>
 						<div className={classes.price_container}>
 							<img className={classes.price_symbol} src={rs_icon} alt="" />
@@ -99,7 +103,8 @@ const Product = () => {
               >
                 Add to Cart
                 <CartIcon />
-              </Button> */}
+              </CustomButton> */}
+							<Button moralisAuth={false} />
 						</div>
 					</div>
 				</div>

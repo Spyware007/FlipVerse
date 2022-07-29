@@ -1,0 +1,58 @@
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.inner {
+  padding: 40px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.image_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image_upload {
+  display: flex;
+
+  flex-direction: column;
+}
+.custom_file_input {
+  margin-top: 20px;
+}
+.custom_file_input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom_file_input::before {
+  content: "Select some files";
+  display: inline-block;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  color: #e3aaff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom_file_input:hover::before {
+  border-color: black;
+}
+.custom_file_input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+.profile_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 30px;
+}

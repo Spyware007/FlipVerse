@@ -11,6 +11,7 @@
   font-size: 3rem;
   color: #fff;
   margin-bottom: 40px;
+  text-transform: capitalize;
 }
 .category_page_products {
   display: flex;

@@ -1,22 +1,17 @@
 import React, { useState, useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import cart_icon from "../../Assets/cart.svg";
+import classes from "./Navbar.module.css";
+import Dropdown from "./Dropdown";
+// import cart_icon from "../../Assets/cart.svg";
 import profile_icon from "../../Assets/profile.svg";
 import { sellerAuthContext, userAuthContext } from "../../Contexts";
 
 import { Logo } from "../UI";
-import classes from "./Navbar.module.css";
 
 const Navbar = () => {
   const redirect = useNavigate();
   const { isSellerAuthenticated, logoutSeller } = useContext(sellerAuthContext);
   const { isUserAuthenticated, logout } = useContext(userAuthContext);
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isActive, setActive] = useState(false);
-  const navHandler = () => {
-    setActive((prevState) => !prevState);
-    // disableScroll();
-  };
   const authenticated = isSellerAuthenticated || isUserAuthenticated;
   const logoutHandler = () => {
     if (isSellerAuthenticated) {
@@ -26,62 +21,115 @@ const Navbar = () => {
     }
     redirect("/login");
   };
+  // Navbar Responsive
+
+  const [click, setClick] = useState(false);
+  const [dropdown, setDropdown] = useState(false);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
+  const onMouseEnter = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(true);
+    }
+  };
+
+  const onMouseLeave = () => {
+    if (window.innerWidth < 960) {
+      setDropdown(false);
+    } else {
+      setDropdown(false);
+    }
+  };
 
   return (
     <>
       <nav className={classes.navbar}>
-        <div className={classes.logo_container}>
-          <Logo />
-        </div>
-        <div
-          className={`${classes.nav_links_container} ${
-            isActive ? classes.active : ""
-          }`}
+        <NavLink
+          to="/"
+          className={classes.navbar_logo}
+          onClick={closeMobileMenu}
         >
-          <ul className={classes.nav_links}>
-            <li className={classes.link_container}>
-              <NavLink className={classes.link} to="/">
+          <Logo />
+        </NavLink>
+        <div className={classes.menu_icon} onClick={handleClick}>
+          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+        </div>
+        <div className={classes.align}>
+          <ul
+            className={
+              click ? `${classes.nav_menu} ${classes.active}` : classes.nav_menu
+            }
+          >
+            <li className={classes.nav_item}>
+              <NavLink
+                to="/"
+                className={classes.nav_links}
+                onClick={closeMobileMenu}
+              >
                 Home
               </NavLink>
             </li>
-            <li className={classes.link_container}>
-              <NavLink className={classes.link} to="/explore">
+            <li
+              className={classes.nav_item}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            >
+              <NavLink
+                to="/explore"
+                className={classes.nav_links}
+                onClick={closeMobileMenu}
+              >
                 Explore
+                <i className="fas fa-caret-down" />
               </NavLink>
+              {dropdown && <Dropdown />}
             </li>
-            <li className={classes.link_container}>
-              <NavLink className={classes.link} to="/verifynft">
+            <li className={classes.nav_item}>
+              <NavLink
+                to="/verifynft"
+                className={classes.nav_links}
+                onClick={closeMobileMenu}
+              >
                 Verify Warranty
               </NavLink>
             </li>
+
             {!authenticated && (
               <>
-                <li className={classes.link_container}>
-                  <NavLink className={classes.link} to="/signup">
+                <li className={classes.nav_item}>
+                  <NavLink className={classes.nav_links} to="/signup">
                     Signup
                   </NavLink>
                 </li>
-                <li className={classes.link_container}>
-                  <NavLink className={classes.link} to="/login">
+                <li className={classes.nav_item}>
+                  <NavLink className={classes.nav_links} to="/login">
                     Login
                   </NavLink>
                 </li>
               </>
             )}
-          </ul>
-          {authenticated && (
-            <>
-              <li className={classes.link_container}>
-                <div onClick={logoutHandler} className={classes.link}>
-                  Logout
-                </div>
-              </li>
-              <div className={classes.icons_container}>
-                <NavLink to="/cart">
-                  <div className={classes.icon_container}>
-                    <img className={classes.cart_icon} src={cart_icon} alt="" />
+
+            {authenticated && (
+              <>
+                <li className={classes.nav_item}>
+                  <div onClick={logoutHandler} className={classes.nav_links}>
+                    Logout
                   </div>
-                </NavLink>
+                </li>
+                {/* <NavLink to="/cart">
+                    <div className={classes.icon_container}>
+                      <img
+                        className={classes.cart_icon}
+                        src={cart_icon}
+                        alt=""
+                      />
+                    </div>
+                  </NavLink> */}
+
                 <NavLink
                   to={
                     isSellerAuthenticated
@@ -90,18 +138,16 @@ const Navbar = () => {
                   }
                 >
                   <div className={classes.icon_container}>
-                    <img className={classes.icon} src={profile_icon} alt="" />
+                    <img
+                      className={classes.icon}
+                      src={profile_icon}
+                      alt="profileicon"
+                    />
                   </div>
                 </NavLink>
-              </div>
-            </>
-          )}
-        </div>
-        <div className={classes.btn}>
-          <button className={classes.icon} onClick={navHandler}>
-            <span className={classes.line + " " + classes.line1}></span>
-            <span className={classes.line + " " + classes.line2}></span>
-          </button>
+              </>
+            )}
+          </ul>
         </div>
       </nav>
     </>
