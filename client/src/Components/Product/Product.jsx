@@ -1,8 +1,10 @@
 import React, { useEffect, useContext, useState } from "react";
-import { useMoralis } from "react-moralis";
+import { useMoralis, useWeb3Contract } from "react-moralis";
 import { CustomButton, ProductCard, SingleProductCard } from "../UI";
+import { useNotification } from "@web3uikit/core";
 import { useParams, useNavigate } from "react-router-dom";
 import classes from "./Product.module.css";
+import abi from "../../Constants/abi.json";
 import rs_icon from "../../Assets/rs_icon.png";
 import {
 	productContext,
@@ -11,6 +13,15 @@ import {
 } from "../../Contexts";
 
 const Product = () => {
+	const contractAddress = "0xc7e886c33eb26501c966eaf35db7bb15dd46b45d";
+
+	const { runContractFunction: getBlockTimeStamp } = useWeb3Contract({
+		abi,
+		contractAddress,
+		functionName: "getBlockTimeStamp",
+		params: {},
+	});
+
 	const redirect = useNavigate();
 
 	const [walletAddress, setWalletAddress] = useState("");
@@ -128,6 +139,22 @@ const Product = () => {
 									filled
 								/>
 							)}
+							{/* {isWeb3Enabled && (
+								<CustomButton
+									onClick={async () => {
+										try {
+											const res = await getBlockTimeStamp();
+											console.log(parseInt(parseInt(res._hex)));
+											console.log(res);
+										} catch (error) {
+											console.log(error);
+										}
+									}}
+									label="Get Timestamp"
+									padding="0.5em 11em"
+									filled
+								/>
+							)} */}
 							<CustomButton
 								label={
 									isWeb3Enabled
@@ -142,8 +169,17 @@ const Product = () => {
 								onClick={connectWallet}
 								disabled={isWeb3EnableLoading}
 							/>
-							{/* {isWeb3Enabled &&
-								"This address will be used to store your warranty card"} */}
+							{isWeb3Enabled && isSellerAuthenticated && (
+								<CustomButton
+									// onClick={}
+									label="Create Warranty Card NFT"
+									padding="0.5em 7em"
+									filled
+								/>
+							)}
+							{isWeb3Enabled &&
+								!isSellerAuthenticated &&
+								"This address will be used to store your warranty card"}
 							{/* <CustomButton
                 // onClick={handleClick}
                 // label="Add to Cart"

@@ -53,6 +53,7 @@ const getProductsByCategory = asyncHandler(async (req, res) => {
 
 	if (!category) {
 		res.status(400).json({ message: "Please enter category" });
+		return;
 	}
 
 	const products = await Product.find({ category });
