@@ -1,6 +1,6 @@
 <div align = "center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <img  width="50px" src = "./readme_assets/logo.png">
   </div>
@@ -107,6 +107,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/Spyware007"><img src="https://avatars.githubusercontent.com/u/89961974?v=4?s=100" width="100px;" alt=""/><br /><sub><b>OM GAWANDE</b></sub></a><br /><a href="https://github.com/Spyware007/FlipVerse/commits?author=Spyware007" title="Code">💻</a> <a href="#ideas-Spyware007" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-Spyware007" title="Project Management">📆</a> <a href="#maintenance-Spyware007" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://nishant-bhosale.netlify.app/"><img src="https://avatars.githubusercontent.com/u/77777251?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nishant Bhosale</b></sub></a><br /><a href="https://github.com/Spyware007/FlipVerse/commits?author=Nishant-Bhosale" title="Code">💻</a> <a href="#ideas-Nishant-Bhosale" title="Ideas, Planning, & Feedback">🤔</a> <a href="#projectManagement-Nishant-Bhosale" title="Project Management">📆</a> <a href="#maintenance-Nishant-Bhosale" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
