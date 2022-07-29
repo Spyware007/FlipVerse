@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { useMoralis } from "react-moralis";
 import { CustomButton, ProductCard, SingleProductCard } from "../UI";
 import { useParams, useNavigate } from "react-router-dom";
@@ -12,6 +12,8 @@ import {
 
 const Product = () => {
 	const redirect = useNavigate();
+
+	const [walletAddress, setWalletAddress] = useState("");
 
 	const { getSingleProduct, product, orderProduct } =
 		useContext(productContext);
@@ -33,11 +35,13 @@ const Product = () => {
 		if (!isWeb3Enabled && localStorage.getItem("connected")) {
 			enableWeb3();
 		}
+		setWalletAddress(account);
 	}, [isWeb3Enabled]);
 
 	useEffect(() => {
 		Moralis.onAccountChanged((account) => {
 			console.log(`Account changed to ${account}`);
+			setWalletAddress(account);
 			if (account == null) {
 				window.localStorage.removeItem("connected");
 				deactivateWeb3();
@@ -49,10 +53,15 @@ const Product = () => {
 	const connectWallet = async () => {
 		await enableWeb3();
 		localStorage.setItem("connected", "walletconnect");
+		setWalletAddress(account);
 	};
 
 	const handleClick = (pId) => {
-		orderProduct(pId);
+		if (!walletAddress) {
+			console.log("Connect to a wallet first to receive warranty!");
+			return;
+		}
+		orderProduct(pId, walletAddress);
 	};
 
 	const {
@@ -133,6 +142,8 @@ const Product = () => {
 								onClick={connectWallet}
 								disabled={isWeb3EnableLoading}
 							/>
+							{/* {isWeb3Enabled &&
+								"This address will be used to store your warranty card"} */}
 							{/* <CustomButton
                 // onClick={handleClick}
                 // label="Add to Cart"

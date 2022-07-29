@@ -168,7 +168,13 @@ const purchaseProduct = asyncHandler(async (req, res) => {
 	const {
 		params: { id },
 		user: { purchasedProducts, _id },
+		body: { walletAddress },
 	} = req;
+
+	if (!walletAddress) {
+		res.status(404).json({ message: "Please provide wallet Address" });
+		return;
+	}
 
 	if (!id) {
 		res.status(400).json({ message: "Product ID invalid" });
@@ -196,9 +202,11 @@ const purchaseProduct = asyncHandler(async (req, res) => {
 		throw new Error("Product already purchased");
 	}
 
+	req.user.walletAddress = walletAddress;
 	product.isReadyForSale = true;
 	product.orderedBy = _id;
 	await product.save();
+	await req.user.save();
 	res.status(200).json({ message: "Ordered successfully" });
 });
 
