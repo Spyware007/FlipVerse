@@ -11,13 +11,13 @@
   
 ---
 
-<div align = "center">
-<img src = "./readme_assets/mockup_main.png">
+<div align="center">
+<img  src = "./readme_assets/mockup_main.png">
   </div>
 
 ---
 
-<div style="display:flex ">
+<div align="center" style="display:flex ">
 <img width="500px" src = "./readme_assets/flipkart_grid.png">
 </div>
 <table>
@@ -26,7 +26,7 @@
     <td><img width="500px" src = "./readme_assets/log_in.png"></td>
   </tr>
   <tr>
-    <td><img width="500px" src = "./readme_assets/mockup_main.png"></td>
+    <td><img width="500px" src = "./readme_assets/featured_products.png"></td>
     <td><img width="500px" src = "./readme_assets/retailer_profile.png"></td>
   </tr>
   <tr>
