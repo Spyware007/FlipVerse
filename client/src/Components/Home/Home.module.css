@@ -1,231 +1,230 @@
 .home_page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 20px;
 }
 .landing_slide {
-  width: 100vw;
-  height: 90vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 60px;
-  padding: 0 80px;
+	width: 100vw;
+	height: 90vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	column-gap: 60px;
+	padding: 0 80px;
 }
 .landing {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
 }
 .landing_text {
-  font-size: 4rem;
-  color: #fff;
-  margin-bottom: 60px;
-  margin-left: 20px;
+	font-size: 4rem;
+	color: #fff;
+	margin-bottom: 60px;
+	margin-left: 20px;
 }
 .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 40px;
 }
 .featured_section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100vw;
-  overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100vw;
+	overflow: hidden;
 }
 .featured_text {
-  font-size: 4rem;
-  color: #fff;
-  margin-bottom: 60px;
-  text-shadow: 4px 8px 0px #0937b6;
-  font-weight: 800;
+	font-size: 4rem;
+	color: #fff;
+	margin-bottom: 60px;
+	text-shadow: 4px 8px 0px #0937b6;
+	font-weight: 800;
 }
 .featured_products {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* column-gap: 20px; */
-  overflow-x: scroll;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* column-gap: 20px; */
 }
 .translated {
-  transform: perspective(200px) translateZ(-50px);
+	transform: perspective(200px) translateZ(-50px);
 }
 .translated1 {
-  transform: perspective(100px) translateZ(-50px);
-  /* margin-left: 5000px; */
+	transform: perspective(100px) translateZ(-50px);
+	/* margin-left: 5000px; */
 }
 .translated5 {
-  transform: perspective(100px) translateZ(-50px);
-  /* margin-right: 5000px; */
+	transform: perspective(100px) translateZ(-50px);
+	/* margin-right: 5000px; */
 }
 .our_products_section {
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 100px;
-  row-gap: 60px;
-  padding: 0 100px;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 100px;
+	row-gap: 60px;
+	padding: 0 100px;
 }
 .our_products_text {
-  font-size: 4rem;
-  color: #fff;
-  /* margin-bottom: 60px; */
-  text-shadow: 4px 8px 0px #0937b6;
-  font-weight: 800;
+	font-size: 4rem;
+	color: #fff;
+	/* margin-bottom: 60px; */
+	text-shadow: 4px 8px 0px #0937b6;
+	font-weight: 800;
 }
 .our_product1,
 .our_product2,
 .our_product3,
 .our_product4 {
-  width: 95vw;
-  height: 100vh;
-  border-radius: 30px;
-  display: flex;
-  /* justify-content: flex-start; */
-  align-items: right;
-  flex-direction: row;
-  object-fit: cover;
-  background-position: center;
-  padding: 150px 200px;
-  background-size: contain;
-  background-repeat: no-repeat;
+	width: 95vw;
+	height: 100vh;
+	border-radius: 30px;
+	display: flex;
+	/* justify-content: flex-start; */
+	align-items: right;
+	flex-direction: row;
+	object-fit: cover;
+	background-position: center;
+	padding: 150px 200px;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 .our_product1 {
-  background-image: url("../../Assets//Home//sneakers.png");
-  align-items: flex-start;
-  justify-content: flex-end;
+	background-image: url("../../Assets//Home//sneakers.png");
+	align-items: flex-start;
+	justify-content: flex-end;
 }
 .our_product2 {
-  background-image: url("../../Assets//Home//hoodies.png");
-  align-items: flex-start;
+	background-image: url("../../Assets//Home//hoodies.png");
+	align-items: flex-start;
 
-  padding: 150px 150px;
+	padding: 150px 150px;
 }
 .our_product3 {
-  background-image: url("../../Assets//Home//bagpacks.png");
-  align-items: flex-start;
-  justify-content: flex-end;
+	background-image: url("../../Assets//Home//bagpacks.png");
+	align-items: flex-start;
+	justify-content: flex-end;
 }
 .our_product4 {
-  background-image: url("../../Assets//Home//tshirts.png");
-  align-items: flex-start;
+	background-image: url("../../Assets//Home//tshirts.png");
+	align-items: flex-start;
 
-  padding: 150px 150px;
+	padding: 150px 150px;
 }
 .our_product_content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 80vw;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: 80vw;
 }
 .our_product_text {
-  font-size: 5rem;
-  color: #fff;
-  margin-bottom: 60px;
-  text-align: left;
+	font-size: 5rem;
+	color: #fff;
+	margin-bottom: 60px;
+	text-align: left;
 }
 .product_small_images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 .product_small_image1 {
-  width: 300px;
-  animation: floating 5s ease-in-out infinite;
+	width: 300px;
+	animation: floating 5s ease-in-out infinite;
 }
 
 .product_small_image2 {
-  width: 200px;
-  animation: floating 5s ease-in-out infinite;
-  animation-delay: 1s;
+	width: 200px;
+	animation: floating 5s ease-in-out infinite;
+	animation-delay: 1s;
 }
 @keyframes floating {
-  0% {
-    transform: translate(0, 0px);
-  }
+	0% {
+		transform: translate(0, 0px);
+	}
 
-  50% {
-    transform: translate(0, 40px);
-  }
+	50% {
+		transform: translate(0, 40px);
+	}
 
-  100% {
-    transform: translate(0, -0px);
-  }
+	100% {
+		transform: translate(0, -0px);
+	}
 }
 @media screen and (max-width: 1000px) {
-  .home_page {
-    margin-top: 0;
-    margin-bottom: 40px;
-  }
-  .landing_slide {
-    align-items: flex-start;
-    margin-top: 100px;
-    height: 70vh;
-  }
-  .landing_text {
-    font-size: 3rem;
-  }
-  /* .model {
+	.home_page {
+		margin-top: 0;
+		margin-bottom: 40px;
+	}
+	.landing_slide {
+		align-items: flex-start;
+		margin-top: 100px;
+		height: 70vh;
+	}
+	.landing_text {
+		font-size: 3rem;
+	}
+	/* .model {
     display: none;
   } */
-  .featured_section {
-    overflow: hidden;
-  }
-  .featured_text {
-    white-space: nowrap;
-    font-size: 2rem;
-  }
-  .featured_products {
-    column-gap: 20px;
-    overflow: scroll;
-    width: 100%;
-  }
-  .our_products_section {
-    /* overflow: hidden; */
-    gap: 20px;
-  }
-  .our_products_text {
-    white-space: nowrap;
-    font-size: 2rem;
-  }
-  .our_product_text {
-    white-space: nowrap;
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  .our_product1,
-  .our_product2,
-  .our_product3,
-  .our_product4 {
-    height: 40vh;
-    border-radius: 10px;
-    padding: 20px 40px;
-  }
-  .product_small_image1 {
-    width: 0;
-  }
-  .product_small_image2 {
-    width: 100px;
-  }
+	.featured_section {
+		overflow: hidden;
+	}
+	.featured_text {
+		white-space: nowrap;
+		font-size: 2rem;
+	}
+	.featured_products {
+		column-gap: 20px;
+		overflow: scroll;
+		width: 100%;
+	}
+	.our_products_section {
+		/* overflow: hidden; */
+		gap: 20px;
+	}
+	.our_products_text {
+		white-space: nowrap;
+		font-size: 2rem;
+	}
+	.our_product_text {
+		white-space: nowrap;
+		font-size: 3rem;
+		margin-bottom: 20px;
+	}
+	.our_product1,
+	.our_product2,
+	.our_product3,
+	.our_product4 {
+		height: 40vh;
+		border-radius: 10px;
+		padding: 20px 40px;
+	}
+	.product_small_image1 {
+		width: 0;
+	}
+	.product_small_image2 {
+		width: 100px;
+	}
 }
 @media screen and (max-width: 768px) {
-  .product_small_image1 {
-    display: none;
-  }
+	.product_small_image1 {
+		display: none;
+	}
 }
 /* pLaying */
 .content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
