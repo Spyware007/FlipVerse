@@ -174,6 +174,7 @@ const getProduct = asyncHandler(async (req, res) => {
 		description,
 		category,
 		price,
+		tokenId,
 		isReadyForSale,
 		hasWarranty,
 		orderedBy,
@@ -189,6 +190,7 @@ const getProduct = asyncHandler(async (req, res) => {
 		description,
 		isReadyForSale,
 		orderedBy,
+		productTokenId: tokenId,
 		image: product.image ? base64Image : "",
 		price,
 		category,
@@ -245,10 +247,8 @@ const uploadProductImage = asyncHandler(async (req, res) => {
 
 const confirmPurchaseOfProduct = asyncHandler(async (req, res) => {
 	const { id } = req.params;
-
+	const { tId } = req.body;
 	const product = await Product.findById(id);
-	console.log(req.seller._id);
-	console.log(product.createdBy);
 
 	if (!product || product.createdBy.toString() !== req.seller._id.toString()) {
 		res.status(400).json({ message: "Product not found" });
@@ -259,6 +259,7 @@ const confirmPurchaseOfProduct = asyncHandler(async (req, res) => {
 
 	product.sold = true;
 	product.isReadyForSale = false;
+	product.tokenId = tId;
 	product.orderedBy = null;
 	buyer.purchasedProducts.push(id);
 

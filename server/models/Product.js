@@ -39,6 +39,9 @@ const productSchema = new Schema(
 			type: Boolean,
 			default: false,
 		},
+		tokenId: {
+			type: Number,
+		},
 		orderedBy: {
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "User",
