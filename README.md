@@ -41,9 +41,9 @@ customers to receive the physical product along with a digital version of it.<br
   </div>
 - Moralis <img width="35px" src = "./readme_assets/moralis.svg">
   </div>
-- Solidity <img width="35px" src = "./readme_assets/solidity.png">
+- Solidity <img width="15px" src = "./readme_assets/solidity.png">
   </div>
-- Ethereum <img width="35px" src = "./readme_assets/ethereum.png">
+- Ethereum <img width="25px" src = "./readme_assets/ethereum.png">
   </div>
 
 ### Frontend :
