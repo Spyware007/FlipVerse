@@ -2,7 +2,6 @@ import React, { useEffect, useContext } from "react";
 import { useMoralis } from "react-moralis";
 import { CustomButton, ProductCard, SingleProductCard } from "../UI";
 import { useParams, useNavigate } from "react-router-dom";
-import { Button } from "@web3uikit/core";
 import classes from "./Product.module.css";
 import rs_icon from "../../Assets/rs_icon.png";
 import {
@@ -20,11 +19,41 @@ const Product = () => {
 	const { isUserAuthenticated } = useContext(userAuthContext);
 	const { productId } = useParams();
 
-	const { isWeb3Enabled, enableWeb3 } = useMoralis();
+	const {
+		enableWeb3,
+		isWeb3Enabled,
+		isWeb3EnableLoading,
+		account,
+		Moralis,
+		deactivateWeb3,
+	} = useMoralis();
 
 	useEffect(() => {
 		getSingleProduct(productId);
-	}, [productId]);
+		if (!isWeb3Enabled && localStorage.getItem("connected")) {
+			enableWeb3();
+		}
+	}, [isWeb3Enabled]);
+
+	useEffect(() => {
+		Moralis.onAccountChanged((account) => {
+			console.log(`Account changed to ${account}`);
+			if (account == null) {
+				window.localStorage.removeItem("connected");
+				deactivateWeb3();
+				console.log("Null Account found");
+			}
+		});
+	}, []);
+
+	const connectWallet = async () => {
+		await enableWeb3();
+		localStorage.setItem("connected", "walletconnect");
+	};
+
+	const handleClick = (pId) => {
+		orderProduct(pId);
+	};
 
 	const {
 		title,
@@ -38,11 +67,6 @@ const Product = () => {
 		warrantyDurationInSeconds,
 	} = product;
 
-	const handleClick = (pId) => {
-		orderProduct(pId);
-	};
-
-	console.log(isReadyForSale);
 	const unauthorized = () => {
 		redirect("/");
 	};
@@ -95,6 +119,20 @@ const Product = () => {
 									filled
 								/>
 							)}
+							<CustomButton
+								label={
+									isWeb3Enabled
+										? `Connected to ${account.slice(0, 4)}...${account.slice(
+												39,
+												account.length,
+										  )}`
+										: "Connect Wallet"
+								}
+								filled
+								padding={`0.5em ${isWeb3Enabled ? 5.2 : 8}em`}
+								onClick={connectWallet}
+								disabled={isWeb3EnableLoading}
+							/>
 							{/* <CustomButton
                 // onClick={handleClick}
                 // label="Add to Cart"
@@ -104,7 +142,6 @@ const Product = () => {
                 Add to Cart
                 <CartIcon />
               </CustomButton> */}
-							<Button moralisAuth={false} />
 						</div>
 					</div>
 				</div>
