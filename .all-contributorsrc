@@ -1,0 +1,51 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Spyware007",
+      "name": "OM GAWANDE",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89961974?v=4",
+      "profile": "https://github.com/Spyware007",
+      "contributions": [
+        "code",
+        "ideas",
+        "projectManagement",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Nishant-Bhosale",
+      "name": "Nishant Bhosale",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77777251?v=4",
+      "profile": "https://nishant-bhosale.netlify.app/",
+      "contributions": [
+        "code",
+        "ideas",
+        "projectManagement",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "SaurabhBarde-007",
+      "name": "Saurabh Barde",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89410132?v=4",
+      "profile": "https://github.com/SaurabhBarde-007",
+      "contributions": [
+        "content",
+        "design",
+        "ideas",
+        "review"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "FlipVerse",
+  "projectOwner": "Spyware007",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
