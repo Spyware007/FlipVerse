@@ -20,3 +20,7 @@
   flex-wrap: wrap;
   gap: 40px;
 }
+.notfound {
+  color: rgb(124, 124, 124);
+  font-size: 20px;
+}

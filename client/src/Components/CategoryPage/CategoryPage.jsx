@@ -15,26 +15,27 @@ const CategoryPage = () => {
   console.log(category);
   useEffect(() => {
     getCategorizedProducts(category);
-    console.log(categorizedProducts);
   }, [category]);
+  console.log(categorizedProducts);
   return (
     <>
       <div className={classes.category_page}>
         <h1 className={classes.category_page_text}>{category}</h1>
         <div className={classes.category_page_products}>
-          {categorizedProducts ? (
+          {categorizedProducts &&
             categorizedProducts.products.map((p, i) => {
               return (
                 <ProductCard
+                  key={i}
                   image={p.image}
                   name={p.title}
                   price={p.price}
                   id={p._id}
                 />
               );
-            })
-          ) : (
-            <h1>No Products in this category</h1>
+            })}
+          {categorizedProducts.products.length === 0 && (
+            <h1 className={classes.notfound}>No Products in this category</h1>
           )}
         </div>
       </div>

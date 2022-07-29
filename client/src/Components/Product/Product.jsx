@@ -50,7 +50,7 @@ const Product = () => {
     searchQuery = category?.toLowerCase();
     console.log(category);
     getCategorizedProducts(searchQuery);
-  }, [searchQuery]);
+  }, [product]);
   console.log(category);
 
   //
@@ -275,7 +275,7 @@ const Product = () => {
         <div className={classes.similar_container}>
           <h1 className={classes.similar_text}>Similar Products</h1>
           <div className={classes.similar_products}>
-            {categorizedProducts ? (
+            {categorizedProducts &&
               categorizedProducts.products.map((p, i) => {
                 return (
                   <ProductCard
@@ -285,9 +285,11 @@ const Product = () => {
                     id={p._id}
                   />
                 );
-              })
-            ) : (
-              <h1 className={classes.notfound}>No Products in this category</h1>
+              })}
+            {categorizedProducts.products.length === 0 && (
+              <h1 className={classes.notfound}>
+                No Similar Products found in this category
+              </h1>
             )}
           </div>
         </div>
