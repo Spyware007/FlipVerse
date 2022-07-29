@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import queryString from "query-string";
 import { useLocation } from "react-router-dom";
 import classes from "./CategoryPage.module.css";
@@ -12,27 +12,30 @@ const CategoryPage = () => {
   const { search } = useLocation();
   const values = queryString.parse(search);
   const { category } = values;
-  getCategorizedProducts(search);
-
+  console.log(category);
+  useEffect(() => {
+    getCategorizedProducts(category);
+    console.log(categorizedProducts);
+  }, []);
   return (
     <>
       <div className={classes.category_page}>
         <h1 className={classes.category_page_text}>{category}</h1>
         <div className={classes.category_page_products}>
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
-          <ProductCard image={trial1} />
+          {categorizedProducts ? (
+            categorizedProducts.products.map((p, i) => {
+              return (
+                <ProductCard
+                  image={p.image}
+                  name={p.title}
+                  price={p.price}
+                  id={p._id}
+                />
+              );
+            })
+          ) : (
+            <h1>No Products in this category</h1>
+          )}
         </div>
       </div>
     </>

@@ -17,7 +17,7 @@ const EditProfile = () => {
   const onImageChange = (e) => {
     const [file] = e.target.files;
     setImgPreview(URL.createObjectURL(file));
-    setImg(e.target.files);
+    setImg(file);
   };
   const onChangeHandler = (e) => {
     setUser({
@@ -28,7 +28,9 @@ const EditProfile = () => {
 
   const onImageUpdateHandler = (e) => {
     e.preventDefault();
-    updateImage(user, img);
+    const dataArray = new FormData();
+    dataArray.append("image", img, img.name);
+    updateImage(dataArray);
     console.log(img);
   };
 

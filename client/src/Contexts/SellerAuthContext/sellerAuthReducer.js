@@ -84,7 +84,7 @@ export default (state, action) => {
     case UPDATE_PROFILE:
       return {
         ...state,
-        seller: action.payload,
+        // seller: action.payload,
       };
     default:
       return state;

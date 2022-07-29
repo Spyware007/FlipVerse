@@ -1,14 +1,26 @@
+.profile {
+  margin: 30px;
+}
 .profile_card {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 30px; */
+  padding: 30px;
+  /* margin: 20px; */
 }
 .profile_pic {
-  width: 70%;
+  width: auto;
 }
 .inputs {
-  width: 70%;
+  width: auto;
+}
+@media screen and (max-width: 1000px) {
+  .profile_card {
+    flex-direction: column;
+  }
+  .image {
+    width: 200px;
+  }
 }
