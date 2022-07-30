@@ -11,7 +11,7 @@ error Product_Creator_Unidentified();
 error Product_Owner_Unidentified();
 error Product_WarrantyPeriod_Over();
 
-contract WarrantyCardStorage is ERC721, ERC721URIStorage, ERC721Burnable {
+contract WarrantyCard is ERC721, ERC721URIStorage, ERC721Burnable {
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIdCounter;
@@ -20,7 +20,6 @@ contract WarrantyCardStorage is ERC721, ERC721URIStorage, ERC721Burnable {
         uint256 duration;
         uint256 startTime;
         uint256 endTime;
-        address[] owners;
     }
 
     address payable private i_nftCreator = payable(address(0)); // Store address of creator of Warranty Card
@@ -37,9 +36,10 @@ contract WarrantyCardStorage is ERC721, ERC721URIStorage, ERC721Burnable {
 
     // Only the owner of the product warranty card can call a function
     modifier onlyByOwner(address accountAddress, uint256 tokenId) {
-        address[] memory temp = tokenIdToNFTInfo[tokenId].owners;
-        uint256 len = temp.length;
-        address currentOwnerAddress = temp[len - 1];
+        // address[] memory temp = tokenIdToNFTInfo[tokenId].owners;
+        // uint256 len = temp.length;
+        // address currentOwnerAddress = temp[len - 1];
+        address currentOwnerAddress = ownerOf(tokenId);
         if (accountAddress != currentOwnerAddress) {
             revert Product_Owner_Unidentified();
         }
@@ -63,20 +63,18 @@ contract WarrantyCardStorage is ERC721, ERC721URIStorage, ERC721Burnable {
         i_nftCreator = payable(msg.sender);
     }
 
-    // Change/Transfer ownership of a product warranty card upon resale
-    function changeCurrentOwner(
-        bool hasPurchased,
-        address newOwner,
-        uint256 tokenId
-    ) public onlyByOwner(msg.sender, tokenId) checkForEndOfWarranty(tokenId) {
+    // Set the starting and ending time of warranty, change start time on resale
+    function changeWarrantyPeriod(bool hasPurchased, uint256 tokenId)
+        public
+        onlyByOwner(msg.sender, tokenId)
+        checkForEndOfWarranty(tokenId)
+    {
         // Revert the transaction if the product has not been purchased
         if (!hasPurchased) {
             revert Product_Not_Purchased();
         }
 
-        if (tokenIdToNFTInfo[tokenId].startTime == 0) {
-            tokenIdToNFTInfo[tokenId].startTime = block.timestamp;
-        }
+        tokenIdToNFTInfo[tokenId].startTime = block.timestamp;
 
         if (tokenIdToNFTInfo[tokenId].endTime == 0) {
             tokenIdToNFTInfo[tokenId].endTime =
@@ -84,7 +82,7 @@ contract WarrantyCardStorage is ERC721, ERC721URIStorage, ERC721Burnable {
                 tokenIdToNFTInfo[tokenId].duration;
         }
 
-        tokenIdToNFTInfo[tokenId].owners.push(newOwner);
+        // tokenIdToNFTInfo[tokenId].owners.push(newOwner);
     }
 
     // Extend the duration of warranty. Only the brand/retailer can do so.
@@ -112,10 +110,9 @@ contract WarrantyCardStorage is ERC721, ERC721URIStorage, ERC721Burnable {
         tokenIdToNFTInfo[tokenId] = nftInfo({
             duration: duration,
             startTime: 0,
-            endTime: 0,
-            owners: new address[](0)
+            endTime: 0
         });
-        tokenIdToNFTInfo[tokenId].owners.push(msg.sender);
+        // tokenIdToNFTInfo[tokenId].owners.push(msg.sender);
     }
 
     // The following functions are overrides required by Solidity.
@@ -149,17 +146,13 @@ contract WarrantyCardStorage is ERC721, ERC721URIStorage, ERC721Burnable {
         return tokenIdToNFTInfo[tokenId].endTime;
     }
 
-    function getPreviousOwner(uint256 tokenId, uint256 index)
-        public
-        view
-        returns (address)
-    {
-        address[] memory owners = tokenIdToNFTInfo[tokenId].owners;
-        if (owners.length > 0) {
-            return owners[index];
-        }
-        return address(0);
-    }
+    // function getPreviousOwner(uint256 tokenId, uint256 index) public view returns(address){
+    //     address[] memory owners = tokenIdToNFTInfo[tokenId].owners;
+    //     if(owners.length > 0){
+    //         return owners[index];
+    //     }
+    //     return address(0);
+    // }
 
     function getStartTime(uint256 tokenId) public view returns (uint256) {
         return tokenIdToNFTInfo[tokenId].startTime;

@@ -20,7 +20,7 @@ async function createWarrantyCardNFT() {
 
 	const args = [warrantyCardName, warrantyCardSymbol];
 
-	const warrantyCardNFT = await deploy("WarrantyCardStorage", {
+	const warrantyCardNFT = await deploy("WarrantyCard", {
 		from: deployer,
 		args,
 		log: true,
