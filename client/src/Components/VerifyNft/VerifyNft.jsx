@@ -20,6 +20,7 @@ const VerifyNft = () => {
 
 	const [inputNum, setInputNum] = useState(null);
 	const [ownerAddress, setOwnerAddress] = useState("");
+	const [warrantyDuration, setWarrantyDuration] = useState(0);
 	const [currentWalletAddress, setCurrentWalletAddress] = useState("");
 
 	const connectWallet = async () => {
@@ -55,6 +56,16 @@ const VerifyNft = () => {
 			tokenId: inputNum,
 		},
 	});
+	const { runContractFunction: getWarrantyDurationInSeconds } = useWeb3Contract(
+		{
+			abi,
+			contractAddress,
+			functionName: "getCurrentWarrantyDuration",
+			params: {
+				tokenId: inputNum,
+			},
+		},
+	);
 
 	const handleNotification = (message, title) => {
 		dispatch({
@@ -86,7 +97,15 @@ const VerifyNft = () => {
 				onSuccess: handleSuccess,
 				onError: (error) => handleError(error),
 			});
+
 			setOwnerAddress(res.toString().toLowerCase());
+
+			const warrantyBigNum = await getWarrantyDurationInSeconds({
+				onSuccess: handleSuccess,
+				onError: (error) => handleError(error),
+			});
+
+			setWarrantyDuration(parseInt(warrantyBigNum._hex) / (3600 * 24 * 365));
 		} catch (error) {
 			console.log(error);
 		}
@@ -122,6 +141,9 @@ const VerifyNft = () => {
 							<div className={classes.btn}>
 								<CustomButton label="Verify" filled />
 							</div>
+							<div className={classes.btn}>
+								<CustomButton label="Get Warranty Duration" filled />
+							</div>
 						</form>
 					</Card>
 					<CustomButton
@@ -138,6 +160,12 @@ const VerifyNft = () => {
 						onClick={connectWallet}
 						disabled={isWeb3EnableLoading}
 					/>
+					{isWeb3Enabled && warrantyDuration && (
+						<h3 className={classes.verify_text}>
+							Warranty Duratioin is {warrantyDuration}{" "}
+							{warrantyDuration === 1 ? "Year" : "Years"}
+						</h3>
+					)}
 					{isWeb3Enabled && ownerAddress && (
 						<h3 className={classes.verify_text}>
 							Account is owned by {ownerAddress}

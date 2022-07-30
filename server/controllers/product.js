@@ -221,11 +221,11 @@ const getWishListedProducts = asyncHandler(async (req, res) => {
 });
 
 const getPurchasedProducts = asyncHandler(async (req, res) => {
-	const purchasedProducts = await User.findById(req.user._id)
+	const user = await User.findById(req.user._id)
 		.populate("purchasedProducts")
 		.exec();
 
-	const finalProducts = purchasedProducts.products.map((product) => {
+	const finalProducts = user.purchasedProducts.map((product) => {
 		if (product.image) {
 			let buffer = Buffer.from(product.image);
 			let base64Image = buffer.toString("base64");

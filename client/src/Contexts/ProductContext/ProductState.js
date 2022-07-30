@@ -8,6 +8,7 @@ import {
 	GET_ALL_PRODUCTS,
 	GET_SINGLE_PRODUCT,
 	GET_PRODUCTS_BY_CATEGORY,
+	GET_PURCHASED_PRODUCTS,
 } from "../types";
 
 const ProductState = (props) => {
@@ -15,6 +16,7 @@ const ProductState = (props) => {
 		allProducts: [],
 		product: {},
 		categorizedProducts: [],
+		purchasedProducts: [],
 	};
 
 	const [state, dispatch] = useReducer(productReducer, initialState);
@@ -133,18 +135,39 @@ const ProductState = (props) => {
 			//   dispatch({ type: ADD_PRODUCT_FAIL, payload: error.message });
 		}
 	};
+	const getPurchasedProducts = async () => {
+		const config = {
+			headers: {
+				"Content-Type": "application/json",
+			},
+		};
+		try {
+			const res = await axios.get("/api/user/purchased", config);
+
+			dispatch({
+				type: GET_PURCHASED_PRODUCTS,
+				payload: res.data.purchasedProducts,
+			});
+			// return res.data;
+		} catch (error) {
+			console.log(error);
+			//   dispatch({ type: ADD_PRODUCT_FAIL, payload: error.message });
+		}
+	};
 
 	return (
 		<productContext.Provider
 			value={{
 				allProducts: state.allProducts,
 				product: state.product,
+				purchasedProducts: state.purchasedProducts,
 				categorizedProducts: state.categorizedProducts,
 				getSingleProduct,
 				getAllProducts,
 				updateProductToken,
 				orderProduct,
 				getCategorizedProducts,
+				getPurchasedProducts,
 				dispatchProductWithWarranty,
 			}}
 		>
