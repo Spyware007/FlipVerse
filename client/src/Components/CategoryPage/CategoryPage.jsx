@@ -1,32 +1,41 @@
-import React, { useContext, useEffect } from "react";
-import queryString from "query-string";
-import { useLocation } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import classes from "./CategoryPage.module.css";
 import { ProductCard } from "../UI";
-// import trial1 from "../../Assets/trial3.png";
-import { productContext } from "../../Contexts";
 
 const CategoryPage = () => {
-	const { getCategorizedProducts, categorizedProducts } =
-		useContext(productContext);
-	const { search } = useLocation();
-	const values = queryString.parse(search);
-	const { category } = values;
+	const [categoryProducts, setCategoryProducts] = useState([]);
 
-	getCategorizedProducts(category);
-	console.log(category);
+	// const { search } = useLocation();
+	// const values = queryString.parse(search);
+	// const { category } = values;
+
+	const params = new URLSearchParams(window.location.search);
+	const config = {
+		headers: {
+			"Content-Type": "application/json",
+		},
+	};
+
 	useEffect(() => {
-		console.log("Runksdkfj");
-	}, []);
+		axios
+			.post(
+				"/api/products/category",
+				{ category: params.get("category") },
+				config,
+			)
+			.then((res) => {
+				setCategoryProducts(res.data.products);
+			});
+	}, [params]);
 
-	console.log(categorizedProducts);
 	return (
 		<>
 			<div className={classes.category_page}>
-				<h1 className={classes.category_page_text}>{category}</h1>
+				<h1 className={classes.category_page_text}>{params.get("category")}</h1>
 				<div className={classes.category_page_products}>
-					{categorizedProducts &&
-						categorizedProducts.products.map((p, i) => {
+					{categoryProducts &&
+						categoryProducts.map((p, i) => {
 							return (
 								<ProductCard
 									key={i}
@@ -37,7 +46,7 @@ const CategoryPage = () => {
 								/>
 							);
 						})}
-					{categorizedProducts.products.length === 0 && (
+					{categoryProducts.length === 0 && (
 						<h1 className={classes.notfound}>No Products in this category</h1>
 					)}
 				</div>

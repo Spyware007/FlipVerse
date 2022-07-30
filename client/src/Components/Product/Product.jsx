@@ -47,13 +47,6 @@ const Product = () => {
 		warrantyDurationInSeconds,
 	} = product;
 
-	// const { runContractFunction: getBlockTimeStamp } = useWeb3Contract({
-	// 	abi,
-	// 	contractAddress,
-	// 	functionName: "getBlockTimeStamp",
-	// 	params: {},
-	// });
-
 	const { runContractFunction: createWarrantyCard } = useWeb3Contract({
 		abi,
 		contractAddress,
@@ -331,6 +324,7 @@ const Product = () => {
 							{isWeb3Enabled &&
 								isSellerAuthenticated &&
 								!isSold &&
+								hasProductTokenId &&
 								isReadyForSale &&
 								hasWarranty && (
 									<CustomButton
@@ -353,7 +347,19 @@ const Product = () => {
 										filled
 									/>
 								)}
-							{isSellerAuthenticated && isReadyForSale && !isSold && (
+							{hasWarranty ? (
+								isSellerAuthenticated &&
+								hasProductTokenId &&
+								isReadyForSale &&
+								!isSold && (
+									<CustomButton
+										onClick={() => handleDispatch(productId, tokenId)}
+										label="DISPATCH"
+										padding="0.5em 11em"
+										filled
+									/>
+								)
+							) : (
 								<CustomButton
 									onClick={() => handleDispatch(productId, tokenId)}
 									label="DISPATCH"
@@ -365,25 +371,7 @@ const Product = () => {
 							{isWeb3Enabled &&
 								!isSellerAuthenticated &&
 								"This address will be used to store your warranty card"}
-							{/* <CustomButton
-                // onClick={handleClick}
-                // label="Add to Cart"
-                padding="0.5em 8em"
-                // filled
-              >
-                Add to Cart
-                <CartIcon />
-              </CustomButton> */}
 						</div>
-					</div>
-				</div>
-				<div className={classes.similar_container}>
-					<h1 className={classes.similar_text}>Similar Products</h1>
-					<div className={classes.similar_products}>
-						<ProductCard image={""} />
-						<ProductCard image={""} />
-						<ProductCard image={""} />
-						<ProductCard image={""} />
 					</div>
 				</div>
 			</div>

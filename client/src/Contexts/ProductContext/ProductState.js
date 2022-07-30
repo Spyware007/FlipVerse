@@ -114,13 +114,14 @@ const ProductState = (props) => {
 			//   dispatch({ type: ADD_PRODUCT_FAIL, payload: error.message });
 		}
 	};
+
 	const getCategorizedProducts = async (name) => {
 		const config = {
 			headers: {
 				"Content-Type": "application/json",
 			},
 		};
-		console.log(name);
+
 		try {
 			const res = await axios.post(
 				"/api/products/category",
@@ -128,13 +129,14 @@ const ProductState = (props) => {
 				config,
 			);
 			console.log(res);
-			dispatch({ type: GET_PRODUCTS_BY_CATEGORY, payload: res.data });
-			return res.data;
+			dispatch({ type: GET_PRODUCTS_BY_CATEGORY, payload: res.data.products });
+			return res.data.products;
 		} catch (error) {
 			console.log(error);
 			//   dispatch({ type: ADD_PRODUCT_FAIL, payload: error.message });
 		}
 	};
+
 	const getPurchasedProducts = async () => {
 		const config = {
 			headers: {
