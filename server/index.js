@@ -9,7 +9,7 @@ import sellerRouter from "./routes/seller.js";
 import userAuthRouter from "./routes/authRoutes/userAuth.js";
 import sellerAuthRouter from "./routes/authRoutes/sellerAuth.js";
 
-const PORT = 8000 || process.env.PORT;
+const PORT = 8001 || process.env.PORT;
 
 const app = express();
 
