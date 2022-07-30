@@ -141,9 +141,9 @@ const VerifyNft = () => {
 							<div className={classes.btn}>
 								<CustomButton label="Verify" filled />
 							</div>
-							<div className={classes.btn}>
+							{/* <div className={classes.btn}>
 								<CustomButton label="Get Warranty Duration" filled />
-							</div>
+							</div> */}
 						</form>
 					</Card>
 					<CustomButton
@@ -162,7 +162,7 @@ const VerifyNft = () => {
 					/>
 					{isWeb3Enabled && warrantyDuration && (
 						<h3 className={classes.verify_text}>
-							Warranty Duratioin is {warrantyDuration}{" "}
+							Warranty Duration is {warrantyDuration}{" "}
 							{warrantyDuration === 1 ? "Year" : "Years"}
 						</h3>
 					)}
