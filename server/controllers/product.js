@@ -61,8 +61,7 @@ const getProductsByCategory = asyncHandler(async (req, res) => {
 		sold: false,
 		isReadyForSale: false,
 	});
-	console.log(products);
-	console.log(category);
+
 	const finalProducts = products.map((product) => {
 		if (product.image) {
 			let buffer = Buffer.from(product.image);
@@ -319,7 +318,7 @@ const getProductsReadyForSale = asyncHandler(async (req, res) => {
 const updateProductToken = asyncHandler(async (req, res) => {
 	const { tId } = req.body;
 	const { id } = req.params;
-	console.log(id);
+
 	const pId = id.toString();
 
 	if (!verifyId(pId)) {
@@ -328,7 +327,7 @@ const updateProductToken = asyncHandler(async (req, res) => {
 	}
 
 	const product = await Product.findById(id);
-	console.log(product);
+
 	if (!product || product.sold) {
 		res.status(400).json({ message: "Product not found" });
 		throw new Error("Product not found!");

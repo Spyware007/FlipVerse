@@ -127,6 +127,7 @@ const ProductState = (props) => {
 			);
 			console.log(res);
 			dispatch({ type: GET_PRODUCTS_BY_CATEGORY, payload: res.data });
+			return res.data;
 		} catch (error) {
 			console.log(error);
 			//   dispatch({ type: ADD_PRODUCT_FAIL, payload: error.message });
