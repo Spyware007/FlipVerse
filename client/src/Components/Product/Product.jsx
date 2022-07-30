@@ -13,27 +13,18 @@ import {
 } from "../../Contexts";
 
 const Product = () => {
-	const {
-		isWeb3Enabled,
-		account,
-		isWeb3EnableLoading,
-		Moralis,
-		deactivateWeb3,
-		enableWeb3,
-	} = useMoralis();
-
-	const contractAddress = "0xc7e886c33eb26501c966eaf35db7bb15dd46b45d";
-	const [userAccountAddress, setUserAccountAddress] = useState("");
+	const contractAddress = "0x171F6Cd3aaa32a6f1cFDAa63fF0a2d056473C569";
 	const [sellerWalletAddress, setSellerWalletAddress] = useState("");
+	const [userAccountAddress, setUserAccountAddress] = useState("");
 	const [tokenId, setTokenId] = useState(null);
+	const [isSold, setIsSold] = useState(false);
+	const [warrantyDuration, setWarrantyDuration] = useState(null);
 
 	const {
 		getSingleProduct,
 		product,
 		orderProduct,
 		dispatchProductWithWarranty,
-		getCategorizedProducts,
-		categorizedProducts,
 		updateProductToken,
 	} = useContext(productContext);
 	const { isSellerAuthenticated } = useContext(sellerAuthContext);
@@ -49,22 +40,19 @@ const Product = () => {
 		description,
 		price,
 		isReadyForSale,
-		orderedBy,
 		productTokenId,
 		image,
+		orderedBy,
 		hasWarranty,
 		warrantyDurationInSeconds,
 	} = product;
-	//
-	let searchQuery;
-	// >>>>>>> aaf3307fae0f61e071726ed64ea7a0f00871370d
 
-	useEffect(() => {
-		searchQuery = category?.toLowerCase();
-		console.log(category);
-		getCategorizedProducts(searchQuery);
-	}, [product]);
-	console.log(category);
+	// const { runContractFunction: getBlockTimeStamp } = useWeb3Contract({
+	// 	abi,
+	// 	contractAddress,
+	// 	functionName: "getBlockTimeStamp",
+	// 	params: {},
+	// });
 
 	const { runContractFunction: createWarrantyCard } = useWeb3Contract({
 		abi,
@@ -81,6 +69,26 @@ const Product = () => {
 		},
 	});
 
+	const { runContractFunction: setDurationForTokenId } = useWeb3Contract({
+		abi,
+		contractAddress,
+		functionName: "setDurationForTokenId",
+		params: {
+			tokenId: tokenId,
+			duration: warrantyDuration,
+		},
+	});
+
+	const { runContractFunction: changeWarrantyPeriod } = useWeb3Contract({
+		abi,
+		contractAddress,
+		functionName: "changeWarrantyPeriod",
+		params: {
+			hasPurchased: true,
+			tokenId: tokenId,
+		},
+	});
+
 	const { runContractFunction: transferWarrantyCard } = useWeb3Contract({
 		abi,
 		contractAddress,
@@ -92,25 +100,23 @@ const Product = () => {
 		},
 	});
 
-	const { runContractFunction: changeWarrantyCardOwner } = useWeb3Contract({
-		abi,
-		contractAddress,
-		functionName: "changeCurrentOwner",
-		params: {
-			hasPurchased: true,
-			newOwner: "0xbE6B4Bc688Ac02374922D9f7a8697C6D1EEA395C" || "",
-			tokenId: 0,
-		},
-		overrides: {
-			gasLimit: 300000000,
-		},
-	});
-
 	const redirect = useNavigate();
+
+	const {
+		enableWeb3,
+		isWeb3Enabled,
+		isWeb3EnableLoading,
+		account,
+		Moralis,
+		deactivateWeb3,
+	} = useMoralis();
 
 	useEffect(() => {
 		const getProduct = async () => {
-			await getSingleProduct(productId);
+			const pr = await getSingleProduct(productId);
+			setTokenId(pr.productTokenId);
+			setWarrantyDuration(pr.warrantyDurationInSeconds);
+			setIsSold(pr.sold);
 		};
 
 		getProduct();
@@ -131,6 +137,12 @@ const Product = () => {
 			}
 		});
 	}, []);
+
+	const connectWallet = async () => {
+		await enableWeb3();
+		localStorage.setItem("connected", "walletconnect");
+		setSellerWalletAddress(account);
+	};
 
 	const handleClick = (pId) => {
 		if (!sellerWalletAddress) {
@@ -153,23 +165,26 @@ const Product = () => {
 		});
 	};
 
+	const handleSuccess = async () => {
+		handleNotification("Transaction Successful!", "Tx Notification");
+	};
+
 	const handleError = (error) => {
 		console.log(error);
 		handleNotification(
-			"Transaction UnSuccessful! Something went wrong",
+			"Transaction UnSuccessful! Make sure you are connected to the right account",
 			"Tx Notification",
 		);
 	};
 
-	const handleSuccess = async (tx) => {
-		await tx.wait(1);
-		handleNotification("Transaction Successful!", "Tx Notification");
-	};
-
-	const connectWallet = async () => {
-		await enableWeb3();
-		localStorage.setItem("connected", "walletconnect");
-		setSellerWalletAddress(account);
+	let hasProductTokenId =
+		productTokenId === undefined || tokenId === null ? false : true;
+	const handleDispatch = async (productId, tokenId) => {
+		if (hasProductTokenId && hasWarranty) {
+			await dispatchProductWithWarranty(productId, tokenId);
+		} else {
+			alert("Please create warranty!");
+		}
 	};
 
 	const handleCreateWarrantyCard = async () => {
@@ -178,7 +193,9 @@ const Product = () => {
 				onSuccess: handleSuccess,
 				onError: (error) => handleError(error),
 			});
+			console.log(res);
 			res.wait(1).then((transactionReceipt) => {
+				console.log(transactionReceipt);
 				const tokenIdNum = parseInt(transactionReceipt.logs[0].topics[3]);
 				setTokenId(tokenIdNum);
 				console.log(productId);
@@ -187,6 +204,33 @@ const Product = () => {
 		} catch (error) {
 			console.log(error);
 		}
+	};
+
+	const handleAddWarrantyDuration = async () => {
+		setWarrantyDuration(warrantyDurationInSeconds);
+		setTokenId(productTokenId);
+
+		try {
+			console.log("ej");
+			const res = await setDurationForTokenId({
+				onSuccess: handleSuccess,
+				onError: (error) => handleError(error),
+			});
+			console.log(res);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	const changeWarrantyPeriodOfNFT = async () => {
+		setTokenId(productTokenId);
+		try {
+			const res2 = await changeWarrantyPeriod({
+				onSuccess: handleSuccess,
+				onError: (error) => handleError(error),
+			});
+			console.log(res2);
+		} catch (error) {}
 	};
 
 	const handleTransferOfWarranty = async () => {
@@ -204,27 +248,7 @@ const Product = () => {
 		}
 	};
 
-	const changeOwnership = async () => {
-		setUserAccountAddress(orderedBy.walletAddress);
-		if (userAccountAddress === "") return;
-		try {
-			const res2 = await changeWarrantyCardOwner({
-				onSuccess: handleSuccess,
-				onError: (error) => handleError(error),
-			});
-			console.log(res2);
-		} catch (error) {}
-	};
-
 	const authorizedPerson = isSellerAuthenticated || isUserAuthenticated;
-
-	const handleDispatch = async (productId, tokenId) => {
-		if (!tokenId && hasWarranty) {
-			alert("Please create warranty!");
-			return;
-		}
-		await dispatchProductWithWarranty(productId, tokenId);
-	};
 
 	return (
 		<>
@@ -249,14 +273,6 @@ const Product = () => {
 							</h4>
 						)}
 						<div className={classes.btn}>
-							{isSellerAuthenticated && isReadyForSale && (
-								<CustomButton
-									onClick={() => handleDispatch(productId, tokenId)}
-									label="DISPATCH"
-									padding="0.5em 11em"
-									filled
-								/>
-							)}
 							{isUserAuthenticated && (
 								<CustomButton
 									onClick={() => handleClick(productId)}
@@ -273,7 +289,6 @@ const Product = () => {
 									filled
 								/>
 							)}
-
 							<CustomButton
 								label={
 									isWeb3Enabled
@@ -290,7 +305,7 @@ const Product = () => {
 							/>
 							{isWeb3Enabled &&
 								isSellerAuthenticated &&
-								!productTokenId &&
+								!hasProductTokenId &&
 								hasWarranty && (
 									<CustomButton
 										onClick={handleCreateWarrantyCard}
@@ -300,8 +315,32 @@ const Product = () => {
 									/>
 								)}
 							{isWeb3Enabled &&
+								!isSold &&
 								isSellerAuthenticated &&
-								productTokenId &&
+								hasWarranty && (
+									<CustomButton
+										onClick={handleAddWarrantyDuration}
+										label="Add Duration"
+										padding="0.5em 7em"
+										filled
+									/>
+								)}
+							{isWeb3Enabled &&
+								isSellerAuthenticated &&
+								!isSold &&
+								isReadyForSale &&
+								hasWarranty && (
+									<CustomButton
+										onClick={changeWarrantyPeriodOfNFT}
+										label={"Start Warranty"}
+										padding="0.5em 7em"
+										filled
+									/>
+								)}
+							{isWeb3Enabled &&
+								isSellerAuthenticated &&
+								hasProductTokenId &&
+								!isSold &&
 								isReadyForSale &&
 								hasWarranty && (
 									<CustomButton
@@ -311,43 +350,37 @@ const Product = () => {
 										filled
 									/>
 								)}
-							{isWeb3Enabled &&
-								isSellerAuthenticated &&
-								productTokenId &&
-								isReadyForSale &&
-								hasWarranty && (
-									<CustomButton
-										onClick={changeOwnership}
-										label={"Change Owner"}
-										padding="0.5em 7em"
-										filled
-									/>
-								)}
+							{isSellerAuthenticated && isReadyForSale && !isSold && (
+								<CustomButton
+									onClick={() => handleDispatch(productId, tokenId)}
+									label="DISPATCH"
+									padding="0.5em 11em"
+									filled
+								/>
+							)}
+
 							{isWeb3Enabled &&
 								!isSellerAuthenticated &&
 								"This address will be used to store your warranty card"}
+							{/* <CustomButton
+                // onClick={handleClick}
+                // label="Add to Cart"
+                padding="0.5em 8em"
+                // filled
+              >
+                Add to Cart
+                <CartIcon />
+              </CustomButton> */}
 						</div>
 					</div>
 				</div>
 				<div className={classes.similar_container}>
 					<h1 className={classes.similar_text}>Similar Products</h1>
 					<div className={classes.similar_products}>
-						{categorizedProducts &&
-							categorizedProducts.products.map((p, i) => {
-								return (
-									<ProductCard
-										image={p.image}
-										name={p.title}
-										price={p.price}
-										id={p._id}
-									/>
-								);
-							})}
-						{categorizedProducts.products.length === 0 && (
-							<h1 className={classes.notfound}>
-								No Similar Products found in this category
-							</h1>
-						)}
+						<ProductCard image={""} />
+						<ProductCard image={""} />
+						<ProductCard image={""} />
+						<ProductCard image={""} />
 					</div>
 				</div>
 			</div>

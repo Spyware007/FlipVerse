@@ -14,7 +14,7 @@ const ProductState = (props) => {
 	const initialState = {
 		allProducts: [],
 		product: {},
-		categorizedProducts: null,
+		categorizedProducts: [],
 	};
 
 	const [state, dispatch] = useReducer(productReducer, initialState);
@@ -70,8 +70,8 @@ const ProductState = (props) => {
 
 		try {
 			const res = await axios.get(`/api/product/${id}`, config);
-			console.log(res);
 			dispatch({ type: GET_SINGLE_PRODUCT, payload: res.data });
+			return res.data;
 		} catch (error) {
 			console.log(error);
 			//   dispatch({ type: ADD_PRODUCT_FAIL, payload: error.message });
