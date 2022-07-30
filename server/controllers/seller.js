@@ -81,8 +81,6 @@ const createProduct = asyncHandler(async (req, res) => {
 	const warrantyDurationInSeconds =
 		parseInt(warrantyDuration) * 365 * 24 * 60 * 60;
 
-	console.log(warrantyDurationInSeconds);
-
 	if (!title || !category || price < 1) {
 		res.status(400).json({ message: "Please Provide valid details" });
 		throw new Error("Please provide valid details");

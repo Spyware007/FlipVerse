@@ -142,6 +142,14 @@ contract WarrantyCard is ERC721, ERC721URIStorage, ERC721Burnable {
         return tokenIdToNFTInfo[tokenId].duration;
     }
 
+    function redeemWarranty(uint256 tokenId)
+        public
+        checkForEndOfWarranty(tokenId)
+        onlyByOwner(msg.sender, tokenId)
+    {
+        tokenIdToNFTInfo[tokenId].endTime -= tokenIdToNFTInfo[tokenId].duration;
+    }
+
     function getEndTime(uint256 tokenId) public view returns (uint256) {
         return tokenIdToNFTInfo[tokenId].endTime;
     }

@@ -193,12 +193,10 @@ const Product = () => {
 				onSuccess: handleSuccess,
 				onError: (error) => handleError(error),
 			});
-			console.log(res);
+
 			res.wait(1).then((transactionReceipt) => {
-				console.log(transactionReceipt);
 				const tokenIdNum = parseInt(transactionReceipt.logs[0].topics[3]);
 				setTokenId(tokenIdNum);
-				console.log(productId);
 				updateProductToken(productId, tokenIdNum);
 			});
 		} catch (error) {
@@ -262,6 +260,11 @@ const Product = () => {
 						<h2 className={classes.product_name}>Brand: {brand}</h2>
 						<h3 className={classes.product_name}>Category: {category}</h3>
 						<p className={classes.product_description}>{description}</p>
+						{isUserAuthenticated && isSold && (
+							<p className={classes.product_description}>
+								TokenId for warranty is:{tokenId}
+							</p>
+						)}
 						<div className={classes.price_container}>
 							<img className={classes.price_symbol} src={rs_icon} alt="" />
 							<span className={classes.price}>{price}</span>
