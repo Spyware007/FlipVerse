@@ -15,6 +15,7 @@ export const GET_SELLER_PRODUCTS = "GET_SELLER_PRODUCTS";
 // Cart Types
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
+export const GET_PURCHASED_PRODUCTS = "GET_PURCHASED_PRODUCTS";
 // Product
 export const BUY_PRODUCT = "BUY_PRODUCT";
 export const BUY_PRODUCT_FAIL = "BUY_PRODUCT_FAIL";
