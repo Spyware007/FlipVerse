@@ -188,7 +188,6 @@ const SellerAuthState = (props) => {
 	};
 
 	// Update Profile
-
 	const updateImage = async (formData) => {
 		const config = {
 			headers: {
@@ -209,6 +208,7 @@ const SellerAuthState = (props) => {
 			console.log(error);
 		}
 	};
+
 	const updateProfile = async (user) => {
 		const config = {
 			headers: {

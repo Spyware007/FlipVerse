@@ -18,8 +18,8 @@ const Profile = () => {
 							/>
 						</div>
 						<div className={classes.inputs}>
-							<h2>Retailer Name:{seller.name}</h2>
-							<h2>Retailer Email:{seller.email}</h2>
+							<h2>Retailer Name: {seller.name}</h2>
+							<h2>Retailer Email: {seller.email}</h2>
 						</div>
 					</div>
 				</Card>
