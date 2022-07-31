@@ -85,10 +85,6 @@ customers to receive the physical product along with a digital version of it.ðŸš
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) <img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"/>
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
-### Deployed On :
-
-![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
-
 ### Designed On:
 
 ![Figma](https://img.shields.io/badge/Figma-FbbE99?style=for-the-badge&logo=figma&logoColor=white)
