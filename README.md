@@ -51,13 +51,13 @@ authenticity and security.
 
 <br>
 
-● Converting ownership authenticity and product warranty cards into decaying NFTs.<br>
+● Converting ownership authenticity and product warranty cards into decaying NFTs.📉<br>
 ● For instance, allow brands and retailers to introduce an NFT for each of their products, which allows
-customers to receive the physical product along with a digital version of it.<br>
-● Customers can then use the digital NFT to verify the authenticity of their product, prove their ownership of their product, and transfer ownership of them upon resale.<br>
-● The brand/retailer should also be able to tie the digital NFT to its warranty program, allowing owners to trackrepairs and replacements to the original item.<br>
-● Decay the NFT once the warranty is over.<br>
-● WE used the Polygon blockchain to deploy our solution and demo the final product as a web prototype<br>
+customers to receive the physical product along with a digital version of it.🚀<br>
+● Customers can then use the digital NFT to verify the authenticity of their product, prove their ownership of their product, and transfer ownership of them upon resale.🎯<br>
+● The brand/retailer should also be able to tie the digital NFT to its warranty program, allowing owners to trackrepairs and replacements to the original item.🤩<br>
+● Decay the NFT once the warranty is over.🥸<br>
+● WE used the Polygon blockchain to deploy our solution and demo the final product as a web prototype🔗<br>
 
 ---
 
@@ -93,10 +93,11 @@ customers to receive the physical product along with a digital version of it.<br
 
 ![Figma](https://img.shields.io/badge/Figma-FbbE99?style=for-the-badge&logo=figma&logoColor=white)
 #### Figma File : [Figma Design Link](https://www.figma.com/file/WRhwvCUDoIyLwGBzBd0U9n/Flipkart-Grid-4.0)
+#### Canva PPT : [Canva PPT Link]()
 
 ## Glimpse ✨
 
-### Website : [Click here]()
+### Video Demo : [GDrive Link](https://drive.google.com/drive/folders/19cvw5LuK_1Fj5fdzUyr_fM02fHjEWQxd?usp=sharing)
 
 ## Contributors ✨
 
