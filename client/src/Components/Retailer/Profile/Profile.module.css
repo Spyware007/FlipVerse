@@ -15,6 +15,9 @@
 }
 .inputs {
 	width: auto;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
 }
 .profile_pic {
 	width: 300px;
@@ -26,6 +29,7 @@
 	height: 100%;
 	border-radius: 20px;
 }
+
 @media screen and (max-width: 1000px) {
 	.profile_card {
 		flex-direction: column;

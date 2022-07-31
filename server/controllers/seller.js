@@ -3,6 +3,10 @@ import Seller from "../models/Seller.js";
 import User from "../models/User.js";
 import Product from "../models/Product.js";
 import { verifyId, getIndexOfProduct } from "../utils/helpers.js";
+import sgMail from "@sendgrid/mail";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 //@desc Get seller Profile
 //@route /seller/profile
@@ -259,8 +263,12 @@ const uploadProductImage = asyncHandler(async (req, res) => {
 });
 
 const confirmPurchaseOfProduct = asyncHandler(async (req, res) => {
-	const { id } = req.params;
-	const { tId } = req.body;
+	const {
+		params: { id },
+		body: { tId },
+		seller: { email },
+	} = req;
+
 	const product = await Product.findById(id);
 
 	if (!product || product.createdBy.toString() !== req.seller._id.toString()) {
@@ -270,6 +278,29 @@ const confirmPurchaseOfProduct = asyncHandler(async (req, res) => {
 
 	const buyer = await User.findById(product.orderedBy);
 
+	// await sendEmail({
+	// 	sellerEmail: "nishantbhosale244@gmail.com",
+	// 	userEmail: buyer.email,
+	// 	subject: `Issued Warranty Card For ${product.title}!`,
+	// 	text: `Your purchased product ${product.title} has been issued a digital warranty card, with unique number of ${tId}! And it has been dispatched successfully. Thanks for shopping with us!`,
+	// });
+
+	sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+	console.log(buyer.email);
+	const msg = {
+		to: buyer.email, // Change to your recipient
+		from: "omgawandeofficial9834899149@gmail.com", // Change to your verified sender
+		subject: `Issued Warranty Card For ${product.title}!`,
+		text: `Your purchased product ${product.title} has been issued a digital warranty card, with unique number of ${tId}! And it has been dispatched successfully. Thanks for shopping with us!`,
+	};
+	sgMail
+		.send(msg)
+		.then(() => {
+			console.log("Email sent");
+		})
+		.catch((error) => {
+			console.error(error);
+		});
 	product.sold = true;
 	product.isReadyForSale = false;
 	product.tokenId = tId;

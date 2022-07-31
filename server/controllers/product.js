@@ -3,6 +3,10 @@ import asyncHandler from "express-async-handler";
 import { getIndexOfProduct, verifyId } from "../utils/helpers.js";
 import User from "../models/User.js";
 import Seller from "../models/Seller.js";
+import sgMail from "@sendgrid/mail";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const getProducts = asyncHandler(async (req, res) => {
 	const products = await Product.find({ sold: false, isReadyForSale: false });
@@ -238,6 +242,7 @@ const getPurchasedProducts = asyncHandler(async (req, res) => {
 				createdBy,
 				createdAt,
 				updatedAt,
+				_id,
 				sold,
 				hasWarranty,
 				warrantyDurationInSeconds,
@@ -249,6 +254,7 @@ const getPurchasedProducts = asyncHandler(async (req, res) => {
 				description,
 				price,
 				category,
+				_id,
 				createdBy,
 				createdAt,
 				hasWarranty,
@@ -316,9 +322,9 @@ const getProductsReadyForSale = asyncHandler(async (req, res) => {
 });
 
 const updateProductToken = asyncHandler(async (req, res) => {
-	const { tId } = req.body;
+	const { tId, userId } = req.body;
 	const { id } = req.params;
-
+	const { seller } = req;
 	const pId = id.toString();
 
 	if (!verifyId(pId)) {
@@ -331,6 +337,27 @@ const updateProductToken = asyncHandler(async (req, res) => {
 	if (!product || product.sold) {
 		res.status(400).json({ message: "Product not found" });
 		throw new Error("Product not found!");
+	}
+
+	const user = await User.findById(userId);
+
+	if (user) {
+		sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+		console.log(user.email);
+		const msg = {
+			to: user.email, // Change to your recipient
+			from: "omgawandeofficial9834899149@gmail.com", // Change to your verified sender
+			subject: `Issued Warranty Card For ${product.title}!`,
+			text: `Your purchased product ${product.title} has been issued a digital warranty card, with unique number of ${tId}! Thanks for shopping with us!`,
+		};
+		sgMail
+			.send(msg)
+			.then(() => {
+				console.log("Email sent");
+			})
+			.catch((error) => {
+				console.error(error);
+			});
 	}
 
 	product.tokenId = tId;

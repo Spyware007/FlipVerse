@@ -42,7 +42,7 @@ const ProductState = (props) => {
 		}
 	};
 
-	const updateProductToken = async (id, tokenId) => {
+	const updateProductToken = async (id, tokenId, userId) => {
 		const config = {
 			headers: {
 				"Content-Type": "application/json",
@@ -52,7 +52,7 @@ const ProductState = (props) => {
 		try {
 			const res = await axios.put(
 				`/api/product/token/${id}`,
-				{ tId: tokenId },
+				{ tId: tokenId, userId },
 				config,
 			);
 			console.log(res.data);

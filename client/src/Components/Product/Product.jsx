@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useState } from "react";
 import { useMoralis, useWeb3Contract } from "react-moralis";
-import { CustomButton, ProductCard, SingleProductCard } from "../UI";
+import { CustomButton, SingleProductCard } from "../UI";
 import { useNotification } from "@web3uikit/core";
 import { useParams, useNavigate } from "react-router-dom";
 import classes from "./Product.module.css";
@@ -88,8 +88,8 @@ const Product = () => {
 		functionName: "safeTransferFrom(address,address,uint256)",
 		params: {
 			from: sellerWalletAddress,
-			to: userAccountAddress || "",
-			tokenId: 0,
+			to: userAccountAddress,
+			tokenId: tokenId,
 		},
 	});
 
@@ -138,11 +138,12 @@ const Product = () => {
 	};
 
 	const handleClick = (pId) => {
-		if (!sellerWalletAddress) {
-			console.log("Connect to a wallet first to receive warranty!");
+		if (!sellerWalletAddress && hasWarranty) {
+			handleSuccess("Please connect a wallet!", "Notification");
 			return;
 		}
 		orderProduct(pId, sellerWalletAddress);
+		handleSuccess("Ordered Successfully", "Notification");
 	};
 
 	const unauthorized = () => {
@@ -158,8 +159,8 @@ const Product = () => {
 		});
 	};
 
-	const handleSuccess = async () => {
-		handleNotification("Transaction Successful!", "Tx Notification");
+	const handleSuccess = async (message, notification) => {
+		handleNotification(message, notification);
 	};
 
 	const handleError = (error) => {
@@ -172,25 +173,31 @@ const Product = () => {
 
 	let hasProductTokenId =
 		productTokenId === undefined || tokenId === null ? false : true;
+
 	const handleDispatch = async (productId, tokenId) => {
 		if (hasProductTokenId && hasWarranty) {
 			await dispatchProductWithWarranty(productId, tokenId);
+			handleSuccess("Product Dispatched...!", "Notification");
 		} else {
-			alert("Please create warranty!");
+			handleSuccess(
+				"Product Dispatch Unsuccessful! Please check everything!",
+				"Notification",
+			);
 		}
 	};
 
 	const handleCreateWarrantyCard = async () => {
 		try {
 			const res = await createWarrantyCard({
-				onSuccess: handleSuccess,
+				onSuccess: () =>
+					handleSuccess("Transaction Successful!", "Tx Notification"),
 				onError: (error) => handleError(error),
 			});
 
 			res.wait(1).then((transactionReceipt) => {
 				const tokenIdNum = parseInt(transactionReceipt.logs[0].topics[3]);
 				setTokenId(tokenIdNum);
-				updateProductToken(productId, tokenIdNum);
+				updateProductToken(productId, tokenIdNum, orderedBy._id);
 			});
 		} catch (error) {
 			console.log(error);
@@ -204,7 +211,8 @@ const Product = () => {
 		try {
 			console.log("ej");
 			const res = await setDurationForTokenId({
-				onSuccess: handleSuccess,
+				onSuccess: () =>
+					handleSuccess("Transaction Successful!", "Tx Notification"),
 				onError: (error) => handleError(error),
 			});
 			console.log(res);
@@ -217,7 +225,8 @@ const Product = () => {
 		setTokenId(productTokenId);
 		try {
 			const res2 = await changeWarrantyPeriod({
-				onSuccess: handleSuccess,
+				onSuccess: () =>
+					handleSuccess("Transaction Successful!", "Tx Notification"),
 				onError: (error) => handleError(error),
 			});
 			console.log(res2);
@@ -230,7 +239,8 @@ const Product = () => {
 
 		try {
 			await transferWarrantyCard({
-				onSuccess: handleSuccess,
+				onSuccess: () =>
+					handleSuccess("Transaction Successful!", "Tx Notification"),
 				onError: (error) => handleError(error),
 			});
 			return;
@@ -262,14 +272,14 @@ const Product = () => {
 							<img className={classes.price_symbol} src={rs_icon} alt="" />
 							<span className={classes.price}>{price}</span>
 						</div>
-						{hasWarranty && (
+						{hasWarranty && !isSold && (
 							<h4>
 								Product available with warranty of{" "}
 								{warrantyDurationInSeconds / (3600 * 365 * 24)} years
 							</h4>
 						)}
 						<div className={classes.btn}>
-							{isUserAuthenticated && (
+							{isUserAuthenticated && !isSold && (
 								<CustomButton
 									onClick={() => handleClick(productId)}
 									label="BUY"
@@ -359,17 +369,18 @@ const Product = () => {
 										filled
 									/>
 								)
-							) : (
+							) : !isSold ? (
 								<CustomButton
 									onClick={() => handleDispatch(productId, tokenId)}
 									label="DISPATCH"
 									padding="0.5em 11em"
 									filled
 								/>
-							)}
+							) : null}
 
 							{isWeb3Enabled &&
 								!isSellerAuthenticated &&
+								!isSold &&
 								"This address will be used to store your warranty card"}
 						</div>
 					</div>

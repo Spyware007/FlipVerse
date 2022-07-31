@@ -7,14 +7,8 @@ import { useNotification } from "@web3uikit/core";
 import abi from "../../Constants/abi.json";
 
 const VerifyNft = () => {
-	const {
-		enableWeb3,
-		isWeb3Enabled,
-		isWeb3EnableLoading,
-		account,
-		Moralis,
-		deactivateWeb3,
-	} = useMoralis();
+	const { enableWeb3, isWeb3Enabled, account, Moralis, deactivateWeb3 } =
+		useMoralis();
 
 	const contractAddress = "0x171F6Cd3aaa32a6f1cFDAa63fF0a2d056473C569";
 
@@ -127,9 +121,7 @@ const VerifyNft = () => {
 						<form className={classes.form} onSubmit={handleSubmit}>
 							<div className={classes.inputs}>
 								<InputField
-									// reference={nameRef}
 									type="number"
-									// value={name}
 									onChange={(e) => setInputNum(e.target.value)}
 									label="Unique ID Number"
 									name="nftID"
@@ -141,39 +133,22 @@ const VerifyNft = () => {
 							<div className={classes.btn}>
 								<CustomButton label="Verify" filled />
 							</div>
-							{/* <div className={classes.btn}>
-								<CustomButton label="Get Warranty Duration" filled />
-							</div> */}
 						</form>
 					</Card>
-					<CustomButton
-						label={
-							isWeb3Enabled
-								? `Connected to ${account.slice(0, 4)}...${account.slice(
-										39,
-										account.length,
-								  )}`
-								: "Connect Wallet"
-						}
-						filled
-						padding={`0.5em ${isWeb3Enabled ? 5.2 : 8}em`}
-						onClick={connectWallet}
-						disabled={isWeb3EnableLoading}
-					/>
+					{isWeb3Enabled && ownerAddress && (
+						<h4 className={classes.verify_text}>
+							NFT is owned by {ownerAddress}
+						</h4>
+					)}
 					{isWeb3Enabled && warrantyDuration && (
-						<h3 className={classes.verify_text}>
+						<h4 className={classes.verify_text} style={{ paddingTop: "1rem" }}>
 							Warranty Duration is {warrantyDuration}{" "}
 							{warrantyDuration === 1 ? "Year" : "Years"}
-						</h3>
+						</h4>
 					)}
-					{isWeb3Enabled && ownerAddress && (
-						<h3 className={classes.verify_text}>
-							Account is owned by {ownerAddress}
-						</h3>
-					)}
-					{ownerAddress === (currentWalletAddress || "") && (
+					{ownerAddress === currentWalletAddress && (
 						<h4 className={classes.verify_text}>
-							You are the owner of this Card!
+							You are the owner of this NFT!
 						</h4>
 					)}
 				</div>
