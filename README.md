@@ -89,7 +89,7 @@ customers to receive the physical product along with a digital version of it.ðŸš
 
 ![Figma](https://img.shields.io/badge/Figma-FbbE99?style=for-the-badge&logo=figma&logoColor=white)
 #### Figma File : [Figma Design Link](https://www.figma.com/file/WRhwvCUDoIyLwGBzBd0U9n/Flipkart-Grid-4.0)
-#### Canva PPT : [Canva PPT Link]()
+#### Canva PPT : [Canva PPT Link](https://www.canva.com/design/DAFH52JWG8w/8DjZjxHVXOMLV7WrOY5j_g/view?utm_content=DAFH52JWG8w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## Glimpse âœ¨
 
