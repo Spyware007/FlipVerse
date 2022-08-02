@@ -7,6 +7,10 @@
 <!-- PROJECT LOGO -->
 
 <h2><b>🔗 Blockchain-based eCommerce warranty system using NFTs</b></h2>
+
+  
+# [DEMO LINK](https://drive.google.com/drive/folders/19cvw5LuK_1Fj5fdzUyr_fM02fHjEWQxd?usp=sharing)
+
   </div>
   
 ---
@@ -90,10 +94,6 @@ customers to receive the physical product along with a digital version of it.�
 ![Figma](https://img.shields.io/badge/Figma-FbbE99?style=for-the-badge&logo=figma&logoColor=white)
 #### Figma File : [Figma Design Link](https://www.figma.com/file/WRhwvCUDoIyLwGBzBd0U9n/Flipkart-Grid-4.0)
 #### Canva PPT : [Canva PPT Link](https://www.canva.com/design/DAFH52JWG8w/8DjZjxHVXOMLV7WrOY5j_g/view?utm_content=DAFH52JWG8w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
-
-## Glimpse ✨
-
-### Video Demo : [GDrive Link](https://drive.google.com/drive/folders/19cvw5LuK_1Fj5fdzUyr_fM02fHjEWQxd?usp=sharing)
 
 ## Contributors ✨
 
